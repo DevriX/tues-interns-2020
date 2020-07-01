@@ -2,7 +2,7 @@
 
 ## Local Setup
 
-1. Set-up LAMP Stack on your machine - You can check [this guide](https://www.digitaloouscean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04)
+1. Set-up LAMP Stack on your machine - You can check [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04)
 2. Create a table from phpmyadmin/workbench or whatever suits you best
 3. Set-up your hosts. Go to '/etc/hosts' ( 'c:\windows\system32\drivers\etc\hosts' for Windows )  and add a new entry for Carmag at the localhost IP. example: `127.0.0.1 local.carmag.com`
 4. Now, when you open this url you should be able to see the main folder of the localhost server

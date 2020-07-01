@@ -1,0 +1,14 @@
+.section-welcome {
+	position: relative;
+	padding: 0;
+
+	&-content {
+		position: absolute;
+		z-index: 2;
+		color: #fff;
+		max-width: 600px;
+		width: 100%;
+		top: 40%;
+		left: 10%;
+	}
+}

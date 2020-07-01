@@ -1,0 +1,64 @@
+// New responsive images design. The goal is to make images
+// that will fit always everywhere with equal height so that
+// they can be reused in grids keeping the same aspect ratio.
+
+.responsive-image {
+	overflow: hidden;
+	padding-bottom: percentage( 3 / 4 );
+	width: 100%;
+	height: 0;
+	display: inline-block;
+	position: relative;
+
+	// Will fix issue with image paddings.
+	margin-bottom: -8px;
+
+	// Styling that can be removed:
+	background: #f8f8f8;
+
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+
+	// Different ratios that can be used for your responsive images
+	// If you want to default to one of the following below, simply
+	// update the padding-bottom of the base .responsive-image element
+
+	&.ratio-16-9 {
+		padding-bottom: percentage( 9/16 );
+	}
+
+	&.ratio-16-10 {
+		padding-bottom: percentage( 10/16 );
+	}
+
+	&.ratio-11-8 {
+		padding-bottom: percentage( 8/11 );
+	}
+
+	&.ratio-3-2 {
+		padding-bottom: percentage( 2/3 );
+	}
+
+	&.ratio-1-1 {
+		padding-bottom: percentage( 1 );
+	}
+
+	&.ratio-golden {
+		padding-bottom: percentage( 1 / 1.618 );
+	}
+
+	&.ratio-silver {
+		padding-bottom: percentage( 1 / 2.414 );
+	}
+
+	// Add border-radius to the responsive images.
+	&.radius-3 { border-radius: 3px; }
+	&.radius-5 { border-radius: 5px; }
+	&.radius-10 { border-radius: 10px; }
+	&.radius-20 { border-radius: 20x; }
+	&.radius-circle { border-radius: 50%; }
+}

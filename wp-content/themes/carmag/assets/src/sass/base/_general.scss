@@ -1,0 +1,234 @@
+// Allowing to run foundation.js file
+meta.foundation-data-attribute-namespace { font-family: false; }
+
+// Importing basic HTML element stylings. See it like reset + small stylings
+@import "general-basic";
+
+html {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+// Add margin-top to body tag when admin-bar is visible.
+body.admin-bar {
+	padding-top: 32px;
+	@media (max-width: 782px) { padding-top: 46px; }
+}
+
+body {
+	font-family: $font-sans;
+	font-size: $global-font-size;
+	line-height: 1.7;
+	background: white;
+}
+
+p:first-child {
+	margin-top: 0;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	line-height: 1.2;
+	font-family: $font-heading;
+
+	// Removes the default margins from the headings.
+	// Add this customly for entry content if needed.
+	margin: 0;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+hr {
+	height: 1px;
+	border: none;
+	width: 100%;
+	background: #f0f0f0;
+}
+
+// Required WordPress stylings
+img.alignright {
+	margin: 20px 0 20px 20px;
+}
+
+img.alignleft {
+	margin: 20px 20px 20px 0;
+}
+
+img.aligncenter {
+	margin: 20px auto;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: -8px; // Fixes weird spacing under images
+}
+
+/**
+ * Required classes by WordPress. To pass the theme check
+ * stylings to those must be applied, since the SASS watch
+ * script is skipping classes that have no properties.
+ */
+.sticky { display: block; }
+.bypostauthor { display: block; }
+
+.alignleft {
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important; // sass-lint:disable-line no-important
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important; // sass-lint:disable-line no-important
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem; // 14px
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+// Do not show the outline on the skip link target.
+#content[tabindex="-1"]:focus { // sass-lint:disable-line no-ids
+	outline: 0;
+}
+
+// Media
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+// Make sure embeds and iframes fit their containers.
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+// Captions
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+// Gallery defaults
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}

@@ -1,0 +1,30 @@
+/**
+ * Image on left, text on right. Uses flexbox for alignment.
+ * Write media queries based on your theme's design and requirements.
+ */
+.section-halfsplit {
+	$section-padding: 100px;
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 0;
+
+	&.image-right {
+		flex-direction: row-reverse;
+	}
+
+	.section-image,
+	.section-content {
+		flex: 1 1 50%;
+		padding: #{$section-padding / 3};
+
+		@media (min-width: $breakpoint-small) {
+			padding: #{$section-padding / 2};
+		}
+
+		@media (min-width: $breakpoint-medium) {
+			padding: #{$section-padding};
+		}
+	}
+}

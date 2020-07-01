@@ -1,0 +1,51 @@
+// This will form a two columns list of 1, 2, 3 lists that will list questions
+// and answers without any javascript in there.
+.faq-elements {
+	counter-reset: ol-counter;
+
+	// This is quite specific, but no otter (hehe) way to reach it.
+	.row:last-child .columns:last-of-type .faq-element {
+		margin-bottom: 0;
+	}
+}
+
+.faq-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.faq-element {
+	flex: 1 1 50%;
+	position: relative;
+	margin-bottom: 30px;
+	padding: 10px;
+
+
+	&:before {
+		content: counter(ol-counter);
+		counter-increment: ol-counter;
+		display: block;
+		position: absolute;
+		left: 0;
+		top: -0.7em;
+		font-weight: bold;
+		font-size: 2.4em;
+		color: $color-primary;
+	}
+
+	.title {
+		font-size: 22px;
+		margin-bottom: 10px;
+		margin-top: 0;
+		padding-left: 50px;
+	}
+
+	.content {
+		opacity: 0.5;
+	}
+
+	@media (max-width: 640px) {
+		flex: 1 1 100%;
+	}
+}
+

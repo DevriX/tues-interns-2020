@@ -1,0 +1,55 @@
+/**
+ * The standard section wrapper. Use this with other classes for the base styling.
+ * Default paddings are 40 and 80px
+ */
+.section-fullwidth {
+	$border-color: #ddd;
+	$section-padding: 80px;
+
+	padding: #{$section-padding} 0;
+	position: relative;
+
+	@media (min-width: $breakpoint-small) {
+		padding: #{$section-padding} 0;
+	}
+
+	// Default modifiers
+	&.border-bottom {
+		border-bottom: 1px solid #ddd;
+	}
+
+	&.border-top {
+		border-top: 1px solid #ddd;
+	}
+
+	&.shadow {
+		box-shadow: 0 5px 10px -5px rgba(black, 0.3);
+		z-index: 10;
+	}
+
+	&.shadow-inset {
+		box-shadow: inset 0 5px 10px -5px rgba(black, 0.3);
+		z-index: 10;
+	}
+
+	&.inverted {
+		background: black;
+		color: white;
+
+		hr {
+			background-color: rgba(white, 0.2);
+		}
+	}
+
+	&.text-white {
+		color: white;
+
+		hr {
+			background-color: rgba(white, 0.2);
+		}
+
+		a {
+			color: white;
+		}
+	}
+}

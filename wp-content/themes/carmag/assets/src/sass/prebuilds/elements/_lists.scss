@@ -1,0 +1,95 @@
+// Our Work Process component - two columns of content, different than the
+// Foundation columns grid system. Can't use columns class prefix because of
+// the Foundation's selectors.
+.rates-columns {
+
+	// For finer tuning
+	$columns-gutter: 30px;
+
+	// .rates-columns base styling
+	color: white;
+
+	.rates-left,
+	.rates-right {
+		text-align: center;
+		margin-bottom: 50px;
+		width: 50%;
+		padding: 0 20px;
+	}
+
+	.rates-right {
+		margin-bottom: 0;
+	}
+
+	.rates-title {
+		color: $color-yellow--500;
+		margin: 0 0 30px;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0 0 20px;
+		padding: 0;
+	}
+
+	.fa {
+		// A little more unique red color;
+		color: #dd3b31;
+		display: inline-block;
+		margin-right: 5px;
+	}
+
+	// Black text, white background. By default this section is used in sections
+	// with background images. This modifier class will invert the colors.
+	&.dark {
+		color: #888;
+
+		.rates-title {
+			color: #333;
+		}
+
+		.fa {
+			color: $color-red--400;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.rates-left,
+		.rates-right {
+			width: 100%;
+		}
+	}
+
+	@media (min-width: 640px) {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+
+		.rates-right {
+			display: inline-block;
+			text-align: left;
+		}
+
+		// Column with the separator.
+		.rates-left {
+			text-align: right;
+			display: inline-block;
+			border-right: 1px solid #414251;
+			margin-right: $columns-gutter;
+			margin-bottom: 0;
+			padding-right: $columns-gutter + 5px; // 5px compensation for text spacing
+
+			.fa {
+				float: right;
+				margin: 5px 0 0 8px;
+			}
+		}
+
+		&.dark {
+			.rates-left {
+				border-color: #f0f0f0;
+			}
+		}
+	}
+
+}

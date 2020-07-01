@@ -1,0 +1,13 @@
+/**
+ * All standard sections come here.
+ *
+ * Important: try not to edit too much here. You can extend by simply overwriting
+ * rules in your components folder.
+ */
+.section-fullwidth {
+	// You can remove this one, it's for the starter theme.
+	&.demo-gradient {
+		background: #a90329 linear-gradient(to bottom, #a90329 0%, #8f0222 44%, #6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=0 ); /* IE6-9 */
+	}
+}

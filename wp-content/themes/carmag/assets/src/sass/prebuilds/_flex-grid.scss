@@ -1,0 +1,70 @@
+/**
+ * Various flex grid stylings that can be used across the theme.
+ * Very good for archive pages. Of course, the foundation grid is
+ * also a good choice here, but this is giving a bit more controll
+ * and is alowing you to add custom sizings and media queries without
+ * distrubting the stylings of foundation.
+ */
+.flex-grid-wrapper {
+	$flex-grid-gutter: 40px;
+	$border-color: #f0f0f0;
+	$border-color-inverted: #444;
+
+
+	.flex-grid {
+		margin: 0 #{-$flex-grid-gutter / 2};
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.grid-item {
+		padding: 0 $flex-grid-gutter / 2;
+	}
+
+	.col-4 .grid-item {
+		flex: 1 1 calc(100% / 4);
+	}
+
+	.col-3 .grid-item {
+		flex: 1 1 calc(100% / 3);
+	}
+
+	.col-2 .grid-item {
+		flex: 1 1 calc(100% / 2);
+	}
+
+	@media (max-width: $breakpoint-medium) {
+		.col-2 .grid-item,
+		.col-3 .grid-item,
+		.col-4 .grid-item {
+			flex: 1 1 calc(100% / 2);
+		}
+	}
+
+	@media (max-width: $breakpoint-small) {
+		.col-2 .grid-item,
+		.col-3 .grid-item,
+		.col-4 .grid-item {
+			flex: 1 1 calc(100% / 1);
+		}
+	}
+
+	// Modifiers
+	// ------------------
+	&.separators {
+		overflow: hidden;
+
+		.grid-item {
+			border-right: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+			margin-right: -1px;
+			margin-bottom: -2px;
+			padding: $flex-grid-gutter;
+		}
+	}
+
+	.inverted &.separators .grid-item {
+		border-right: 1px solid $border-color-inverted;
+		border-bottom: 1px solid $border-color-inverted;
+	}
+}

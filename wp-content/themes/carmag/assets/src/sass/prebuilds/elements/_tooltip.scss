@@ -1,0 +1,52 @@
+/**
+ * .tooltip is only the wrapper, that has position: absolute. Nothing else :) The actual
+ * tooltip is in .tooltip-content element nested inside
+ */
+.tooltip {
+	position: relative;
+	cursor: help;
+
+	&:hover {
+		transition: 0.4s;
+
+		.tooltip-content {
+			transform: translateY(0);
+			opacity: 1;
+			pointer-events: normal;
+		}
+	}
+
+	&-content {
+		transform: translateY(10px);
+		opacity: 0;
+		pointer-events: none;
+		transition: 0.4s;
+		bottom: 100%;
+		position: absolute;
+		left: 0; right: 0;
+		z-index: 100;
+		background: rgba(0, 0, 0, 0.8);
+		display: block;
+		max-width: 200px;
+		line-height: 1.3em;
+		padding: 8px 15px;
+		color: #FFF;
+		border-radius: 5px;
+		margin: 0 auto;
+	}
+
+	&-content:after {
+		top: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(0, 0, 0, 0);
+		border-top-color: rgba(black, 0.8);
+		border-width: 10px;
+		margin-left: -10px;
+	}
+}

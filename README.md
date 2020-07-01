@@ -22,13 +22,13 @@ ServerName local.carmag.com
 </Directory>
 </VirtualHost>
 ```
-6. Restart the server in order to see your changes sudo service apache2 restart
+6. Restart the server in order to see your changes `sudo service apache2 restart`
 7. Change permissions to  777 recursively for the directory: `sudo chmod -R 777`
-8. Download WP inside the server's directory. Either from wp.org or via [wp-cli](https://wp-cli.org/).
+8. Download WP inside the server's directory. Either from [wordpress.org](wordpress.org) or via [wp-cli](https://wp-cli.org/).
 9. Delete `wp-content` directory
 10. Clone the repository in temp directory
 11. Transfer the files from the tmp directory to the main directory of the site. Mind the git files that are hidden!
 12. Open the site and set-up the needed details. Use easy login details. It's you local installation after all.
-13. Edit wp-config.php. Make sure to have WP_DEBUG constant set to true!
+13. Edit `wp-config.php.` Make sure to have `WP_DEBUG` constant set to true!
 14. You should be all set now!
 

@@ -1,5 +1,7 @@
 // Allowing to run foundation.js file
-meta.foundation-data-attribute-namespace { font-family: false; }
+meta.foundation-data-attribute-namespace {
+	font-family: false;
+}
 
 // Importing basic HTML element stylings. See it like reset + small stylings
 @import "general-basic";
@@ -13,12 +15,15 @@ html {
 *:before,
 *:after {
 	box-sizing: inherit;
+	-webkit-tap-highlight-color: transparent;
 }
 
 // Add margin-top to body tag when admin-bar is visible.
 body.admin-bar {
 	padding-top: 32px;
-	@media (max-width: 782px) { padding-top: 46px; }
+	@media (max-width: 782px) {
+		padding-top: 46px;
+	}
 }
 
 body {
@@ -87,8 +92,12 @@ img {
  * stylings to those must be applied, since the SASS watch
  * script is skipping classes that have no properties.
  */
-.sticky { display: block; }
-.bypostauthor { display: block; }
+.sticky {
+	display: block;
+}
+.bypostauthor {
+	display: block;
+}
 
 .alignleft {
 	float: left;
@@ -142,7 +151,8 @@ ul {
 }
 
 // Do not show the outline on the skip link target.
-#content[tabindex="-1"]:focus { // sass-lint:disable-line no-ids
+#content[tabindex="-1"]:focus {
+	// sass-lint:disable-line no-ids
 	outline: 0;
 }
 
@@ -162,7 +172,6 @@ iframe,
 object {
 	max-width: 100%;
 }
-
 
 // Captions
 .wp-caption {

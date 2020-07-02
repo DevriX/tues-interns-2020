@@ -19,4 +19,5 @@
 /wp-trackback.php
 /xmlrpc.php
 
-
+# Mac
+.DS_Store

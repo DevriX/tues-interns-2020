@@ -11,6 +11,5 @@
 
 get_header(); ?>
 
-<?php // Custom page template structure ?>
 
 <?php get_footer(); ?>

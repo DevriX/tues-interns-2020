@@ -1,0 +1,31 @@
+.button {
+	border: none;
+	padding: 10px 32px;
+	font-size: 1rem;
+	font-weight: bold;
+
+	&:hover {
+		color: black;
+		transition: 0.3s;
+	}
+
+	&.primary {
+		background-color: $color-primary;
+		color: $color-white;
+
+		&:hover {
+			background-color: darken($color-primary, 2%);
+			color: white;
+		}
+	}
+
+	&.secondary {
+		background-color: $color-secondary;
+		color: $color-primary-dark;
+
+		&:hover {
+			background-color: darken($color-secondary, 2%);
+			color: black;
+		}
+	}
+}

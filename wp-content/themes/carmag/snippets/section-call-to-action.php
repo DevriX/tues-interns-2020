@@ -2,7 +2,7 @@
 /**
  * This will create a section that displays one row with text and button
  *
- * @since  DX Starter v1.3.1
+ * @since  CarMag v1.3.1
  * @uses  assets/sass/prebuilds/_section-call-to-action.scss
  */
 ?>

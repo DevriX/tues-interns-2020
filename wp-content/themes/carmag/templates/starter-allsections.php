@@ -7,7 +7,7 @@
  * to use get_template_part or copy-paste the markup for more freedom.
  *
  * @since  v1.0.0
- * @package DevriX_Starter
+ * @package CarMag
  */
 
 get_header(); ?>

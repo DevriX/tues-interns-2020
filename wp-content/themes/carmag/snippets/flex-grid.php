@@ -4,7 +4,7 @@
  * Here you get separated boxes with lines instead of basic grid elements next
  * to eachother. If possible use the default Foundation grid though.
  *
- * @since  DX Starter v1.2.0
+ * @since  CarMag v1.2.0
  * @uses  assets/sass/prebuilds/_flex-grid.scss
  */
 ?>

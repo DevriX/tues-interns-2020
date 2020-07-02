@@ -2,7 +2,7 @@
 /**
  * Box with image on one side and box with content on the other
  *
- * @since  DX Starter v1.2.0
+ * @since  CarMag v1.2.0
  * @uses  assets/sass/prebuilds/_section-halfsplit.scss
  */
 ?>

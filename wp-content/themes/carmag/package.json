@@ -1,9 +1,9 @@
 {
-  "name": "dxstarter",
+  "name": "carmag",
   "version": "1.5.1",
   "description": "Quick settings for developing themes.",
   "main": "Gulpfile.js",
-  "repository": "https://github.com/DevriX/DX-Starter",
+  "repository": "https://github.com/DevriX/CarMag",
   "sasslintConfig": ".sass-lint.yml",
   "devDependencies": {
     "@babel/cli": "^7.4.4",

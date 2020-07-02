@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package DevriX_Starter
+ * @package CarMag
  */
 
 /**
@@ -13,7 +13,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function dxstarter_body_classes( $classes ) {
+function carmag_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -26,7 +26,7 @@ function dxstarter_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'dxstarter_body_classes' );
+add_filter( 'body_class', 'carmag_body_classes' );
 
 function dxdump( $var, $text = '' ) {
 	echo "<strong style='background: #ff0; display: block; margin-top: 10px; margin-bottom: -20px; padding: 0 10px; border: 2px solid #f00'>dxdump: $text</strong>";

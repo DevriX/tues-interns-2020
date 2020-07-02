@@ -2,7 +2,7 @@
 /**
  * Our basic FAQ layout.
  *
- * @since  DX Starter v1.3.0
+ * @since  CarMag v1.3.0
  * @uses  assets/sass/prebuilds/elements/_section-faq-elements.scss
  */
 ?>

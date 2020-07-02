@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package DevriX_Starter
+ * @package CarMag
  */
 
 ?><!DOCTYPE html>
@@ -26,7 +26,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dxstarter' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'carmag' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="row">

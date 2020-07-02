@@ -544,67 +544,67 @@ hr.clear {
 .position-initial {
   position: initial; }
 
-.dxstarter-styleguide hr {
+.carmag-styleguide hr {
   margin: 40px 0; }
 
-.dxstarter-styleguide .theme-colors {
+.carmag-styleguide .theme-colors {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px; }
 
-.dxstarter-styleguide .section-title {
+.carmag-styleguide .section-title {
   border-bottom: 1px solid #f0f0f0;
   margin-bottom: 40px;
   padding-bottom: 20px;
   margin-top: 100px; }
 
-.dxstarter-styleguide .page-header {
+.carmag-styleguide .page-header {
   margin-top: 50px;
   font-size: 48px;
   color: black; }
 
-.dxstarter-styleguide .colorbox {
+.carmag-styleguide .colorbox {
   display: inline-block;
   margin: 10px;
   max-width: calc(10% - 20px);
   width: 100%; }
   @media (max-width: 640px) {
-    .dxstarter-styleguide .colorbox {
+    .carmag-styleguide .colorbox {
       max-width: calc(50% - 20px); } }
-  .dxstarter-styleguide .colorbox > * {
+  .carmag-styleguide .colorbox > * {
     opacity: 0.2; }
-  .dxstarter-styleguide .colorbox .color {
+  .carmag-styleguide .colorbox .color {
     padding-bottom: 100%; }
-  .dxstarter-styleguide .colorbox .name {
+  .carmag-styleguide .colorbox .name {
     font-size: 13px; }
 
-.dxstarter-styleguide .label {
+.carmag-styleguide .label {
   text-transform: uppercase;
   margin: 20px 0;
   display: block; }
 
-.dxstarter-styleguide .color-primary > * {
+.carmag-styleguide .color-primary > * {
   opacity: 1; }
 
-.dxstarter-styleguide .color-primary .color {
+.carmag-styleguide .color-primary .color {
   background-color: #4072db; }
 
-.dxstarter-styleguide .color-primary-dark > * {
+.carmag-styleguide .color-primary-dark > * {
   opacity: 1; }
 
-.dxstarter-styleguide .color-primary-dark .color {
+.carmag-styleguide .color-primary-dark .color {
   background-color: #3f3f75; }
 
-.dxstarter-styleguide .color-secondary > * {
+.carmag-styleguide .color-secondary > * {
   opacity: 1; }
 
-.dxstarter-styleguide .color-secondary .color {
+.carmag-styleguide .color-secondary .color {
   background-color: #5ea54d; }
 
-.dxstarter-styleguide .color-accent > * {
+.carmag-styleguide .color-accent > * {
   opacity: 1; }
 
-.dxstarter-styleguide .color-accent .color {
+.carmag-styleguide .color-accent .color {
   background-color: #ff4902; }
 
 .responsive-image {

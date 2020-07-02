@@ -2,7 +2,7 @@
 /**
  * Hero section with large background image and overlay box to the left
  *
- * @since  DX Starter v1.2.0
+ * @since  CarMag v1.2.0
  * @uses  assets/sass/prebuilds/_section-welcome.scss
  */
 ?>

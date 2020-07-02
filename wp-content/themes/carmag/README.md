@@ -2,11 +2,11 @@
 
 ### Exporting to WordPress.org compilant zip file
 
-To export your development files to the WordPress.org requirements run the following command: `bash zip.sh path/name.zip` or `npm run ziptheme path/name.zip`. We can suggest you to suffix your zip file with the version of your theme. Example: `../dx-starter-1.0.0.zip`
+To export your development files to the WordPress.org requirements run the following command: `bash zip.sh path/name.zip` or `npm run ziptheme path/name.zip`. We can suggest you to suffix your zip file with the version of your theme. Example: `../CarMag-1.0.0.zip`
 
 ### .gitignore
 
-DX Starter has a rather large .gitignore file. Make sure to check it out in case you have important file types or directories listed there. Part of the TODO for the theme is to create npm script that will auto generate a ZIP of your theme that is fully compatible with WordPress's theme standarts - meaning no .DS_Store files, no hidden .git folders or files, no gulp files or sass ones.
+CarMag has a rather large .gitignore file. Make sure to check it out in case you have important file types or directories listed there. Part of the TODO for the theme is to create npm script that will auto generate a ZIP of your theme that is fully compatible with WordPress's theme standarts - meaning no .DS_Store files, no hidden .git folders or files, no gulp files or sass ones.
 
 ### Nodejs
 

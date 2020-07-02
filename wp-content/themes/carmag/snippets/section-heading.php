@@ -2,7 +2,7 @@
 /**
  * Heading markup for sections
  *
- * @since  DX Starter v1.2.0
+ * @since  CarMag v1.2.0
  * @uses  assets/sass/prebuilds/_section-heading.scss
  */
 ?>

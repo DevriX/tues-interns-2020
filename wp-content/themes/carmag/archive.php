@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package DevriX_Starter
+ * @package CarMag
  */
 
 get_header(); ?>

@@ -5,7 +5,7 @@
  * Custom homepage template for the theme
  * 
  * @since  v1.0.0
- * @package DevriX_Starter
+ * @package CarMag
  */
 
 

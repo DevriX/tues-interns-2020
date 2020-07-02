@@ -2,7 +2,7 @@
 /**
  * This will create a section that displays three featured items in grid
  *
- * @since  DX Starter v1.3.1
+ * @since  CarMag v1.3.1
  * @uses  assets/sass/prebuilds/_section-features-grid.scss
  */
 ?>

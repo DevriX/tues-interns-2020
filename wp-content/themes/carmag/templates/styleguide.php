@@ -15,7 +15,7 @@
  * pull custom test data if you need. See more here - https://dummyimage.com/
  * 
  * It is still work in progress, if you find something more that needs to be added please
- * open a GitHub issue at https://github.com/DevriX/DX-Starter/issues
+ * open a GitHub issue at https://github.com/DevriX/CarMag/issues
  */
 ?>
 
@@ -23,10 +23,10 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<div class="dxstarter-styleguide-wrapper">
+<div class="carmag-styleguide-wrapper">
 	<!-- Separate each section this way onwards. -->
 	<section class="fullwidth-section">
-		<div class="dxstarter-styleguide">
+		<div class="carmag-styleguide">
 			<div class="row">
 				<div class="column">
 					<header class="page-heading">
@@ -105,11 +105,11 @@
 				</div><!-- .column -->
 			</div><!-- .row -->
 
-		</div><!-- .dxstarter-styleguide -->
+		</div><!-- .carmag-styleguide -->
 	</section><!-- .fullwidth-section -->
 
 	<section class="fullwidth-section">
-		<div class="dxstarter-styleguide">
+		<div class="carmag-styleguide">
 			<div class="row">
 				<div class="column">
 					<h2 class="section-title">Colors</h2>
@@ -161,12 +161,12 @@
 					</div><!-- .theme-colors -->
 				</div><!-- .column small-4 medium-2 -->
 			</div><!-- .row -->
-		</div><!-- .dxstarter-styleguide -->
+		</div><!-- .carmag-styleguide -->
 	</section><!-- .fullwidth-section -->
 
 
 	<section class="fullwidth-section typography-showcase">
-		<div class="dxstarter-styleguide">
+		<div class="carmag-styleguide">
 			<div class="row">
 				<div class="columns">
 					<h2 class="section-title">Typography</h2><!-- .section-heading -->
@@ -229,11 +229,11 @@
 					</ol>
 				</div><!-- .columns medium-6 -->
 			</div><!-- .row -->
-		</div><!-- .dxstarter-styleguide -->
+		</div><!-- .carmag-styleguide -->
 	</section><!-- .fullwidth-section typography-showcase -->
 
 	<section class="fullwidth-section typography-showcase">
-		<div class="dxstarter-styleguide">
+		<div class="carmag-styleguide">
 			<div class="row">
 				<div class="columns">
 					<h2 class="section-title">Typography inside <code>the_content()</code></h2><!-- .section-heading -->
@@ -297,12 +297,12 @@
 				</div><!-- .columns medium-6 -->
 			</div><!-- .row -->
 
-		</div><!-- .dxstarter-styleguide -->
+		</div><!-- .carmag-styleguide -->
 	</section><!-- .fullwidth-section typography-showcase -->
 
 
 	<section class="fullwidth-section">
-		<div class="dxstarter-styleguide">
+		<div class="carmag-styleguide">
 			<div class="row">
 				<div class="column">
 					<h2 class="section-title">Images</h2>
@@ -329,11 +329,11 @@
 					<img class="responsive-image" src="https://dummyimage.com/1000x400/f7f7f7/dbdbdb.png&text=Example+image+-+1000x400" alt="" />
 				</div><!-- .column -->
 			</div><!-- .row -->
-		</div><!-- .dxstarter-styleguide -->
+		</div><!-- .carmag-styleguide -->
 	</section><!-- .fullwidth-section images -->
 
 	<section class="fullwidth-section">
-		<div class="dxstarter-styleguide">
+		<div class="carmag-styleguide">
 			<div class="row">
 				<div class="column">
 					<h2 class="section-title">Table</h2>
@@ -383,7 +383,7 @@
 			</div><!-- .row -->
 		</div>
 	</section><!-- .fullwidth-section -->
-</div><!-- .dxstarter-styleguide-wrapper -->
+</div><!-- .carmag-styleguide-wrapper -->
 
 <?php endwhile; ?>
 

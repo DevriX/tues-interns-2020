@@ -347,6 +347,9 @@ ul {
   z-index: 100000;
   /* Above WP toolbar. */ }
 
+#wpadminbar {
+  position: fixed; }
+
 #content[tabindex="-1"]:focus {
   outline: 0; }
 
@@ -5139,8 +5142,10 @@ readers do not read off random characters that represent icons */
   max-width: 800px; }
 
 .site-header {
-  position: relative;
-  height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 85px;
   background-color: #2c2c2c; }
   .site-header .row {
     height: 100%;
@@ -5191,16 +5196,37 @@ readers do not read off random characters that represent icons */
           pointer-events: auto; }
         .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu {
           display: flex;
-          flex-direction: row; }
-          .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item {
-            padding: 0 30px; }
-            .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a {
-              color: white; }
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 560px;
+          width: 100vw; }
+          .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .separator {
+            height: 55px;
+            background-color: #767676;
+            width: 1px;
+            margin: 0px 10px 0;
+            display: inline-block; }
+          .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a {
+            display: inline-block;
+            transition: 0.2s;
+            border: 1px solid transparent;
+            padding: 12px 20px;
+            color: white;
+            font-weight: bold; }
+            .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a.register {
+              padding: 12px 40px; }
+              .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a.register:hover {
+                border-bottom: 1px solid transparent; }
+            .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a:hover {
+              border-bottom: 1px solid white; }
 
 .site-branding {
   display: inline-block; }
 
 @media only screen and (max-width: 960px) {
+  .site-header .row .site-header-inner .site-branding {
+    padding-left: 20px; }
   .site-header .row .site-header-inner .main-navigation .menu-toggle {
     display: flex; }
   .site-header .row .site-header-inner .main-navigation .menu-primary-container {
@@ -5214,22 +5240,54 @@ readers do not read off random characters that represent icons */
     left: 0;
     right: 0; }
     .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu {
-      display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      padding: 0 20px; }
+      .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .separator {
+        background-color: #767676;
+        height: 1px;
+        display: inline-block;
+        width: 100%;
+        margin: 10px 0; }
       .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item {
-        padding: 10px 30px; }
+        width: 100%;
+        text-align: center;
+        padding: 8px; }
+        .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item:last-child {
+          padding: 8px 0 28px; }
         .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a {
-          color: white; } }
+          width: 100%;
+          border: 0; } }
+
+.button {
+  border: none;
+  padding: 10px 32px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s; }
+  .button:hover {
+    color: black; }
+  .button.primary {
+    background-color: #ff5722;
+    color: #f5f5f5; }
+    .button.primary:hover, .button.primary:active {
+      background-color: #ff4409;
+      color: white; }
+  .button.secondary {
+    background-color: #00bcd4;
+    color: #2c2c2c; }
+    .button.secondary:hover, .button.secondary:active {
+      background-color: #00a5bb;
+      color: black; }
 
 /**
  * The standard section wrapper. Use this with other classes for the base styling.
  * Default paddings are 40 and 80px
  */
 .section-fullwidth {
-  padding: 80px 0;
+  padding: calc(80px + 85px) 0 80px;
   position: relative; }
   @media (min-width: 640px) {
     .section-fullwidth {
-      padding: 80px 0; } }
+      padding: calc(80px + 85px) 0 80px; } }
 
 /*# sourceMappingURL=master.css.map */

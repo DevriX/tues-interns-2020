@@ -4,7 +4,9 @@
 // Menu stylings file be found in components/mobile-menu
 
 .site-header {
-	position: relative;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
 	height: $layout-header-height;
 	background-color: $color-primary-dark;
 
@@ -82,12 +84,39 @@
 						.menu {
 							display: flex;
 							flex-direction: row;
+							align-items: center;
+							justify-content: space-between;
+							max-width: 560px;
+							width: 100vw;
+
+							.separator {
+								height: 55px;
+								background-color: darken($color-white, 50);
+								width: 1px;
+								margin: 0px 10px 0;
+								display: inline-block;
+							}
 
 							.menu-item {
-								padding: 0 30px;
-
 								a {
+									display: inline-block;
+									transition: 0.2s;
+									border: 1px solid transparent;
+									padding: 12px 20px;
 									color: white;
+									font-weight: bold;
+
+									&.register {
+										padding: 12px 40px;
+
+										&:hover {
+											border-bottom: 1px solid transparent;
+										}
+									}
+
+									&:hover {
+										border-bottom: 1px solid white;
+									}
 								}
 							}
 						}
@@ -106,6 +135,10 @@
 	.site-header {
 		.row {
 			.site-header-inner {
+				.site-branding {
+					padding-left: 20px;
+				}
+
 				.main-navigation {
 					.menu-toggle {
 						display: flex;
@@ -125,9 +158,29 @@
 						.menu-primary-menu-container {
 							.menu {
 								flex-direction: column;
+								padding: 0 20px;
+
+								.separator {
+									background-color: darken($color-white, 50);
+									height: 1px;
+									display: inline-block;
+									width: 100%;
+									margin: 10px 0;
+								}
 
 								.menu-item {
-									padding: 10px 30px;
+									width: 100%;
+									text-align: center;
+									padding: 8px;
+
+									&:last-child {
+										padding: 8px 0 28px;
+									}
+
+									a {
+										width: 100%;
+										border: 0;
+									}
 								}
 							}
 						}

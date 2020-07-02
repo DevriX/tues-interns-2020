@@ -27,3 +27,10 @@ const toggleDrawer = () => {
 	drawerClassList.toggle("opened");
 	navClassList.toggle("opened");
 };
+
+const navbarLinks = document.querySelectorAll(".menu-item");
+const separator = document.createElement("span");
+separator.className = "separator";
+navbarLinks[2].after(separator);
+navbarLinks[navbarLinks.length - 1].firstElementChild.className +=
+	" button primary register";

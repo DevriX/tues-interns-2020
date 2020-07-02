@@ -150,6 +150,10 @@ ul {
 	z-index: 100000; /* Above WP toolbar. */
 }
 
+#wpadminbar {
+	position: fixed;
+}
+
 // Do not show the outline on the skip link target.
 #content[tabindex="-1"]:focus {
 	// sass-lint:disable-line no-ids

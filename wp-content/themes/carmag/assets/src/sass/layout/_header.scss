@@ -124,15 +124,10 @@
 
 						.menu-primary-menu-container {
 							.menu {
-								display: flex;
 								flex-direction: column;
 
 								.menu-item {
 									padding: 10px 30px;
-
-									a {
-										color: white;
-									}
 								}
 							}
 						}

@@ -18,6 +18,6 @@ class Vehicles {
     }
 
     function cpt_create() {
-        register_post_type( 'Vechicles', $this->labels() );
+        register_post_type( 'vechicles', $this->labels() );
     }
 }

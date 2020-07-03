@@ -1,0 +1,60 @@
+[02-Jul-2020 11:11:05 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'pgmatev'@'localhost' (using password: YES) in /var/www/local.carmag.com/wp-includes/wp-db.php on line 1626
+[02-Jul-2020 15:50:54 UTC] PHP Parse error:  syntax error, unexpected '}' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 8
+[03-Jul-2020 07:41:58 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 07:42:00 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 07:42:03 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 07:42:21 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 07:42:22 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 07:42:24 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 07:43:22 UTC] PHP Fatal error:  Uncaught Error: Class 'Vehicles' not found in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php:13
+Stack trace:
+#0 /var/www/local.carmag.com/wp-settings.php(371): include_once()
+#1 /var/www/local.carmag.com/wp-config.php(80): require_once('/var/www/local....')
+#2 /var/www/local.carmag.com/wp-load.php(37): require_once('/var/www/local....')
+#3 /var/www/local.carmag.com/wp-admin/admin.php(34): require_once('/var/www/local....')
+#4 /var/www/local.carmag.com/wp-admin/edit.php(10): require_once('/var/www/local....')
+#5 {main}
+  thrown in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 13
+[03-Jul-2020 07:43:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Vehicles' not found in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php:13
+Stack trace:
+#0 /var/www/local.carmag.com/wp-settings.php(371): include_once()
+#1 /var/www/local.carmag.com/wp-config.php(80): require_once('/var/www/local....')
+#2 /var/www/local.carmag.com/wp-load.php(37): require_once('/var/www/local....')
+#3 /var/www/local.carmag.com/wp-admin/admin.php(34): require_once('/var/www/local....')
+#4 /var/www/local.carmag.com/wp-admin/post-new.php(10): require_once('/var/www/local....')
+#5 {main}
+  thrown in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 13
+[03-Jul-2020 07:43:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Vehicles' not found in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php:13
+Stack trace:
+#0 /var/www/local.carmag.com/wp-settings.php(371): include_once()
+#1 /var/www/local.carmag.com/wp-config.php(80): require_once('/var/www/local....')
+#2 /var/www/local.carmag.com/wp-load.php(37): require_once('/var/www/local....')
+#3 /var/www/local.carmag.com/wp-admin/admin.php(34): require_once('/var/www/local....')
+#4 /var/www/local.carmag.com/wp-admin/edit.php(10): require_once('/var/www/local....')
+#5 {main}
+  thrown in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 13
+[03-Jul-2020 07:43:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Vehicles' not found in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php:13
+Stack trace:
+#0 /var/www/local.carmag.com/wp-settings.php(371): include_once()
+#1 /var/www/local.carmag.com/wp-config.php(80): require_once('/var/www/local....')
+#2 /var/www/local.carmag.com/wp-load.php(37): require_once('/var/www/local....')
+#3 /var/www/local.carmag.com/wp-admin/admin.php(34): require_once('/var/www/local....')
+#4 /var/www/local.carmag.com/wp-admin/post-new.php(10): require_once('/var/www/local....')
+#5 {main}
+  thrown in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 13
+[03-Jul-2020 07:45:15 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 07:46:16 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 07:48:17 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 07:50:18 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 07:52:19 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 07:54:19 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.php on line 23
+[03-Jul-2020 08:13:10 UTC] PHP Fatal error:  Cannot declare class Vehicles, because the name is already in use in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.cpt.php on line 2
+[03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 29
+[03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 30
+[03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 31
+[03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 32
+[03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 35
+[03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 36
+[03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 37
+[03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 38
+[03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 39

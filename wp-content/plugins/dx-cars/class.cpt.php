@@ -8,16 +8,16 @@ class Vehicles {
         $arr = array(
             'labels' => array(
                 'name' => __( 'Vehicles' ),
-                'singular_name' => __( 'Vechicle' )
+                'singular_name' => __( 'Vehicle' )
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array( 'slug' => 'vechicles' ),
+            'rewrite' => array( 'slug' => 'vehicles' ),
             'show_in_rest' => true, );
         return $arr;
     }
 
     function cpt_create() {
-        register_post_type( 'Vechicles', $this->labels() );
+        register_post_type( 'Vehicles', $this->labels() );
     }
 }

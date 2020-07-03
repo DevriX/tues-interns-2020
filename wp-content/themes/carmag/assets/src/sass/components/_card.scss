@@ -1,0 +1,42 @@
+.card {
+	background-image: url("https://picsum.photos/350/280");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 350px;
+	height: 280px;
+	position: relative;
+
+	.card-info {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		color: white;
+		padding: 20px;
+
+		* {
+			margin: 0;
+		}
+
+		.info-title {
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 29px;
+		}
+
+		.info-price {
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 19px;
+			color: #acacaa;
+			font-family: $font-secondary;
+
+			&::first-letter {
+				color: $color-primary;
+			}
+		}
+
+		.info-readmore {
+		}
+	}
+}

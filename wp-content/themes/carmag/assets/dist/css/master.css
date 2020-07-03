@@ -5327,7 +5327,8 @@ readers do not read off random characters that represent icons */
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 20px 25px 0; }
+    padding: 20px 25px 0;
+    transition: 0.2s; }
     .card .card-info * {
       margin: 0; }
     .card .card-info .info-title {
@@ -5357,5 +5358,16 @@ readers do not read off random characters that represent icons */
       color: rgba(255, 255, 255, 0.75); }
       .card .card-info .info-readmore i {
         font-size: 19px; }
+  .card:hover .card-info .info-readmore {
+    margin-top: calc(100% - 130px); }
+
+.section-latestoffers .latestoffers-text {
+  justify-content: center;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #2c2c2c;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
 
 /*# sourceMappingURL=master.css.map */

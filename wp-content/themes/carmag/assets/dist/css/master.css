@@ -5156,13 +5156,16 @@ readers do not read off random characters that represent icons */
       flex-direction: row;
       justify-content: space-between;
       align-items: center; }
-      .site-header .row .site-header-inner .site-branding .site-title a {
-        color: white;
-        display: inline-block;
-        unicode-bidi: bidi-override; }
-        .site-header .row .site-header-inner .site-branding .site-title a::after {
-          content: ".";
-          color: #ff5722; }
+      .site-header .row .site-header-inner .site-branding .site-title {
+        font-weight: bold;
+        font-size: 2em; }
+        .site-header .row .site-header-inner .site-branding .site-title a {
+          color: white;
+          display: inline-block;
+          unicode-bidi: bidi-override; }
+          .site-header .row .site-header-inner .site-branding .site-title a::after {
+            content: ".";
+            color: #ff5722; }
       .site-header .row .site-header-inner .main-navigation .menu-toggle {
         display: none;
         flex-direction: column;
@@ -5207,6 +5210,12 @@ readers do not read off random characters that represent icons */
             width: 1px;
             margin: 0px 10px 0;
             display: inline-block; }
+          .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item.register {
+            padding: 0; }
+            .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item.register a {
+              padding: 10px 45px; }
+              .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item.register a:hover {
+                border-bottom: 1px solid transparent; }
           .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a {
             display: inline-block;
             transition: 0.2s;
@@ -5214,10 +5223,6 @@ readers do not read off random characters that represent icons */
             padding: 12px 20px;
             color: white;
             font-weight: bold; }
-            .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a.register {
-              padding: 12px 40px; }
-              .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a.register:hover {
-                border-bottom: 1px solid transparent; }
             .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a:hover {
               border-bottom: 1px solid white; }
 
@@ -5253,7 +5258,8 @@ readers do not read off random characters that represent icons */
         text-align: center;
         padding: 8px; }
         .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item:last-child {
-          padding: 8px 0 28px; }
+          margin: 8px 0 28px;
+          padding: 0; }
         .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a {
           width: 100%;
           border: 0; } }

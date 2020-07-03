@@ -24,6 +24,9 @@
 
 			.site-branding {
 				.site-title {
+					font-weight: bold;
+					font-size: 2em;
+
 					a {
 						color: white;
 						display: inline-block;
@@ -98,6 +101,18 @@
 							}
 
 							.menu-item {
+								&.register {
+									padding: 0;
+
+									a {
+										padding: 10px 45px;
+
+										&:hover {
+											border-bottom: 1px solid transparent;
+										}
+									}
+								}
+
 								a {
 									display: inline-block;
 									transition: 0.2s;
@@ -105,14 +120,6 @@
 									padding: 12px 20px;
 									color: white;
 									font-weight: bold;
-
-									&.register {
-										padding: 12px 40px;
-
-										&:hover {
-											border-bottom: 1px solid transparent;
-										}
-									}
 
 									&:hover {
 										border-bottom: 1px solid white;
@@ -174,7 +181,8 @@
 									padding: 8px;
 
 									&:last-child {
-										padding: 8px 0 28px;
+										margin: 8px 0 28px;
+										padding: 0;
 									}
 
 									a {

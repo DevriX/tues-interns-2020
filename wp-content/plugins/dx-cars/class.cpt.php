@@ -41,10 +41,10 @@ class Vehicles {
     	// Now that we're authenticated, time to save the data.
     	// This sanitizes the data from the field and saves it into an array $events_meta.
         $events_meta = array(
-            'car-year'    => esc_textarea( isset($_POST['car-year']) ? $_POST['car-year'] : null ),
-            'car-millage' => esc_textarea( isset($_POST['car-millage']) ? $_POST['car-millage'] : null ),
-            'car-price'   => esc_textarea( isset($_POST['car-price']) ? $_POST['car-price'] : null ),
-            'car-image'   => esc_textarea( isset($_POST['car-image']) ? $_POST['car-image'] : null ),
+            'car-year'    => sanitize_text_field( isset($_POST['car-year']) ? $_POST['car-year'] : null ),
+            'car-millage' => sanitize_text_field( isset($_POST['car-millage']) ? $_POST['car-millage'] : null ),
+            'car-price'   => sanitize_text_field( isset($_POST['car-price']) ? $_POST['car-price'] : null ),
+            'car-image'   => sanitize_text_field( isset($_POST['car-image']) ? $_POST['car-image'] : null ),
         );
 
     	// Cycle through the $events_meta array.

@@ -88,19 +88,18 @@
 							display: flex;
 							flex-direction: row;
 							align-items: center;
-							justify-content: space-between;
-							max-width: 560px;
-							width: 100vw;
 
 							.separator {
 								height: 55px;
 								background-color: darken($color-white, 50);
-								width: 1px;
+								flex: 0 0 1px;
 								margin: 0px 10px 0;
 								display: inline-block;
 							}
 
 							.menu-item {
+								margin: 0 10px;
+
 								&.register {
 									padding: 0;
 
@@ -119,6 +118,7 @@
 									border: 1px solid transparent;
 									padding: 12px 20px;
 									color: white;
+									width: max-content;
 									font-weight: bold;
 
 									&:hover {

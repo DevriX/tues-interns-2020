@@ -5200,31 +5200,33 @@ readers do not read off random characters that represent icons */
         .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu {
           display: flex;
           flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          max-width: 560px;
-          width: 100vw; }
+          align-items: center; }
           .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .separator {
             height: 55px;
             background-color: #767676;
-            width: 1px;
+            flex: 0 0 1px;
             margin: 0px 10px 0;
             display: inline-block; }
-          .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item.register {
-            padding: 0; }
-            .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item.register a {
-              padding: 10px 45px; }
-              .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item.register a:hover {
-                border-bottom: 1px solid transparent; }
-          .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a {
-            display: inline-block;
-            transition: 0.2s;
-            border: 1px solid transparent;
-            padding: 12px 20px;
-            color: white;
-            font-weight: bold; }
-            .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a:hover {
-              border-bottom: 1px solid white; }
+          .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item {
+            margin: 0 10px; }
+            .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item.register {
+              padding: 0; }
+              .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item.register a {
+                padding: 10px 45px; }
+                .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item.register a:hover {
+                  border-bottom: 1px solid transparent; }
+            .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a {
+              display: inline-block;
+              transition: 0.2s;
+              border: 1px solid transparent;
+              padding: 12px 20px;
+              color: white;
+              width: -webkit-max-content;
+              width: -moz-max-content;
+              width: max-content;
+              font-weight: bold; }
+              .site-header .row .site-header-inner .main-navigation .menu-primary-container .menu-primary-menu-container .menu .menu-item a:hover {
+                border-bottom: 1px solid white; }
 
 .site-branding {
   display: inline-block; }

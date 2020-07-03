@@ -21,6 +21,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
 
@@ -48,11 +49,13 @@
 						endif; ?>
 					</div><!-- .site-branding -->
 
-					<?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
+					<?php if ( has_nav_menu( 'primary' ) ) : ?>
 					<nav id="site-navigation" class="main-navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-							<i class="fa fa-reorder"></i>
-						</button>
+						<div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" onClick="toggleDrawer()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
 						<div class="menu-primary-container">
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 						</div><!-- .menu-primary-container -->

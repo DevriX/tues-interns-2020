@@ -68,16 +68,5 @@ class Taxonomies {
             'rewrite' => array( 'slug' => 'fuel' ),
             )
         );
-        register_taxonomy( 'car-type', 'vehicles', array( 
-            'hierarchical' => false,
-            'labels' => $this->labels('Type'),
-            'show_ui' => true,
-            'show_admin_column' => true,
-            'show_in_rest' => true,
-            'update_count_callback' => '_update_post_term_count',
-            'query_var' => true,
-            'rewrite' => array( 'slug' => 'car-type' ),
-            )
-        );
     }
 }

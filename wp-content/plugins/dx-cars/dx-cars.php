@@ -8,6 +8,9 @@
  * Author URI:        https://devrix.com
  * Text Domain:       dx-cars
  */
+
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
  include 'class.taxonomies.non-hierarchical.php';
  include 'class.taxonomies.hierarchical.php';
  include 'class.cpt.php';

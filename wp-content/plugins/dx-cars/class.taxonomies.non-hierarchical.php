@@ -5,6 +5,7 @@ class Taxonomies {
     function init() {
         add_action( 'init', array( $this, 'tax_create' ) , 999 );
     }
+
     public function labels($name) {
         $arr = array (
             'name' => _x( $name.'s', 'taxonomy general name' ),
@@ -67,15 +68,16 @@ class Taxonomies {
             'rewrite' => array( 'slug' => 'fuel' ),
             )
         );
-        // register_taxonomy( 'type', 'vehicles', array( 
-        //     'hierarchical' => false,
-        //     'labels' => $this->labels(),
-        //     'show_ui' => true,
-        //     'show_admin_column' => true,
-        //     'update_count_callback' => '_update_post_term_count',
-        //     'query_var' => true,
-        //     'rewrite' => array( 'slug' => 'type' ),
-        //     )
-        // )
+        register_taxonomy( 'car-type', 'vehicles', array( 
+            'hierarchical' => false,
+            'labels' => $this->labels('Type'),
+            'show_ui' => true,
+            'show_admin_column' => true,
+            'show_in_rest' => true,
+            'update_count_callback' => '_update_post_term_count',
+            'query_var' => true,
+            'rewrite' => array( 'slug' => 'car-type' ),
+            )
+        );
     }
 }

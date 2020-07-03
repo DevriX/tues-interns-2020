@@ -8,10 +8,13 @@
  * Author URI:        https://devrix.com
  * Text Domain:       dx-cars
  */
- include 'class.taxonomies.non-hierarchal.php';
+ include 'class.taxonomies.non-hierarchical.php';
+ include 'class.taxonomies.hierarchical.php';
  include 'class.cpt.php';
 
  $cars = new Vehicles;
  $tax = new Taxonomies;
+ $tax1 = new TaxonomiesHierarchical;
  $cars->init();
  $tax->init();
+ $tax1 -> init();

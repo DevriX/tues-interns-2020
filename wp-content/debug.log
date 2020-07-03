@@ -59,3 +59,85 @@ Stack trace:
 [03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 38
 [03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 39
 [03-Jul-2020 08:47:53 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.cpt.php on line 21
+[03-Jul-2020 10:11:34 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.cpt.php on line 21
+[03-Jul-2020 10:13:34 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.cpt.php on line 21
+[03-Jul-2020 10:15:34 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.cpt.php on line 21
+[03-Jul-2020 10:17:34 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.cpt.php on line 21
+[03-Jul-2020 10:19:34 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.cpt.php on line 21
+[03-Jul-2020 10:21:34 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.cpt.php on line 21
+[03-Jul-2020 10:23:35 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.cpt.php on line 21
+[03-Jul-2020 11:25:29 UTC] PHP Warning:  include(class.taxonomies.non-hierarchal.php): failed to open stream: No such file or directory in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 11
+[03-Jul-2020 11:25:29 UTC] PHP Warning:  include(): Failed opening 'class.taxonomies.non-hierarchal.php' for inclusion (include_path='.:/usr/share/php') in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 11
+[03-Jul-2020 11:25:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Taxonomies' not found in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php:15
+Stack trace:
+#0 /var/www/local.carmag.com/wp-settings.php(371): include_once()
+#1 /var/www/local.carmag.com/wp-config.php(80): require_once('/var/www/local....')
+#2 /var/www/local.carmag.com/wp-load.php(37): require_once('/var/www/local....')
+#3 /var/www/local.carmag.com/wp-admin/admin-ajax.php(22): require_once('/var/www/local....')
+#4 {main}
+  thrown in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 15
+[03-Jul-2020 11:27:30 UTC] PHP Warning:  include(class.taxonomies.non-hierarchal.php): failed to open stream: No such file or directory in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 11
+[03-Jul-2020 11:27:30 UTC] PHP Warning:  include(): Failed opening 'class.taxonomies.non-hierarchal.php' for inclusion (include_path='.:/usr/share/php') in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 11
+[03-Jul-2020 11:27:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Taxonomies' not found in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php:15
+Stack trace:
+#0 /var/www/local.carmag.com/wp-settings.php(371): include_once()
+#1 /var/www/local.carmag.com/wp-config.php(80): require_once('/var/www/local....')
+#2 /var/www/local.carmag.com/wp-load.php(37): require_once('/var/www/local....')
+#3 /var/www/local.carmag.com/wp-admin/admin-ajax.php(22): require_once('/var/www/local....')
+#4 {main}
+  thrown in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 15
+[03-Jul-2020 11:29:31 UTC] PHP Warning:  include(class.taxonomies.non-hierarchal.php): failed to open stream: No such file or directory in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 11
+[03-Jul-2020 11:29:31 UTC] PHP Warning:  include(): Failed opening 'class.taxonomies.non-hierarchal.php' for inclusion (include_path='.:/usr/share/php') in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 11
+[03-Jul-2020 11:29:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Taxonomies' not found in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php:15
+Stack trace:
+#0 /var/www/local.carmag.com/wp-settings.php(371): include_once()
+#1 /var/www/local.carmag.com/wp-config.php(80): require_once('/var/www/local....')
+#2 /var/www/local.carmag.com/wp-load.php(37): require_once('/var/www/local....')
+#3 /var/www/local.carmag.com/wp-admin/admin-ajax.php(22): require_once('/var/www/local....')
+#4 {main}
+  thrown in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 15
+[03-Jul-2020 11:31:32 UTC] PHP Warning:  include(class.taxonomies.non-hierarchal.php): failed to open stream: No such file or directory in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 11
+[03-Jul-2020 11:31:32 UTC] PHP Warning:  include(): Failed opening 'class.taxonomies.non-hierarchal.php' for inclusion (include_path='.:/usr/share/php') in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 11
+[03-Jul-2020 11:31:32 UTC] PHP Fatal error:  Uncaught Error: Class 'Taxonomies' not found in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php:15
+Stack trace:
+#0 /var/www/local.carmag.com/wp-settings.php(371): include_once()
+#1 /var/www/local.carmag.com/wp-config.php(80): require_once('/var/www/local....')
+#2 /var/www/local.carmag.com/wp-load.php(37): require_once('/var/www/local....')
+#3 /var/www/local.carmag.com/wp-admin/admin-ajax.php(22): require_once('/var/www/local....')
+#4 {main}
+  thrown in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 15
+[03-Jul-2020 11:32:31 UTC] PHP Warning:  include(class.taxonomies.hierarchical.php): failed to open stream: No such file or directory in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:32:31 UTC] PHP Warning:  include(): Failed opening 'class.taxonomies.hierarchical.php' for inclusion (include_path='.:/usr/share/php') in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:32:31 UTC] PHP Warning:  include(class.taxonomies.hierarchical.php): failed to open stream: No such file or directory in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:32:31 UTC] PHP Warning:  include(): Failed opening 'class.taxonomies.hierarchical.php' for inclusion (include_path='.:/usr/share/php') in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:32:31 UTC] PHP Warning:  include(class.taxonomies.hierarchical.php): failed to open stream: No such file or directory in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:32:31 UTC] PHP Warning:  include(): Failed opening 'class.taxonomies.hierarchical.php' for inclusion (include_path='.:/usr/share/php') in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:32:31 UTC] PHP Warning:  include(class.taxonomies.hierarchical.php): failed to open stream: No such file or directory in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:32:31 UTC] PHP Warning:  include(): Failed opening 'class.taxonomies.hierarchical.php' for inclusion (include_path='.:/usr/share/php') in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:33:20 UTC] PHP Warning:  include(class.taxonomies.hierarchical.php): failed to open stream: No such file or directory in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:33:20 UTC] PHP Warning:  include(): Failed opening 'class.taxonomies.hierarchical.php' for inclusion (include_path='.:/usr/share/php') in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:33:20 UTC] PHP Fatal error:  Uncaught Error: Class 'TaxonomiesHierarchical' not found in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php:17
+Stack trace:
+#0 /var/www/local.carmag.com/wp-settings.php(371): include_once()
+#1 /var/www/local.carmag.com/wp-config.php(80): require_once('/var/www/local....')
+#2 /var/www/local.carmag.com/wp-load.php(37): require_once('/var/www/local....')
+#3 /var/www/local.carmag.com/wp-admin/admin.php(34): require_once('/var/www/local....')
+#4 /var/www/local.carmag.com/wp-admin/index.php(10): require_once('/var/www/local....')
+#5 {main}
+  thrown in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 17
+[03-Jul-2020 11:33:21 UTC] PHP Warning:  include(class.taxonomies.hierarchical.php): failed to open stream: No such file or directory in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:33:21 UTC] PHP Warning:  include(): Failed opening 'class.taxonomies.hierarchical.php' for inclusion (include_path='.:/usr/share/php') in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 12
+[03-Jul-2020 11:33:21 UTC] PHP Fatal error:  Uncaught Error: Class 'TaxonomiesHierarchical' not found in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php:17
+Stack trace:
+#0 /var/www/local.carmag.com/wp-settings.php(371): include_once()
+#1 /var/www/local.carmag.com/wp-config.php(80): require_once('/var/www/local....')
+#2 /var/www/local.carmag.com/wp-load.php(37): require_once('/var/www/local....')
+#3 /var/www/local.carmag.com/wp-admin/admin.php(34): require_once('/var/www/local....')
+#4 /var/www/local.carmag.com/wp-admin/index.php(10): require_once('/var/www/local....')
+#5 {main}
+  thrown in /var/www/local.carmag.com/wp-content/plugins/dx-cars/dx-cars.php on line 17
+[03-Jul-2020 11:40:07 UTC] PHP Notice:  register_taxonomy was called <strong>incorrectly</strong>. The "type" taxonomy "name" property (type) conflicts with an existing property on the REST API Posts Controller. Specify a custom "rest_base" when registering the taxonomy to avoid this error. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.4.0.) in /var/www/local.carmag.com/wp-includes/functions.php on line 5167
+[03-Jul-2020 11:40:08 UTC] PHP Notice:  register_taxonomy was called <strong>incorrectly</strong>. The "type" taxonomy "name" property (type) conflicts with an existing property on the REST API Posts Controller. Specify a custom "rest_base" when registering the taxonomy to avoid this error. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.4.0.) in /var/www/local.carmag.com/wp-includes/functions.php on line 5167
+[03-Jul-2020 11:40:54 UTC] PHP Notice:  register_taxonomy was called <strong>incorrectly</strong>. The "type" taxonomy "name" property (type) conflicts with an existing property on the REST API Posts Controller. Specify a custom "rest_base" when registering the taxonomy to avoid this error. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.4.0.) in /var/www/local.carmag.com/wp-includes/functions.php on line 5167
+[03-Jul-2020 11:41:48 UTC] PHP Notice:  register_taxonomy was called <strong>incorrectly</strong>. The "type" taxonomy "name" property (type) conflicts with an existing property on the REST API Posts Controller. Specify a custom "rest_base" when registering the taxonomy to avoid this error. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.4.0.) in /var/www/local.carmag.com/wp-includes/functions.php on line 5167
+[03-Jul-2020 11:41:50 UTC] PHP Notice:  register_taxonomy was called <strong>incorrectly</strong>. The "type" taxonomy "name" property (type) conflicts with an existing property on the REST API Posts Controller. Specify a custom "rest_base" when registering the taxonomy to avoid this error. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.4.0.) in /var/www/local.carmag.com/wp-includes/functions.php on line 5167

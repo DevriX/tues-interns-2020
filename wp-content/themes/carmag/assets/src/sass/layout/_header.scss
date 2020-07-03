@@ -26,6 +26,7 @@
 				.site-title {
 					font-weight: bold;
 					font-size: 2em;
+					margin: 0;
 
 					a {
 						color: white;
@@ -37,6 +38,10 @@
 							color: $color-primary;
 						}
 					}
+				}
+
+				.site-description {
+					display: none;
 				}
 			}
 

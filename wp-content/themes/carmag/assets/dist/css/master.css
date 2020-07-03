@@ -5269,6 +5269,17 @@ readers do not read off random characters that represent icons */
           width: 100%;
           border: 0; } }
 
+.view {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.list {
+  flex-direction: column; }
+  .list .card {
+    width: 100%; }
+
 .button {
   border: none;
   padding: 10px 32px;
@@ -5307,7 +5318,8 @@ readers do not read off random characters that represent icons */
   background-size: cover;
   width: 350px;
   height: 280px;
-  position: relative; }
+  position: relative;
+  margin: 1rem; }
   .card .card-info {
     position: absolute;
     bottom: 0;

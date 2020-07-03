@@ -24,12 +24,12 @@ get_header(); ?>
 
 							?>
 						</header><!-- .page-header -->
-						<div class="row padded">
+						<div class="view">
 						<?php
 						/* Start the Loop */
 						while ( have_posts() ) : the_post();
 
-							get_template_part( 'template-parts/content', 'grid' );
+							get_template_part( 'template-parts/content', 'card' );
 
 						endwhile;
 

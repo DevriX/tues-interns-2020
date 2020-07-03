@@ -5166,6 +5166,8 @@ readers do not read off random characters that represent icons */
           .site-header .row .site-header-inner .site-branding .site-title a::after {
             content: ".";
             color: #ff5722; }
+      .site-header .row .site-header-inner .site-branding .site-description {
+        display: none; }
       .site-header .row .site-header-inner .main-navigation .menu-toggle {
         display: none;
         flex-direction: column;

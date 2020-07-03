@@ -5158,7 +5158,8 @@ readers do not read off random characters that represent icons */
       align-items: center; }
       .site-header .row .site-header-inner .site-branding .site-title {
         font-weight: bold;
-        font-size: 2em; }
+        font-size: 2em;
+        margin: 0; }
         .site-header .row .site-header-inner .site-branding .site-title a {
           color: white;
           display: inline-block;

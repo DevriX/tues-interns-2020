@@ -5285,7 +5285,8 @@ readers do not read off random characters that represent icons */
   padding: 10px 32px;
   font-size: 1rem;
   font-weight: bold;
-  transition: 0.3s; }
+  transition: 0.3s;
+  outline: none; }
   .button:hover {
     color: black; }
   .button.primary {
@@ -5326,7 +5327,7 @@ readers do not read off random characters that represent icons */
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 20px; }
+    padding: 20px 25px 0; }
     .card .card-info * {
       margin: 0; }
     .card .card-info .info-title {
@@ -5341,5 +5342,20 @@ readers do not read off random characters that represent icons */
       font-family: Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
       .card .card-info .info-price::first-letter {
         color: #ff5722; }
+    .card .card-info .info-readmore {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      border-top: 1px solid rgba(255, 255, 255, 0.75);
+      padding: 0;
+      width: 100%;
+      text-align: left;
+      padding: 10px 0;
+      margin-top: 15px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.75); }
+      .card .card-info .info-readmore i {
+        font-size: 19px; }
 
 /*# sourceMappingURL=master.css.map */

@@ -5301,4 +5301,33 @@ readers do not read off random characters that represent icons */
     .section-fullwidth {
       padding: calc(80px + 85px) 0 80px; } }
 
+.card {
+  background-image: url("https://picsum.photos/350/280");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 280px;
+  position: relative; }
+  .card .card-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px; }
+    .card .card-info * {
+      margin: 0; }
+    .card .card-info .info-title {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 29px; }
+    .card .card-info .info-price {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      color: #acacaa;
+      font-family: Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+      .card .card-info .info-price::first-letter {
+        color: #ff5722; }
+
 /*# sourceMappingURL=master.css.map */

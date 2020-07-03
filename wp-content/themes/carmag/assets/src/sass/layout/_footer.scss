@@ -1,0 +1,37 @@
+.site-info {
+    display : flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $color-primary-dark;
+    padding: 15px 0;
+    width: 100%;
+
+    
+    .footer-icons {
+        a {
+            margin: 0 13px;
+            color: white;
+            font-size: 20px;
+        }
+        
+    }
+
+    .footer-text {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 23px;
+        color: rgba(255, 255, 255, 0.5);
+
+        a {
+            color: $color-primary;
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .site-info {
+        display : flex;
+        flex-direction: column;
+    }
+}

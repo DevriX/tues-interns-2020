@@ -58,3 +58,4 @@ Stack trace:
 [03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 37
 [03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 38
 [03-Jul-2020 08:36:10 UTC] PHP Notice:  Undefined variable: name in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.taxonomies.non-hierarchal.php on line 39
+[03-Jul-2020 08:47:53 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /var/www/local.carmag.com/wp-content/plugins/dx-cars/class.cpt.php on line 21

@@ -49,16 +49,15 @@ class Vehicles {
     	// Cycle through the $events_meta array.
     	// Note, in this example we just have one item, but this is helpful if you have multiple.
     	foreach ( $events_meta as $key => $value ) {
-
             // Don't store custom data twice
     		if ( 'revision' === $post->post_type ) {
     			return;
     		}
 
             switch( $key ) {
-                case 'car-year': if( strcmp( "1769", $value ) > 0 || strcmp( "2020", $value ) < 0 ) return; break;
-                case 'car-millage':
-                case 'car-price': if( strcmp( "0", $value ) > 0 ) return; break;
+                case 'car-year': if( strcmp( "1769", $value ) > 0 || strcmp( get_the_date('Y'), $value ) < 0 ) wp_die('Invalid year.'); break;
+                case 'car-millage': if( strcmp( "0", $value ) > 0 ) wp_die('Invalid millage.'); break;
+                case 'car-price': if( strcmp( "0", $value ) > 0 ) wp_die('Invalid price.'); break;
             }
 
     		if ( get_post_meta( $post_id, $key, false ) ) {

@@ -40,10 +40,10 @@ class Vehicles {
     	// Now that we're authenticated, time to save the data.
     	// This sanitizes the data from the field and saves it into an array $events_meta.
         $events_meta = array(
-            'car-year'    => sanitize_text_field( isset($_POST['car-year']) ? $_POST['car-year'] : null ),
-            'car-millage' => sanitize_text_field( isset($_POST['car-millage']) ? $_POST['car-millage'] : null ),
-            'car-price'   => sanitize_text_field( isset($_POST['car-price']) ? $_POST['car-price'] : null ),
-            'car-image'   => sanitize_text_field( isset($_POST['car-image']) ? $_POST['car-image'] : null ),
+            'car-year'    => sanitize_text_field( isset( $_POST['car-year'] ) ? $_POST['car-year'] : null ),
+            'car-millage' => sanitize_text_field( isset( $_POST['car-millage'] ) ? $_POST['car-millage'] : null ),
+            'car-price'   => sanitize_text_field( isset( $_POST['car-price'] ) ? $_POST['car-price'] : null ),
+            'car-image'   => sanitize_text_field( isset( $_POST['car-image'] ) ? $_POST['car-image'] : null ),
         );
 
     	// Cycle through the $events_meta array.
@@ -55,10 +55,10 @@ class Vehicles {
     			return;
     		}
 
-            switch($key) {
-                case 'car-year': if(strcmp("1769", $value) > 0 || strcmp("2020", $value) < 0) return; break;
+            switch( $key ) {
+                case 'car-year': if( strcmp( "1769", $value ) > 0 || strcmp( "2020", $value ) < 0 ) return; break;
                 case 'car-millage':
-                case 'car-price': if(strcmp("0", $value) > 0) return; break;
+                case 'car-price': if( strcmp( "0", $value ) > 0 ) return; break;
             }
 
     		if ( get_post_meta( $post_id, $key, false ) ) {

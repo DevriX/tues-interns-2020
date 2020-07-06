@@ -10,3 +10,8 @@
  */
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
+include 'class.cm.php';
+
+$users = new Users;
+$users->init();

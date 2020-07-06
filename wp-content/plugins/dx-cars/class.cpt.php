@@ -37,7 +37,6 @@ class Vehicles {
     	if ( ! current_user_can( 'edit_post', $post_id ) ) {
     		return $post_id;
     	}
-
     	// Now that we're authenticated, time to save the data.
     	// This sanitizes the data from the field and saves it into an array $events_meta.
         $events_meta = array(
@@ -55,6 +54,12 @@ class Vehicles {
     		if ( 'revision' === $post->post_type ) {
     			return;
     		}
+
+            switch($key) {
+                case 'car-year': if(strcmp("1769", $value) > 0 || strcmp("2020", $value) < 0) return; break;
+                case 'car-millage':
+                case 'car-price': if(strcmp("0", $value) > 0) return; break;
+            }
 
     		if ( get_post_meta( $post_id, $key, false ) ) {
     			// If the custom field already has a value, update it.

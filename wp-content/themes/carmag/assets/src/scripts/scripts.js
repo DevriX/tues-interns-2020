@@ -34,3 +34,11 @@ const loginLink = document.querySelectorAll(".login")[0];
 if (loginLink) {
 	loginLink.before(separator);
 }
+
+const faqFields = document.querySelectorAll(".faq-field");
+faqFields.forEach((field) => {
+	field.addEventListener("click", () => {
+		field.querySelector(".field-heading").classList.toggle("opened");
+		field.querySelector(".field-content").classList.toggle("opened");
+	});
+});

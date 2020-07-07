@@ -1,0 +1,48 @@
+.seller-card {
+	display: flex;
+	flex-flow: column;
+	background-color: rgb(247, 247, 247);
+	justify-content: space-between;
+	height: 100%;
+
+	.seller-map {
+		height: 100%;
+		position: relative;
+		flex-grow: 1;
+		padding-bottom: 50px;
+		min-height: 200px;
+		.gmnoprint {
+			display: none;
+		}
+	}
+
+	.seller-avatar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		border-radius: 50%;
+		max-width: 125px;
+		width: 50%;
+		margin: 0 auto;
+		display: block;
+		transform: translateY(-50%);
+	}
+
+	.seller-info {
+		padding: 32px;
+		position: relative;
+		p {
+			font-size: 1.5rem;
+			font-weight: bold;
+			text-align: center;
+			margin: 48px 0 24px;
+		}
+
+		button {
+			width: 100%;
+		}
+	}
+	@media (min-width: $breakpoint-medium) {
+	}
+}

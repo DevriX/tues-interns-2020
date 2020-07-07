@@ -1,0 +1,105 @@
+.carousel {
+	height: 450px;
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	margin-bottom: 16px;
+	@media (max-width: 1024px) {
+		height: 600px;
+	}
+	@media (max-width: $breakpoint-medium) {
+		height: 500px;
+	}
+	@media (max-width: $breakpoint-small) {
+		height: 400px;
+	}
+	@media (max-width: $breakpoint-mobile) {
+		height: 200px;
+	}
+}
+
+.carousel-image {
+	min-width: 800px;
+	background-color: #afafaf;
+	transition: 0.75s;
+	transform: translateX(calc(-width));
+	display: block;
+	object-fit: cover;
+	height: auto;
+	@media (max-width: 1024px) {
+		min-width: 100vw;
+	}
+}
+
+.arrow {
+	position: absolute;
+	top: 0;
+	width: 40px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	transition: 0.3s;
+	cursor: pointer;
+	div {
+		width: 25px;
+		height: 25px;
+		border-top: 3px solid white;
+		border-right: 3px solid white;
+		transform: rotate(45deg);
+	}
+
+	&:hover {
+		background-color: rgba(black, 0.5);
+	}
+
+	&.forward {
+		right: 0;
+	}
+
+	&.backward {
+		transform: rotate(180deg);
+		left: 0;
+	}
+}
+
+.image-num {
+	position: absolute;
+	bottom: 16px;
+	left: 50%;
+	font-size: 1.2rem;
+	margin: 0;
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+	transform: translatex(-50%);
+
+	@media (max-width: 800px) {
+		font-size: 1rem;
+	}
+}
+
+.all-images {
+	max-width: fit-content;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	gap: 16px;
+	div {
+		min-width: 120px;
+		height: 80px;
+		margin: 0;
+		cursor: pointer;
+		img {
+			width: 120px;
+			display: block;
+			height: 80px;
+			object-fit: cover;
+			transition: 0.5s;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		display: none;
+	}
+}

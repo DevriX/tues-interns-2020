@@ -4,7 +4,6 @@
 // and in the darkness bind them.
 // The order of files include is important. Dont change it.
 
-
 // All general settings and utils
 @import "base/settings";
 @import "base/mixins";
@@ -41,6 +40,8 @@
 @import "components/comments";
 @import "components/widgets";
 @import "components/forms";
+@import "components/carousel";
+@import "components/seller-card";
 
 // If there is anything specific for a page it should be in this folder
 @import "pages/404";

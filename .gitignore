@@ -18,6 +18,8 @@
 /wp-signup.php
 /wp-trackback.php
 /xmlrpc.php
+/wp-content/uploads/
+/wp-content/debug.log
 
 # Mac
 .DS_Store

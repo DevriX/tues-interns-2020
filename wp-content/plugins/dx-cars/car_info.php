@@ -13,6 +13,15 @@
     </tr>
     <tr>
         <td><?php _e( 'Photo:' ) ?></td>
-        <td><input type="image" name="car-image" value="<?php echo( sanitize_text_field( get_post_meta( get_the_ID(), __( 'car-image' ), true ) ) ) ?>"></td>
+        <td><input type="file" name="car-images[]" value="" multiple></td>
+    </tr>
+    <tr>
+        <td><?php _e( 'Uploaded photo<br>(might need page refresh):' ) ?></td>
+        <?php
+            $images = ( array )json_decode( get_post_meta( get_the_ID(), __( 'car-images' ), true ) );
+            foreach ( $images as $image ) {
+                echo( '<td> <img src="' . $image . '" alt=""></td>' );
+            }
+        ?>
     </tr>
 </table>

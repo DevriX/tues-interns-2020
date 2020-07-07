@@ -32,6 +32,10 @@ class Vehicles {
         include 'car_info.php';
     }
 
+    function remove_message( $location ) {
+        return remove_query_arg( 'message', $location);
+    }
+
     function car_info_save_meta( $post_id, $post ) {
     	// Return if the user doesn't have edit permissions.
     	if ( ! current_user_can( 'edit_post', $post_id ) ) {
@@ -43,7 +47,6 @@ class Vehicles {
             'car-year'    => sanitize_text_field( isset( $_POST['car-year'] ) ? $_POST['car-year'] : null ),
             'car-millage' => sanitize_text_field( isset( $_POST['car-millage'] ) ? $_POST['car-millage'] : null ),
             'car-price'   => sanitize_text_field( isset( $_POST['car-price'] ) ? $_POST['car-price'] : null ),
-            'car-image'   => sanitize_text_field( isset( $_POST['car-image'] ) ? $_POST['car-image'] : null ),
         );
 
     	// Cycle through the $events_meta array.
@@ -54,8 +57,12 @@ class Vehicles {
     			return;
     		}
 
+            if ($value == null) {
+                return;
+            }
+
             switch( $key ) {
-                case 'car-year': if( strcmp( "1769", $value ) > 0 || strcmp( get_the_date('Y'), $value ) < 0 ) wp_die('Invalid year.'); break;
+                case 'car-year': if( strcmp( "1769", $value ) > 0 || strcmp( "2020", $value ) < 0 ) wp_die('Invalid year'); break;
                 case 'car-millage': if( strcmp( "0", $value ) > 0 ) wp_die('Invalid millage.'); break;
                 case 'car-price': if( strcmp( "0", $value ) > 0 ) wp_die('Invalid price.'); break;
             }

@@ -9,80 +9,96 @@
 
 get_header(); ?>
 
-	<section class="section-fullwidth section-main">
+	<section class="section-fullwidth section-main single-vehicle">
 		<div class="row">
 			<div class="columns small-12 medium-12 large-8">
-				<div id="primary" class="content-area">
-					<div class="carousel">
-                        <img
+                <div class="carousel">
+                    <img
                         class ="carousel-image"
-                            src="https://www.sticky.digital/wp-content/uploads/2013/11/img-6.jpg"
-                            alt=""
-                        />
-                        <img
+                        src="https://mobistatic2.focus.bg/mobile/photosmob/684/1/big/11589622941723684_g.jpg"
+                        alt=""
+                    />
+                    <img
                         class ="carousel-image"
-                            src="https://r-cf.bstatic.com/images/hotel/max1024x768/468/46842174.jpg"
-                            alt=""
-                        />
-                        <img
+                        src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_tj.jpg"
+                        alt=""
+                    />
+                    <img
                         class ="carousel-image"
-                            src="https://imgcomfort.com/Userfiles/Upload/images/illustration-geiranger.jpg"
-                            alt=""
-                        />
-                        <img
+                        src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_wV.jpg"
+                        alt=""
+                    />
+                    <img
                         class ="carousel-image"
-                            src="https://www.tandemconstruction.com/sites/default/files/styles/project_slider_main/public/images/project-images/IMG-Fieldhouse-10.jpg?itok=Whi8hHo9"
-                            alt=""
-                        />
-                        <img
-                            class ="carousel-image"
-                            src="https://www.sticky.digital/wp-content/uploads/2013/11/img-6.jpg"
-                            alt=""
-                        />
-                    
-                        <p class="image-num">1/7</p>
-                        <div class="arrow forward">
-                            <div></div>
-                        </div>
-                        <div class="arrow backward">
-                            <div></div>
-                        </div>
+                        src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_3I.jpg"
+                        alt=""
+                    />
+                    <p class="image-num">1/7</p>
+                    <div class="arrow forward">
+                        <div></div>
                     </div>
-                    <div class="all-images">
+                    <div class="arrow backward">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="all-images">
                     <div>
                         <img
-                            src="https://r-cf.bstatic.com/images/hotel/max1024x768/468/46842174.jpg"
+                            src="https://mobistatic2.focus.bg/mobile/photosmob/684/1/big/11589622941723684_g.jpg"
                             alt=""
                         />
                     </div>
                     <div>
                         <img
-                            src="https://imgcomfort.com/Userfiles/Upload/images/illustration-geiranger.jpg"
+                            src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_tj.jpg"
                             alt=""
                         />
                     </div>
                     <div>
                         <img
-                            src="https://www.tandemconstruction.com/sites/default/files/styles/project_slider_main/public/images/project-images/IMG-Fieldhouse-10.jpg?itok=Whi8hHo9"
+                            src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_wV.jpg"
                             alt=""
                         />
                     </div>
                     <div>
                         <img
-                            src="https://www.sticky.digital/wp-content/uploads/2013/11/img-6.jpg"
+                            src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_3I.jpg"
                             alt=""
                         />
                     </div>
-                    <div>
-                        <img
-                            src="https://imgcomfort.com/Userfiles/Upload/images/illustration-geiranger.jpg"
-                            alt=""
-                        />
-                    </div>
-                    </div>
-				</div><!-- #primary -->
+                </div>
+                <div class="vehicle-information">
+                    <h2>Polo Comfortline 1.0 EVO BMT</h2>
+                    <ul class="vehicle-properties">
+                        <li>
+                            <i class="fas fa-calendar-alt"></i>
+                            <p>2020</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-gas-pump">&#xf52f;</i>
+                            <p>Petrol</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-road"></i>
+                            <p>200 km</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-tachometer-alt"></i>
+                            <p>650 hp</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-cogs"></i>
+                            <p>Manual</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-car"></i>
+                            <p>Sedan</p>
+                        </li>
+                    </ul> 
+                    <p class="vehicle-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
 			</div><!-- .columns medium-8 -->
-			<div class="columns small-12 medium-12 large-4">
+			<div class="columns small-12 medium-12 large-4 ">
                 <div class="seller-card">
                     <div class="seller-map" id="map"></div>
                     <div class="seller-info">
@@ -92,7 +108,7 @@ get_header(); ?>
                     </div>
                 </div>
 			</div><!-- .columns medium-4 -->
-		</div><!-- .row -->
+		</div>
 	</section><!-- .section-fullwidth section-main -->
 
 <?php

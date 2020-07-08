@@ -3,8 +3,8 @@
 /**
  * Get the latest version of the master branch
  */
-echo shell_exec( 'git fetch origin master; ');
-echo shell_exec( 'git checkout master; ');
+// echo shell_exec( 'git fetch origin master; ');
+// echo shell_exec( 'git checkout master; ');
 echo shell_exec( 'git pull origin master; ');
 echo shell_exec( 'wp cache flush ');
 

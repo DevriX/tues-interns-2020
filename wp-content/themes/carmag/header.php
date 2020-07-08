@@ -21,11 +21,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<<<<<<< HEAD
-<link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
-=======
 <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
->>>>>>> master
 <?php wp_head(); ?>
 </head>
 

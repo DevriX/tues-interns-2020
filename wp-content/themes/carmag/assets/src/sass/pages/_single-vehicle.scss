@@ -1,0 +1,48 @@
+.single-vehicle {
+	.vehicle-information {
+		box-sizing: border-box;
+		color: black;
+		padding: 32px 0;
+		flex-wrap: wrap;
+		margin: auto;
+
+		h2 {
+			font-size: 2rem;
+		}
+	}
+
+	.vehicle-properties {
+		color: black;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		max-width: 300px;
+		margin: 48px auto;
+
+		i {
+			font-size: 1.5rem;
+			color: black;
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+			padding: 8px;
+			margin: 4px;
+			border-bottom: 1px solid black;
+			max-width: 140px;
+			flex-grow: 1;
+		}
+
+		p {
+			margin: 0 0 0 16px;
+		}
+	}
+	.vehicle-description {
+		padding: 0 32px;
+		color: $color-primary-dark;
+	}
+	.seller-card {
+		grid-row: 2;
+	}
+}

@@ -2,13 +2,14 @@
 class Users {
     function init() {
         // add_filter( 'user_contactmethods', array( $this, 'add_custom_box_user' ), 10, 1 );
-        add_action( 'show_user_profile', 'renderProfileFields' );
-        add_action( 'edit_user_profile', 'renderProfileFields' );
+        add_action( 'show_user_profile', array( $this, 'render_profile_fields' ) );
+        add_action( 'edit_user_profile', array( $this, 'render_profile_fields' ) );
         // validate profile fields
-        add_action( 'user_profile_update_errors', 'validateProfileFields', 10, 3 );
+        add_action( 'user_profile_update_errors', array( $this, 'validate_profile_phone' ), 10, 3 );
+        add_action( 'user_profile_update_errors', array( $this, 'validate_profile_address' ), 10, 3 );
         // save profile fields
-        add_action( 'edit_user_profile_update', 'saveProfileFields' );
-        add_action( 'personal_options_update', 'saveProfileFields' );
+        // add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ), 10 );
+        // add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
     }
     // function add_custom_box_user($contact_methods) {
     //     $new_methods = array(
@@ -30,7 +31,7 @@ class Users {
 
     //     return $contact_methods;
     // }
-    function renderProfileFields( WP_User $user ) { ?>
+    function render_profile_fields( $user ) { ?>
 
         <h3>More Information</h3>
         <table class="form-table">
@@ -51,18 +52,35 @@ class Users {
     
     <?php }
 
-    function validateProfileFields( WP_Error &$errors, $update, &$user ) {
+    function validate_profile_phone( &$errors, $update, &$user ) {
     // validate input fields
         if ( !empty( $_POST['phone'] ) && strlen( $_POST['phone'] ) > 10 && !empty( $_POST['phone'] ) )
             $errors->add( 'phone', "<strong>ERROR</strong>: The maximum phone length is 10 characters." );
+        
+        if( !empty( $errors ) )
+            return $errors;
+        else {
+            add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ) );
+            add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
+        }
 
-        if ( !empty( $_POST['address'] ) && strlen( $_POST['address'] ) > 255 && !empty( $_POST['address'] ) )
-            $errors->add( 'address', "<strong>ERROR</strong>: The maximum address length is 255 characters." ); //Unsure what address validation to use 
-
-        return $errors;
     }
 
-    function saveProfileFields( $id ) {
+    function validate_profile_address( &$errors, $update, &$user ) {
+        // validate input fields
+            if ( !empty( $_POST['address'] ) && strlen( $_POST['address'] ) > 255 && !empty( $_POST['address'] ) )
+                $errors->add( 'address', "<strong>ERROR</strong>: The maximum address length is 255 characters." ); //test validation; TO DO define proper validation
+            
+            if( !empty( $errors ) )
+                return $errors;
+            else {
+                add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ) );
+                add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
+            }
+    
+        }
+
+    function save_profile_fields( $id ) {
     //  save input fields values
         if ( !current_user_can( 'edit_user', $id ) )
             return false;

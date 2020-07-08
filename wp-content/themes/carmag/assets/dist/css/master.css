@@ -5138,6 +5138,22 @@ readers do not read off random characters that represent icons */
   position: static;
   width: auto; }
 
+/*!
+ * Font Awesome Pro 5.0.0 by @fontawesome - http://fontawesome.com
+ * License - http://fontawesome.com/license (Commercial License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/fa-solid-900.eot");
+  src: url("../fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.woff") format("woff"), url("../fonts/fa-solid-900.ttf") format("truetype"), url("../fonts/fa-solid-900.svg#fontawesome") format("svg"); }
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 900; }
+
 .row-narrow {
   max-width: 800px; }
 
@@ -5300,5 +5316,50 @@ readers do not read off random characters that represent icons */
   @media (min-width: 640px) {
     .section-fullwidth {
       padding: calc(80px + 85px) 0 80px; } }
+
+.section-faq .row .column, .section-faq .row .columns {
+  margin: 0 auto; }
+  .section-faq .row .column .content-area, .section-faq .row .columns .content-area {
+    background-color: white;
+    padding: 30px 25px; }
+    .section-faq .row .column .content-area .faq-heading, .section-faq .row .columns .content-area .faq-heading {
+      text-align: center;
+      font-family: Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 50px; }
+    .section-faq .row .column .content-area .faq-field, .section-faq .row .columns .content-area .faq-field {
+      cursor: pointer;
+      background-color: #f5f5f5;
+      margin: 15px 0;
+      padding: 10px 20px;
+      color: #2c2c2c; }
+      .section-faq .row .column .content-area .faq-field .field-heading, .section-faq .row .columns .content-area .faq-field .field-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .section-faq .row .column .content-area .faq-field .field-heading span, .section-faq .row .columns .content-area .faq-field .field-heading span {
+          font-size: 17px; }
+        .section-faq .row .column .content-area .faq-field .field-heading i, .section-faq .row .columns .content-area .faq-field .field-heading i {
+          transition: 0.2s;
+          font-size: 23px;
+          padding-left: 15px;
+          color: #5f5f5f; }
+        .section-faq .row .column .content-area .faq-field .field-heading.opened i, .section-faq .row .columns .content-area .faq-field .field-heading.opened i {
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg); }
+      .section-faq .row .column .content-area .faq-field .field-content, .section-faq .row .columns .content-area .faq-field .field-content {
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s; }
+        .section-faq .row .column .content-area .faq-field .field-content.opened, .section-faq .row .columns .content-area .faq-field .field-content.opened {
+          margin-top: 20px;
+          opacity: 1;
+          max-height: 100vh;
+          visibility: visible; }
+
+.section-contest .row .column, .section-contest .row .columns {
+  padding: 0 20px; }
 
 /*# sourceMappingURL=master.css.map */

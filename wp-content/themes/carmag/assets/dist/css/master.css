@@ -5313,10 +5313,17 @@ readers do not read off random characters that represent icons */
 .section-fullwidth {
   padding: calc(80px + 85px) 0 80px;
   position: relative; }
+  .section-fullwidth .row .column, .section-fullwidth .row .columns {
+    padding: 0 20px; }
   @media (min-width: 640px) {
     .section-fullwidth {
       padding: calc(80px + 85px) 0 80px; } }
 
+.section-faq .row .column, .section-faq .row .columns {
+  margin: 0 auto;
+  padding: 30px 25px; }
+  .section-faq .row .column .content-area, .section-faq .row .columns .content-area {
+    background-color: white; }
 .carousel {
   height: 450px;
   position: relative;
@@ -5497,6 +5504,8 @@ readers do not read off random characters that represent icons */
           max-height: 100vh;
           visibility: visible; }
 
+<<<<<<< HEAD
+=======
 .single-vehicle .vehicle-information {
   box-sizing: border-box;
   color: black;
@@ -5534,4 +5543,5 @@ readers do not read off random characters that represent icons */
 .single-vehicle .seller-card {
   grid-row: 2; }
 
+>>>>>>> master
 /*# sourceMappingURL=master.css.map */

@@ -178,9 +178,10 @@ function carmag_scripts() {
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/dist/scripts/bundle' . $suffix . '.js', array( "jquery" ), DX_ASSETS_VERSION, true );
 	// Localize the script with new data
 	$localize_scripts = array(
-		'MAPS_API_KEY' => MAPS_API_KEY,
+        'MAPS_API_KEY' => MAPS_API_KEY,
+        'ADDRESS' => 'Sofia'
 	);
-	wp_localize_script( 'scripts', 'MAPS_API_KEY', $localize_scripts );
+	wp_localize_script( 'scripts', 'CONF_OBJECT', $localize_scripts );
 
 	if ( is_singular( 'vehicles' ) ) {
 		wp_enqueue_script( 'singe-vehicle', '//maps.googleapis.com/maps/api/js?key=' . MAPS_API_KEY, array( 'jquery' ), DX_ASSETS_VERSION, false ) ;

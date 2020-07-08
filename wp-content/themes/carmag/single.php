@@ -14,7 +14,6 @@ get_header(); ?>
 			<div class="columns small-12 medium-8">
 				<div id="primary" class="content-area">
 					<main id="main" class="site-main">
-
 					<?php
 					while ( have_posts() ) : the_post();
 

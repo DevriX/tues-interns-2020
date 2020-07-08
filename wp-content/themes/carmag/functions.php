@@ -11,6 +11,10 @@
 $master_modified_time = filemtime( get_theme_file_path() . '/assets/dist/css/master.min.css' );
 define( 'DX_ASSETS_VERSION', $master_modified_time . '-0000' );
 
+if ( ! defined( 'MAPS_API_KEY' ) ) {
+	define( 'MAPS_API_KEY', 'AIzaSyBuFZT476vDlN3Tf7wjLRt-WiX3pyIFu1Y' );
+}
+
 /**
  * Implement the Custom Header feature.
  */
@@ -172,7 +176,15 @@ function carmag_scripts() {
 
 	// And the only JS file that is build with Gulp
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/dist/scripts/bundle' . $suffix . '.js', array( "jquery" ), DX_ASSETS_VERSION, true );
-    wp_localize_script('scripts', 'MAPS_API_KEY', MAPS_API_KEY );
+	// Localize the script with new data
+	$localize_scripts = array(
+		'MAPS_API_KEY' => MAPS_API_KEY,
+	);
+	wp_localize_script( 'scripts', 'MAPS_API_KEY', $localize_scripts );
+
+	if ( is_singular( 'vehicles' ) ) {
+		wp_enqueue_script( 'singe-vehicle', '//maps.googleapis.com/maps/api/js?key=' . MAPS_API_KEY, array( 'jquery' ), DX_ASSETS_VERSION, false ) ;
+    }
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -187,10 +199,3 @@ function carmag_remove_html_margin() {
 	remove_action( 'wp_head', '_admin_bar_bump_cb' );
 }
 add_action( 'get_header', 'carmag_remove_html_margin' );
-
-function google_maps_script() {
-    if ( is_single() && 'post' == get_post_type() ) {
-            wp_enqueue_script('singe_vehicle', '//maps.googleapis.com/maps/api/js?key=' . MAPS_API_KEY, NULL, '1.0', false);
-    }
-}
-add_action('wp_enqueue_scripts', 'google_maps_script');

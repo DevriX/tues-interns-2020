@@ -1,16 +1,17 @@
 const ADDRESS = "Sofia";
 const mapPlace = document.getElementById("map");
 const displayMap = (address) => {
-	const urlAddress = encodeURI(address);
+const urlAddress = encodeURI(address);
+const googleMapsAPI = MAPS_API_KEY;
 
-	// TO DO: get user location from db
+// TO DO: get user location from db
 
 	fetch(
-		`https://maps.googleapis.com/maps/api/geocode/json?address=${urlAddress}&key=${MAPS_API_KEY}`
+		`https://maps.googleapis.com/maps/api/geocode/json?address=${urlAddress}&key=${googleMapsAPI}`
 	)
 		.then((res) => res.json())
 		.then((json) => {
-			const coordinates = json.results[0].geometry.location;
+			
 			const map = new google.maps.Map(mapPlace, {
 				center: coordinates,
 				zoom: 12,

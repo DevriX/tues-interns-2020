@@ -5360,6 +5360,23 @@ readers do not read off random characters that represent icons */
     .section-fullwidth {
       padding: calc(80px + 85px) 0 80px; } }
 
+.pagination {
+  min-width: 365px;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .pagination .pagination-links {
+    padding: 0 10px;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; }
+    .pagination .pagination-links a {
+      margin: 0 .75rem;
+      color: #767373; }
+    .pagination .pagination-links i {
+      font-size: 1.5rem; }
+
 .carousel {
   height: 450px;
   position: relative;

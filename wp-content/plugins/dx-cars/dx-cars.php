@@ -14,10 +14,13 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
  include 'class.taxonomies.non-hierarchical.php';
  include 'class.taxonomies.hierarchical.php';
  include 'class.cpt.php';
+ include 'class.search.php';
 
  $cars = new Vehicles;
  $tax = new Taxonomies;
  $tax1 = new TaxonomiesHierarchical;
+ $search = new Search;
  $cars->init();
  $tax->init();
  $tax1 -> init();
+ $search -> init();

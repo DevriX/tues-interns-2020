@@ -1,9 +1,8 @@
-const ADDRESS = "Sofia";
+const { ADDRESS, MAPS_API_KEY } = CONF_OBJECT;
 const mapPlace = document.getElementById("map");
+
 const displayMap = (address) => {
 	const urlAddress = encodeURI(address);
-
-	// TO DO: get user location from db
 
 	fetch(
 		`https://maps.googleapis.com/maps/api/geocode/json?address=${urlAddress}&key=${MAPS_API_KEY}`
@@ -19,6 +18,9 @@ const displayMap = (address) => {
 				position: coordinates,
 				map,
 			});
+		})
+		.catch((err) => {
+			throw new Error(err);
 		});
 };
 if (mapPlace) {

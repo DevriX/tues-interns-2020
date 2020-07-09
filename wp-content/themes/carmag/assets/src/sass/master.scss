@@ -42,9 +42,13 @@
 @import "components/widgets";
 @import "components/forms";
 @import "components/card";
+@import "components/carousel";
+@import "components/seller-card";
 
 // If there is anything specific for a page it should be in this folder
 @import "pages/404";
 @import "pages/single";
 @import "pages/search";
 @import "pages/homepage";
+@import "pages/faq";
+@import "pages/single-vehicle";

@@ -19,9 +19,13 @@ get_header(); ?>
 					if ( have_posts() ) : ?>
 
 						<header class="page-header">
+						<h1 class="page-title">
+							Results for <span class="colored-title">McLaren</span>
+						</h1>
 							<?php
-								the_archive_title( '<h1 class="page-title">', '</h1>' );
+								// the_archive_title( '<h1 class="page-title">', '</h1>' );
 
+								get_template_part( 'template-parts/content', 'info');
 							?>
 						</header><!-- .page-header -->
 						<div class="view">
@@ -52,3 +56,4 @@ get_header(); ?>
 
 <?php
 get_footer();
+

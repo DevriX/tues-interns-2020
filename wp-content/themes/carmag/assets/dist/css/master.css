@@ -5269,11 +5269,42 @@ readers do not read off random characters that represent icons */
           width: 100%;
           border: 0; } }
 
-.view {
+.page-header {
+  font-family: sans-serif; }
+  .page-header .page-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: black; }
+  .page-header .colored-title {
+    color: #ff5722; }
+
+.results-info {
+  background: #d2d1d1;
+  width: 100%;
   display: flex;
-  flex-flow: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem; }
+  .results-info .left,
+  .results-info .right {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
+    .results-info .left *,
+    .results-info .right * {
+      margin: 0 0.5rem; }
+  .results-info a {
+    color: #00bcd4;
+    text-decoration: underline; }
+
+.view {
+  display: inline-flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin: -1rem 0 -1rem;
+  width: calc(100% + $gap); }
+  .view .card {
+    margin: 1rem 0 0 1rem; }
 
 .list {
   flex-direction: column; }
@@ -5319,8 +5350,7 @@ readers do not read off random characters that represent icons */
   background-size: cover;
   width: 350px;
   height: 280px;
-  position: relative;
-  margin: 1rem; }
+  position: relative; }
   .card .card-info {
     position: absolute;
     bottom: 0;
@@ -5348,7 +5378,6 @@ readers do not read off random characters that represent icons */
       align-items: center;
       background-color: transparent;
       border-top: 1px solid rgba(255, 255, 255, 0.75);
-      padding: 0;
       width: 100%;
       text-align: left;
       padding: 10px 0;

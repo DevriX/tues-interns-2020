@@ -4,6 +4,7 @@
 // and in the darkness bind them.
 // The order of files include is important. Dont change it.
 
+
 // All general settings and utils
 @import "base/settings";
 @import "base/mixins";
@@ -31,6 +32,7 @@
 // Separating the largest parts of the site in specific files.
 @import "layout/general";
 @import "layout/header";
+@import "layout/footer";
 
 // Any other module that can be reused multuple times.
 @import "components/buttons";

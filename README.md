@@ -32,3 +32,21 @@ ServerName local.carmag.com
 13. Edit `wp-config.php.` Make sure to have `WP_DEBUG` constant set to true!
 14. You should be all set now!
 
+
+## Deployment steps
+In the root directory, there is a `deploy.php` file with some basic commands. You can execute a deployment, pulling the latest master by visiting `url/deploy.php`.
+
+If you want to deploy to our staging, you can open [https://carmag.dxdemos.online/deploy.php](https://carmag.dxdemos.online/deploy.php).
+
+## Pulling the latest staging database
+We have created a small PHP script `db-dump.php`. When you open `url/db-dump.php` and enter the following username and password `dxinterns/dxinterns1`, we'll run a quick PHP script, generating the latest database and you'll be able to download a SQL file.
+
+Keep in mind this is going to dump the database from the staging, which has different URL, in our case [https://carmag.dxdemos.online/](https://carmag.dxdemos.online/).
+When you import the database, you'll need to update two rows:
+`wp_options.home` and `wp_options.siteurl`.
+
+The eaiest approach would be to add this on your `wp-config.php` file:
+```
+define( 'WP_HOME', 'http://local.carmag.com/' );
+define( 'WP_SITEURL', 'http://local.carmag.com/' );
+```

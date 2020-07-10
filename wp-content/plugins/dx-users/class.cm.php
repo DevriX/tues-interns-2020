@@ -52,37 +52,45 @@ class Users {
     
     <?php }
 
-    function validate_profile_phone( &$errors, $update, &$user ) {
+    function validate_profile_phone( $errors, $update, $user ) {
+        $error_check = false;
         $phone_regex = "/08[789]\d{7}/u";
     // validate input fields
-        if ( !empty( $_POST['phone'] ) && strlen( $_POST['phone'] ) > 10)
+        if ( !empty( $_POST['phone'] ) && strlen( $_POST['phone'] ) > 10) {
             $errors->add( 'phone', "<strong>ERROR</strong>: The maximum phone length is 10 characters." );
-
-        if ( preg_match( $phone_regex, $_POST['phone'] ) == 0 )
-            $errors->add( 'phone', "<strong>ERROR</strong>: Not a valid phone number." );
-        
-        if( !empty( $errors ) )
-            return $errors;
-
-        if ( empty ( $errors ) ) {
-            add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ) );
-            add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
+            $error_check = true;
         }
+
+        if ( preg_match( $phone_regex, $_POST['phone'] ) == 0 ) {
+            $errors->add( 'phone', "<strong>ERROR</strong>: Not a valid phone number." );
+            $error_check = true;
+        }
+        
+        if( $error_check ) {
+            error_log("shareni bomboni");
+            return $errors;
+        }
+
+        error_log("shareni bomboni sled if");
+        add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ) );
+        add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
 
     }
 
-    function validate_profile_address( &$errors, $update, &$user ) {
+    function validate_profile_address( $errors, $update, $user ) {
+            $error_check = false;
         // validate input fields
-            if ( !empty( $_POST['address'] ) && strlen( $_POST['address'] ) > 255 && !empty( $_POST['address'] ) )
+            if ( !empty( $_POST['address'] ) && strlen( $_POST['address'] ) > 255 ) {
                 $errors->add( 'address', "<strong>ERROR</strong>: The maximum address length is 255 characters." ); //test validation; TO DO define proper validation
-            
-            if( !empty( $errors ) )
-                return $errors;
-
-            if( empty( $errors ) ) {
-                add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ) );
-                add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
+                $error_check = true;
             }
+
+            if( $error_check ){
+                return $errors;
+            }
+
+            add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ) );
+            add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
     
         }
 

@@ -53,13 +53,18 @@ class Users {
     <?php }
 
     function validate_profile_phone( &$errors, $update, &$user ) {
+        $phone_regex = "/08[789]\d{7}/u";
     // validate input fields
-        if ( !empty( $_POST['phone'] ) && strlen( $_POST['phone'] ) > 10 && !empty( $_POST['phone'] ) )
+        if ( !empty( $_POST['phone'] ) && strlen( $_POST['phone'] ) > 10)
             $errors->add( 'phone', "<strong>ERROR</strong>: The maximum phone length is 10 characters." );
+
+        if ( preg_match( $phone_regex, $_POST['phone'] ) == 0 )
+            $errors->add( 'phone', "<strong>ERROR</strong>: Not a valid phone number." );
         
         if( !empty( $errors ) )
             return $errors;
-        else {
+
+        if ( empty ( $errors ) ) {
             add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ) );
             add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
         }
@@ -73,7 +78,8 @@ class Users {
             
             if( !empty( $errors ) )
                 return $errors;
-            else {
+
+            if( empty( $errors ) ) {
                 add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ) );
                 add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
             }

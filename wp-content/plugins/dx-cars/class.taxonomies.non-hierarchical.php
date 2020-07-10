@@ -24,6 +24,17 @@ class Taxonomies {
     }
 
     public function tax_create(){
+        register_taxonomy( 'location', 'vehicles', array(
+            'hierarchical' => false,
+            'labels' => $this->labels('Location'),
+            'show_ui' => true,
+            'show_admin_column' => true,
+            'show_in_rest' => true,
+            'update_count_callback' => '_update_post_term_count',
+            'query_var' => true,
+            'rewrite' => array( 'slug' => 'location' ),
+            )
+        );
         register_taxonomy( 'color', 'vehicles', array(
             'hierarchical' => false,
             'labels' => $this->labels('Color'),

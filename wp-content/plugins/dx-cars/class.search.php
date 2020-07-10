@@ -78,12 +78,14 @@ class Search {
         }
         */
 
-        $tax_query = array( 'relation' => 'AND', );
+        $query->set('post_type', 'vehicles');
 
-        if( ! empty( get_query_var( 'brand' ) ) ) { // not working, hierarchical taxonomy
+        $tax_query = array();
+
+        if( ! empty( get_query_var( 'brand' ) ) ) {
             $tax_query[] = $this->get_slug_taxonomy_array( 'car-type', get_query_var( 'brand' ) );
         }
-        if( ! empty( get_query_var( 'category' ) ) ) { // not working, hierarchical taxonomy
+        if( ! empty( get_query_var( 'category' ) ) ) {
             $tax_query[] = $this->get_slug_taxonomy_array( 'vehicle-category', get_query_var( 'category' ) );
         }
         if( ! empty( get_query_var( 'color' ) ) ) {
@@ -101,32 +103,29 @@ class Search {
         if( ! empty( get_query_var( 'location' ) ) ) {
             $tax_query[] = $this->get_slug_taxonomy_array( 'location', get_query_var( 'location' ) );
         }
-        if( ! empty( get_query_var( 'model' ) ) ) { // not working, hierarchical taxonomy
+        if( ! empty( get_query_var( 'model' ) ) ) {
             $tax_query[] = $this->get_slug_taxonomy_array( 'car-type', get_query_var( 'model' ) );
         }
-        if( ! empty( get_query_var( 'type' ) ) ) { // not working, hierarchical taxonomy
+        if( ! empty( get_query_var( 'type' ) ) ) {
             $tax_query[] = $this->get_slug_taxonomy_array( 'vehicle-category', get_query_var( 'type' ) );
         }
 
-        $meta_query = array( 'relation' => 'AND', );
+        $meta_query = array();
 
-        if( ! empty( get_query_var( 'start_horsepower' ) ) || ! empty( get_query_var( 'end_horsepower' ) ) ) { // not working
+        if( ! empty( get_query_var( 'start_horsepower' ) ) || ! empty( get_query_var( 'end_horsepower' ) ) ) {
             $meta_query[] = $this->get_num_meta_array( 'car-horsepower', get_query_var( 'start_horsepower' ), get_query_var( 'end_horsepower' ) );
         }
-        if( ! empty( get_query_var( 'start_price' ) ) || ! empty( get_query_var( 'end_price' ) ) ) { // not working
+        if( ! empty( get_query_var( 'start_price' ) ) || ! empty( get_query_var( 'end_price' ) ) ) {
             $meta_query[] = $this->get_num_meta_array( 'car-price', get_query_var( 'start_price' ), get_query_var( 'end_price' ) );
         }
-        if( ! empty( get_query_var( 'start_range' ) ) || ! empty( get_query_var( 'end_range' ) ) ) { // not working
+        if( ! empty( get_query_var( 'start_range' ) ) || ! empty( get_query_var( 'end_range' ) ) ) {
             $meta_query[] = $this->get_num_meta_array( 'car-range', get_query_var( 'start_range' ), get_query_var( 'end_range' ) );
         }
-        if( ! empty( get_query_var( 'start_year' ) ) || ! empty( get_query_var( 'end_year' ) ) ) { // not working
+        if( ! empty( get_query_var( 'start_year' ) ) || ! empty( get_query_var( 'end_year' ) ) ) {
             array_push($meta_query, $this->get_num_meta_array( 'car-year', get_query_var( 'start_year' ), get_query_var( 'end_year' ) ));
         }
 
-        $query = array(
-          'post_type' => 'vehicles',
-          'tax_query' => $tax_query,
-          'meta_query' => $meta_query,
-        );
+        $query->set('meta_query', $meta_query);
+        $query->set('tax_query', $tax_query);
     }
 }

@@ -1,14 +1,205 @@
 // Here is your main header stylings. You can modify all other, but in general
 // try to keep the header stylings in here.
-// 
+//
 // Menu stylings file be found in components/mobile-menu
 
-
 .site-header {
-	position: relative;
-	// height: $layout-header-height;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	height: $layout-header-height;
+	background-color: $color-primary-dark;
+
+	.row {
+		height: 100%;
+
+		display: flex;
+		align-items: center;
+
+		.site-header-inner {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+			.site-branding {
+				.site-title {
+					font-weight: bold;
+					font-size: 2em;
+					margin: 0;
+
+					a {
+						color: white;
+						display: inline-block;
+						unicode-bidi: bidi-override;
+
+						&::after {
+							content: ".";
+							color: $color-primary;
+						}
+					}
+				}
+
+				.site-description {
+					display: none;
+				}
+			}
+
+			.main-navigation {
+				.menu-toggle {
+					display: none;
+					flex-direction: column;
+					padding: 13px 20px 15px;
+					cursor: pointer;
+
+					span {
+						display: inline-block;
+						width: 20px;
+						height: 2px;
+						background-color: white;
+						margin: 2.5px 0;
+						border-radius: 5px;
+						transition: transform 0.3s, opacity 0.3s;
+						pointer-events: none;
+					}
+
+					&.opened {
+						span:first-child {
+							transform: translateY(7px) rotate(45deg);
+						}
+
+						span:nth-child(2) {
+							opacity: 0;
+						}
+
+						span:last-child {
+							transform: translateY(-7px) rotate(-45deg);
+						}
+					}
+				}
+
+				.menu-primary-container {
+					transition: 0.2s;
+
+					&.opened {
+						visibility: visible;
+						top: 60px;
+						opacity: 1;
+						pointer-events: auto;
+					}
+
+					.menu-primary-menu-container {
+						.menu {
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+
+							.separator {
+								height: 55px;
+								background-color: darken($color-white, 50);
+								flex: 0 0 1px;
+								margin: 0px 10px 0;
+								display: inline-block;
+							}
+
+							.menu-item {
+								margin: 0 10px;
+
+								&.register {
+									padding: 0;
+
+									a {
+										padding: 10px 45px;
+
+										&:hover {
+											border-bottom: 1px solid transparent;
+										}
+									}
+								}
+
+								a {
+									display: inline-block;
+									transition: 0.2s;
+									border: 1px solid transparent;
+									padding: 12px 20px;
+									color: white;
+									width: max-content;
+									font-weight: bold;
+
+									&:hover {
+										border-bottom: 1px solid white;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .site-branding {
 	display: inline-block;
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+	.site-header {
+		.row {
+			.site-header-inner {
+				.site-branding {
+					padding-left: 20px;
+				}
+
+				.main-navigation {
+					.menu-toggle {
+						display: flex;
+					}
+
+					.menu-primary-container {
+						position: absolute;
+						z-index: 1;
+						visibility: hidden;
+						top: 0px;
+						opacity: 0;
+						pointer-events: none;
+						background-color: $color-primary-dark;
+						left: 0;
+						right: 0;
+
+						.menu-primary-menu-container {
+							.menu {
+								flex-direction: column;
+								padding: 0 20px;
+
+								.separator {
+									background-color: darken($color-white, 50);
+									height: 1px;
+									display: inline-block;
+									width: 100%;
+									margin: 10px 0;
+								}
+
+								.menu-item {
+									width: 100%;
+									text-align: center;
+									padding: 8px;
+
+									&:last-child {
+										margin: 8px 0 28px;
+										padding: 0;
+									}
+
+									a {
+										width: 100%;
+										border: 0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

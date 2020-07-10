@@ -6,10 +6,16 @@
 	$border-color: #ddd;
 	$section-padding: 80px;
 
-	padding: #{$section-padding} 0;
+	padding: calc(#{$section-padding} + #{$layout-header-height}) 0 #{$section-padding};
 	position: relative;
 
+	.row {
+		.column {
+			padding: 0 20px;
+		}
+	}
+
 	@media (min-width: $breakpoint-small) {
-		padding: #{$section-padding} 0;
+		padding: calc(#{$section-padding} + #{$layout-header-height}) 0 #{$section-padding};
 	}
 }

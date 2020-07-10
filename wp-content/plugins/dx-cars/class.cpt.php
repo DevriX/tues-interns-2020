@@ -49,8 +49,8 @@ class Vehicles {
 
     function get_enc_uploaded_img_urls( $images ) {
         $uploaded_urls = array();
-        for ( $i = 0; $i < sizeof( $images['name'] ); $i++ ) {
-            if ( wp_check_filetype( $images['name'][ $i ], $this->allowed_image_types() )['ext'] ) {
+        for( $i = 0; $i < sizeof( $images['name'] ); $i++ ) {
+            if( wp_check_filetype( $images['name'][ $i ], $this->allowed_image_types() )['ext'] ) {
                 $file = array(
                         'name'     => $images['name'][ $i ],
                         'type'     => $images['type'][ $i ],
@@ -68,13 +68,13 @@ class Vehicles {
     }
 
     function car_info_save_meta( $post_id, $post ) {
-    	// Return if the user doesn't have edit permissions.
-    	if ( ! current_user_can( 'edit_post', $post_id ) ) {
-    		return $post_id;
-    	}
+      	// Return if the user doesn't have edit permissions.
+      	if( ! current_user_can( 'edit_post', $post_id ) ) {
+      		return $post_id;
+      	}
 
-    	// Now that we're authenticated, time to save the data.
-    	// This sanitizes the data from the field and saves it into an array $events_meta.
+      	// Now that we're authenticated, time to save the data.
+      	// This sanitizes the data from the field and saves it into an array $events_meta.
         $events_meta = array(
             'car-year'    => sanitize_text_field( isset( $_POST['car-year'] ) ? $_POST['car-year'] : null ),
             'car-millage' => sanitize_text_field( isset( $_POST['car-millage'] ) ? $_POST['car-millage'] : null ),
@@ -82,37 +82,37 @@ class Vehicles {
             'car-images'  => $this->get_enc_uploaded_img_urls( $_FILES['car-images'] ),
         );
 
-    	// Cycle through the $events_meta array.
-    	// Note, in this example we just have one item, but this is helpful if you have multiple.
-    	foreach ( $events_meta as $key => $value ) {
-            // Don't store custom data twice
-    		if ( 'revision' === $post->post_type ) {
-    			return;
-    		}
+      	// Cycle through the $events_meta array.
+      	// Note, in this example we just have one item, but this is helpful if you have multiple.
+      	foreach ( $events_meta as $key => $value ) {
+              // Don't store custom data twice
+        		if( 'revision' === $post->post_type ) {
+        			return;
+        		}
 
-            if ( $value == null ) {
-                return;
-            }
+                if ( $value == null ) {
+                    return;
+                }
 
-            switch ( $key ) {
-                case 'car-year':
-                    if( strcmp( "1769", $value ) > 0 || strcmp( "2020", $value ) < 0 ) wp_die( 'Invalid year' );
-                    break;
-                case 'car-millage':
-                    if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid millage.' );
-                    break;
-                case 'car-price':
-                    if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid price.' );
-                    break;
-            }
+                switch ( $key ) {
+                    case 'car-year':
+                        if( strcmp( "1769", $value ) > 0 || strcmp( "2020", $value ) < 0 ) wp_die( 'Invalid year' );
+                        break;
+                    case 'car-millage':
+                        if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid millage.' );
+                        break;
+                    case 'car-price':
+                        if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid price.' );
+                        break;
+                }
 
-    		if ( get_post_meta( $post_id, $key, false ) ) {
-    			// If the custom field already has a value, update it.
-    			update_post_meta( $post_id, $key, $value );
-    		} else {
-    			// If the custom field doesn't have a value, add it.
-    			add_post_meta( $post_id, $key, $value );
-    		}
+        		if( get_post_meta( $post_id, $key, false ) ) {
+        			// If the custom field already has a value, update it.
+        			update_post_meta( $post_id, $key, $value );
+        		} else {
+        			// If the custom field doesn't have a value, add it.
+        			add_post_meta( $post_id, $key, $value );
+        		}
         }
     }
 }

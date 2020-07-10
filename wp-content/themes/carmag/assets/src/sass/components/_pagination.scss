@@ -10,10 +10,17 @@
         background: rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;
+        $link-not-selected-color: #767373;
+
         a {
             margin: 0 .75rem;
-            color: #767373;
+            color: $link-not-selected-color;
         }
+
+        .selected {
+            color: black;
+        }
+
         i {
             font-size: 1.5rem;
         }

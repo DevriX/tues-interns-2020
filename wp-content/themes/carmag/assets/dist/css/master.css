@@ -5374,6 +5374,8 @@ readers do not read off random characters that represent icons */
     .pagination .pagination-links a {
       margin: 0 .75rem;
       color: #767373; }
+    .pagination .pagination-links .selected {
+      color: black; }
     .pagination .pagination-links i {
       font-size: 1.5rem; }
 

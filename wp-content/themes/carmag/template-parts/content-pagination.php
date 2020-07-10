@@ -12,7 +12,7 @@
 <div class="pagination">
     <div class="pagination-links">
         <i class="fas fa-angle-left"></i>
-        <a href="#">1</a>
+        <a class="selected" href="#">1</a>
         <a href="#">2</a>
         <a href="#">3</a>
         <a href="#">4</a>
@@ -23,5 +23,6 @@
         <a href="#">9</a>
         <a href="#">10</a>
         <i class="fas fa-angle-right"></i>
+        <!--TODO: Implement logic for the pagination with actual switching pages-->
     </div>
 </div>

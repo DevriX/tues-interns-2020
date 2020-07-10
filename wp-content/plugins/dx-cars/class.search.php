@@ -6,39 +6,56 @@ class Search {
         add_filter( 'query_vars', array( $this, 'register_query_vars' ) );
     }
 
-    function register_query_vars( $vars ) {
-        $vars[] = 'brand';
-        $vars[] = 'category';
-        $vars[] = 'color';
-        $vars[] = 'conditoin';
-        $vars[] = 'fuel';
-        $vars[] = 'gearbox';
-        $vars[] = 'location';
-        $vars[] = 'model';
-        $vars[] = 'type';
-        $vars[] = 'start_horsepower';
-        $vars[] = 'end_horsepower';
-        $vars[] = 'start_price';
-        $vars[] = 'end_price';
-        $vars[] = 'start_range';
-        $vars[] = 'end_range';
-        $vars[] = 'start_year';
-        $vars[] = 'end_year';
+    static $tax_vars = array( // tax_name (what is in the request) => tax_key (what is in the database, only hierarchical taxonomies are different from tax_name )
+      'brand'     => 'car-type',
+      'category'  => 'vehicle-category',
+      'color'     => 'color',
+      'conditoin' => 'condition',
+      'fuel'      => 'fuel',
+      'gearbox'   => 'gearbox',
+      'location'  => 'location',
+      'model'     => 'car-type',
+      'type'      => 'vehicle-category',
+    );
+
+    static $meta_vars = array( // meta_name (name of post meta, stored in the database) => meta_keys (what is in the request)
+        'car-horsepower' => array(
+            'start_horsepower', 'end_horsepower'
+        ),
+        'car-price' => array(
+            'start_price', 'end_price'
+        ),
+        'car-range' => array(
+            'start_range', 'end_range'
+        ),
+        'car-year' => array(
+            'start_year', 'end_year'
+        ),
+    );
+
+    function register_query_vars( $vars ) { // didn't use array_merge because it caused some problems
+        foreach( $this::$tax_vars as $key => $value ) {
+            $vars[] = $key;
+        }
+        foreach( $this::$meta_vars as $key => $value ) {
+            foreach( $value as $name ) {
+                $vars[] = $name;
+            }
+        }
         return $vars;
     }
 
     function get_slug_taxonomy_array( $name, $terms ) {
         $taxonomy_arr = array(
             'taxonomy' => $name,
-            'field' => 'slug',
-            'terms' => $terms,
+            'field'    => 'slug',
+            'terms'    => $terms,
         );
         return $taxonomy_arr;
     }
 
     function get_num_meta_array( $key, $value1, $value2 ) {
         $result;
-
         if( ! empty( $value1 ) && ! empty( $value2 ) ) {
             $result = array(
                 'key'     => $key,
@@ -65,67 +82,25 @@ class Search {
     }
 
     function pre_get_posts( $query ) {
-        /*
-        // check if the user is requesting an admin page
-        // or current query is not the main query
-        if ( is_admin() || ! $query->is_main_query() ){
-            return;
-        }
-
-        // edit the query only when post type is 'vehicles'
-        if ( ! is_post_type_archive( 'vehicles' ) ){
-            return;
-        }
-        */
-
-        $query->set('post_type', 'vehicles');
+        $query->set( 'post_type', 'vehicles' );
 
         $tax_query = array();
 
-        if( ! empty( get_query_var( 'brand' ) ) ) {
-            $tax_query[] = $this->get_slug_taxonomy_array( 'car-type', get_query_var( 'brand' ) );
-        }
-        if( ! empty( get_query_var( 'category' ) ) ) {
-            $tax_query[] = $this->get_slug_taxonomy_array( 'vehicle-category', get_query_var( 'category' ) );
-        }
-        if( ! empty( get_query_var( 'color' ) ) ) {
-            $tax_query[] = $this->get_slug_taxonomy_array( 'color', get_query_var( 'color' ) );
-        }
-        if( ! empty( get_query_var( 'condition' ) ) ) {
-            $tax_query[] = $this->get_slug_taxonomy_array( 'condition', get_query_var( 'condition' ) );
-        }
-        if( ! empty( get_query_var( 'fuel' ) ) ) {
-            $tax_query[] = $this->get_slug_taxonomy_array( 'fuel', get_query_var( 'fuel' ) );
-        }
-        if( ! empty( get_query_var( 'gearbox' ) ) ) {
-            $tax_query[] = $this->get_slug_taxonomy_array( 'gearbox', get_query_var( 'gearbox' ) );
-        }
-        if( ! empty( get_query_var( 'location' ) ) ) {
-            $tax_query[] = $this->get_slug_taxonomy_array( 'location', get_query_var( 'location' ) );
-        }
-        if( ! empty( get_query_var( 'model' ) ) ) {
-            $tax_query[] = $this->get_slug_taxonomy_array( 'car-type', get_query_var( 'model' ) );
-        }
-        if( ! empty( get_query_var( 'type' ) ) ) {
-            $tax_query[] = $this->get_slug_taxonomy_array( 'vehicle-category', get_query_var( 'type' ) );
+        foreach( $this::$tax_vars as $tax_name => $tax_key ) {
+          if( ! empty( get_query_var( $tax_name ) ) ) {
+              $tax_query[] = $this->get_slug_taxonomy_array( $tax_key, get_query_var( $tax_name ) );
+          }
         }
 
         $meta_query = array();
-
-        if( ! empty( get_query_var( 'start_horsepower' ) ) || ! empty( get_query_var( 'end_horsepower' ) ) ) {
-            $meta_query[] = $this->get_num_meta_array( 'car-horsepower', get_query_var( 'start_horsepower' ), get_query_var( 'end_horsepower' ) );
-        }
-        if( ! empty( get_query_var( 'start_price' ) ) || ! empty( get_query_var( 'end_price' ) ) ) {
-            $meta_query[] = $this->get_num_meta_array( 'car-price', get_query_var( 'start_price' ), get_query_var( 'end_price' ) );
-        }
-        if( ! empty( get_query_var( 'start_range' ) ) || ! empty( get_query_var( 'end_range' ) ) ) {
-            $meta_query[] = $this->get_num_meta_array( 'car-range', get_query_var( 'start_range' ), get_query_var( 'end_range' ) );
-        }
-        if( ! empty( get_query_var( 'start_year' ) ) || ! empty( get_query_var( 'end_year' ) ) ) {
-            array_push($meta_query, $this->get_num_meta_array( 'car-year', get_query_var( 'start_year' ), get_query_var( 'end_year' ) ));
+        
+        foreach( $this::$meta_vars as $meta_name => $meta_keys ) {
+          if( ! empty( get_query_var( $meta_keys[0] ) ) || ! empty( get_query_var( $meta_keys[1] ) ) ) {
+              $meta_query[] = $this->get_num_meta_array( $meta_name, get_query_var( $meta_keys[0] ), get_query_var( $meta_keys[1] ) );
+          }
         }
 
-        $query->set('meta_query', $meta_query);
-        $query->set('tax_query', $tax_query);
+        $query->set( 'meta_query', $meta_query );
+        $query->set( 'tax_query', $tax_query );
     }
 }

@@ -79,7 +79,7 @@ class Vehicles {
             'car-year'    => sanitize_text_field( isset( $_POST['car-year'] ) ? $_POST['car-year'] : null ),
             'car-millage' => sanitize_text_field( isset( $_POST['car-millage'] ) ? $_POST['car-millage'] : null ),
             'car-price'   => sanitize_text_field( isset( $_POST['car-price'] ) ? $_POST['car-price'] : null ),
-            'car-images'  => $this->get_enc_uploaded_img_urls( $_FILES['car-images'] ),
+            'car-images'  => isset($_FILES['car-images']) ? $this->get_enc_uploaded_img_urls( $_FILES['car-images'] ): null,
         );
 
     	// Cycle through the $events_meta array.

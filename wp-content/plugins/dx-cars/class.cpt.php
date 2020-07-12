@@ -76,10 +76,12 @@ class Vehicles {
     	// Now that we're authenticated, time to save the data.
     	// This sanitizes the data from the field and saves it into an array $events_meta.
         $events_meta = array(
-            'car-year'    => sanitize_text_field( isset( $_POST['car-year'] ) ? $_POST['car-year'] : null ),
-            'car-millage' => sanitize_text_field( isset( $_POST['car-millage'] ) ? $_POST['car-millage'] : null ),
-            'car-price'   => sanitize_text_field( isset( $_POST['car-price'] ) ? $_POST['car-price'] : null ),
-            'car-images'  => isset($_FILES['car-images']) ? $this->get_enc_uploaded_img_urls( $_FILES['car-images'] ): null,
+            'car-year'       => sanitize_text_field( isset( $_POST['car-year'] ) ? $_POST['car-year'] : null ),
+            'car-millage'    => sanitize_text_field( isset( $_POST['car-millage'] ) ? $_POST['car-millage'] : null ),
+            'car-horsepower' => sanitize_text_field( isset( $_POST['car-horsepower'] ) ? $_POST['car-horsepower'] : null ),
+            'car-range'      => sanitize_text_field( isset( $_POST['car-range'] ) ? $_POST['car-range'] : null ),
+            'car-price'      => sanitize_text_field( isset( $_POST['car-price'] ) ? $_POST['car-price'] : null ),
+            'car-images'     => isset($_FILES['car-images']) ? $this->get_enc_uploaded_img_urls( $_FILES['car-images'] ): null,
         );
 
     	// Cycle through the $events_meta array.
@@ -100,6 +102,12 @@ class Vehicles {
                     break;
                 case 'car-millage':
                     if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid millage.' );
+                    break;
+                case 'car-horsepower':
+                    if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid horsepower.' );
+                    break;
+                case 'car-range':
+                    if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid range.' );
                     break;
                 case 'car-price':
                     if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid price.' );

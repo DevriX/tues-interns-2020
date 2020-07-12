@@ -8,6 +8,14 @@
         <td><input type="text" name="car-millage" value="<?php echo( sanitize_text_field( get_post_meta( get_the_ID(), __( 'car-millage' ), true ) ) ) ?>"></td>
     </tr>
     <tr>
+        <td><?php _e( 'Horsepower:' ) ?></td>
+        <td><input type="text" name="car-horsepower" value="<?php echo( sanitize_text_field( get_post_meta( get_the_ID(), __( 'car-horsepower' ), true ) ) ) ?>"></td>
+    </tr>
+    <tr>
+        <td><?php _e( 'Range:' ) ?></td>
+        <td><input type="text" name="car-range" value="<?php echo( sanitize_text_field( get_post_meta( get_the_ID(), __( 'car-range' ), true ) ) ) ?>"></td>
+    </tr>
+    <tr>
         <td><?php _e( 'Price:' ) ?></td>
         <td><input type="text" name="car-price" value="<?php echo( sanitize_text_field( get_post_meta( get_the_ID(), __( 'car-price' ), true ) ) ) ?>"></td>
     </tr>

@@ -1,0 +1,80 @@
+.section-register, .section-login {
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)), url('../images/register-image.png');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-bottom: 400px;
+
+    .row {
+        .column{
+            margin: 0 0 0 auto;
+            
+            .register-form {
+                background-color: $color-primary-dark;
+                text-align: center;
+                padding: 2em 3.5em 1em;
+                margin: 0 9em;
+
+                
+                h1 {
+                    color: $color-white;
+                    font-size: 24px;
+                    margin-bottom: 0.7em;
+                }
+
+                .form-input {
+                    font-family: $font-sans;
+                    width: 100%;
+                    padding: 1em;
+                    margin-top: 1em;
+                    border: none;
+                    outline: none;
+                    color: $color-white;
+                    -webkit-text-fill-color: white;
+                    background-color: lighten($color-primary-dark, 10%);
+                    -moz-box-shadow:    inset 5em 5em 5em 5em lighten($color-primary-dark, 10%);
+                    -webkit-box-shadow: inset 5em 5em 5em 5em lighten($color-primary-dark, 10%);
+                    box-shadow:         inset 5em 5em 5em 5em lighten($color-primary-dark, 10%);
+                    font-weight: bold;
+
+
+                    &:-webkit-autofill::first-line {
+                        font-family: $font-sans;
+                        font-size: 16px;
+                    }
+                    
+                    &::placeholder {
+                        color: lighten(#404040, 40);
+                        -webkit-text-fill-color: lighten(#404040, 40);
+                    }
+                }
+
+                .form-submit {
+                    background-color: $color-primary;
+                    color: $color-white;
+                    font: inherit;
+                    border: none;
+                    width: 75%;
+                    padding: 10px 32px;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    transition: 0.3s;
+                    margin: 2em 0;
+                }
+
+                .form-suggestion {
+                    font-family: $font-secondary;
+                    color: $color-white;
+                    margin-top: 0;
+                    margin-bottom: 0.5em;
+
+                    a {
+                        color: $color-primary;
+                    }
+                }
+
+            }
+        }
+    }
+}

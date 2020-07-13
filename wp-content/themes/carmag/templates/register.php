@@ -16,7 +16,7 @@ get_header(); ?>
 		<div class="column small-12 medium-8">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <form method="POST" action="" class="register-form">
+                    <form method="POST" action="<?php esc_url( plugins_url( 'register-user-class.php', __FILE__ ) ) ?>" class="register-form">
                         <h1>Create Account</h1>
                         
                         <input class="form-input"  type="email" name="email" id="email" placeholder="Email" required autofocus>

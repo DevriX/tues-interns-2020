@@ -17,11 +17,11 @@ get_header(); ?>
 		<div class="column small-12 medium-8">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <form method="POST" action="" class="login-form">
+                    <form method="POST" action="<?php esc_url( plugins_url( 'register-user-class.php', __FILE__ ) ) ?>" class="login-form">
                         <h1>Login</h1>
                         
-                        <input type="email" name="email" id="email" placeholder="Email" required autofocus>
-                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <input class="form-input" type="email" name="email" id="email" placeholder="Email" required autofocus>
+                        <input class="form-input" type="password" name="password" id="password" placeholder="Password" required>
                         <button type="submit" class="form-submit">Login</button>
 
                         <p class="form-suggestion">Don't have an account? <a href="/register/">Register</a></p>

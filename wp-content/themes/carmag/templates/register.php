@@ -1,9 +1,9 @@
-<?php 
+<?php
 /**
  * Template Name: Register
  *
  * Custom register template for the theme
- * 
+ *
  * @since  v1.0.0
  * @package CarMag
  */
@@ -16,10 +16,10 @@ get_header(); ?>
 		<div class="column small-12 medium-8">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <form method="POST" action="<?php esc_url( plugins_url( 'register-user-class.php', __FILE__ ) ) ?>" class="register-form">
+                    <form method="POST" action="<?php echo admin_url('admin-post.php') ?>" class="register-form">
+												<input type="hidden" name="action" value="process_register">
                         <h1>Create Account</h1>
-                        
-                        <input type="hidden" name="action" value="process_form">
+
                         <input class="form-input"  type="email" name="email" id="email" placeholder="Email" required autofocus>
                         <input class="form-input"  type="text" name="name" id="name" placeholder="Name" required>
                         <input class="form-input"  type="password" name="password" id="password" placeholder="Password" required>

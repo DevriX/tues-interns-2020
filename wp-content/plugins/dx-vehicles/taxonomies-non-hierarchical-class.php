@@ -1,6 +1,5 @@
 <?php
 
-
 class Taxonomies {
     function init() {
         add_action( 'init', array( $this, 'tax_create' ) , 999 );
@@ -14,17 +13,17 @@ class Taxonomies {
             'all_items' => __( 'All '.$name.'s' ),
             'parent_item' => null,
             'parent_item_colon' => null,
-            'edit_item' => __( 'Edit '.$name ), 
+            'edit_item' => __( 'Edit '.$name ),
             'update_item' => __( 'Update '.$name ),
             'add_new_item' => __( 'Add New '.$name ),
             'new_item_name' => __( 'New '.$name.' Name' ),
             'menu_name' => __( $name.'s' ),
-        ); 
+        );
         return $arr;
     }
 
     public function tax_create(){
-        register_taxonomy( 'location', 'vehicles', array(
+        register_taxonomy( 'vehicle-location', 'vehicles', array(
             'hierarchical' => false,
             'labels' => $this->labels('Location'),
             'show_ui' => true,
@@ -35,7 +34,7 @@ class Taxonomies {
             'rewrite' => array( 'slug' => 'location' ),
             )
         );
-        register_taxonomy( 'color', 'vehicles', array(
+        register_taxonomy( 'vehicle-color', 'vehicles', array(
             'hierarchical' => false,
             'labels' => $this->labels('Color'),
             'show_ui' => true,
@@ -46,7 +45,7 @@ class Taxonomies {
             'rewrite' => array( 'slug' => 'color' ),
             )
         );
-        register_taxonomy( 'condition', 'vehicles', array(
+        register_taxonomy( 'vehicle-condition', 'vehicles', array(
             'hierarchical' => false,
             'labels' => $this->labels('Condition'),
             'show_ui' => true,
@@ -57,7 +56,7 @@ class Taxonomies {
             'rewrite' => array( 'slug' => 'condition' ),
             )
         );
-        register_taxonomy( 'gearbox', 'vehicles', array( 
+        register_taxonomy( 'vehicle-gearbox', 'vehicles', array(
             'hierarchical' => false,
             'labels' => $this->labels('Gearbox'),
             'show_ui' => true,
@@ -68,7 +67,7 @@ class Taxonomies {
             'rewrite' => array( 'slug' => 'gearbox' ),
             )
         );
-        register_taxonomy( 'fuel', 'vehicles', array( 
+        register_taxonomy( 'vehicle-fuel', 'vehicles', array(
             'hierarchical' => false,
             'labels' => $this->labels('Fuel'),
             'show_ui' => true,
@@ -79,7 +78,7 @@ class Taxonomies {
             'rewrite' => array( 'slug' => 'fuel' ),
             )
         );
-        register_taxonomy( 'car-type', 'vehicles', array( 
+        register_taxonomy( 'vehicle-type', 'vehicles', array(
             'hierarchical' => false,
             'labels' => $this->labels('Type'),
             'show_ui' => true,

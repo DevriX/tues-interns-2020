@@ -5602,8 +5602,8 @@ readers do not read off random characters that represent icons */
       outline: none;
       color: #f5f5f5;
       -webkit-text-fill-color: white;
-      background-color: #464646;
-      box-shadow: inset 5em 5em 5em 5em #464646;
+      background-color: #393939;
+      box-shadow: inset 5em 5em 5em 5em #393939;
       font-weight: bold; }
       .section-register .row .column .register-form .form-input:-webkit-autofill::first-line, .section-register .row .columns .register-form .form-input:-webkit-autofill::first-line, .section-register .row .column .login-form .form-input:-webkit-autofill::first-line, .section-register .row .columns .login-form .form-input:-webkit-autofill::first-line, .section-login .row .column .register-form .form-input:-webkit-autofill::first-line, .section-login .row .columns .register-form .form-input:-webkit-autofill::first-line, .section-login .row .column .login-form .form-input:-webkit-autofill::first-line, .section-login .row .columns .login-form .form-input:-webkit-autofill::first-line {
         font-family: -apple-system, BlinkMacSystemFont, "Quantico", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -5647,5 +5647,30 @@ readers do not read off random characters that represent icons */
 
 .section-login .row .column, .section-login .row .columns {
   margin: 17em 0 0 26em; }
+
+@media only screen and (max-width: 1200px) {
+  .site-content .section-register, .site-content .section-login {
+    margin: 0; }
+    .site-content .section-register .row .column, .site-content .section-register .row .columns, .site-content .section-login .row .column, .site-content .section-login .row .columns {
+      margin: 0 auto;
+      padding: 0; }
+      .site-content .section-register .row .column .register-form, .site-content .section-register .row .columns .register-form, .site-content .section-register .row .column .login-form, .site-content .section-register .row .columns .login-form, .site-content .section-login .row .column .register-form, .site-content .section-login .row .columns .register-form, .site-content .section-login .row .column .login-form, .site-content .section-login .row .columns .login-form {
+        margin: 0 auto;
+        max-width: 30em;
+        width: 100%; }
+  .site-content .section-register {
+    padding: 12em 0 1.7em 0; }
+  .site-content .section-login {
+    padding: 12em 0 6.5em 0; } }
+
+@media only screen and (max-width: 640px) {
+  .site-content .section-register .row, .site-content .section-login .row {
+    margin: 0 1em; } }
+
+@media only screen and (max-width: 480px) {
+  .site-content .section-register, .site-content .section-login {
+    background-image: none; }
+    .site-content .section-register .row .column .register-form, .site-content .section-register .row .columns .register-form, .site-content .section-register .row .column .login-form, .site-content .section-register .row .columns .login-form, .site-content .section-login .row .column .register-form, .site-content .section-login .row .columns .register-form, .site-content .section-login .row .column .login-form, .site-content .section-login .row .columns .login-form {
+      padding: 2em 2em 1em; } }
 
 /*# sourceMappingURL=master.css.map */

@@ -19,6 +19,7 @@ get_header(); ?>
                     <form method="POST" action="<?php esc_url( plugins_url( 'register-user-class.php', __FILE__ ) ) ?>" class="register-form">
                         <h1>Create Account</h1>
                         
+                        <input type="hidden" name="action" value="process_form">
                         <input class="form-input"  type="email" name="email" id="email" placeholder="Email" required autofocus>
                         <input class="form-input"  type="text" name="name" id="name" placeholder="Name" required>
                         <input class="form-input"  type="password" name="password" id="password" placeholder="Password" required>

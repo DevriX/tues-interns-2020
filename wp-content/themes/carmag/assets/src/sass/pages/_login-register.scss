@@ -14,7 +14,6 @@
                 text-align: center;
                 padding: 2em 3.5em 1em;
                 margin: 0 9em;
-
                 
                 h1 {
                     color: $color-white;
@@ -31,10 +30,10 @@
                     outline: none;
                     color: $color-white;
                     -webkit-text-fill-color: white;
-                    background-color: lighten($color-primary-dark, 10%);
-                    -moz-box-shadow:    inset 5em 5em 5em 5em lighten($color-primary-dark, 10%);
-                    -webkit-box-shadow: inset 5em 5em 5em 5em lighten($color-primary-dark, 10%);
-                    box-shadow:         inset 5em 5em 5em 5em lighten($color-primary-dark, 10%);
+                    background-color: lighten($color-primary-dark, 5%);
+                    -moz-box-shadow:    inset 5em 5em 5em 5em lighten($color-primary-dark, 5%);
+                    -webkit-box-shadow: inset 5em 5em 5em 5em lighten($color-primary-dark, 5%);
+                    box-shadow:         inset 5em 5em 5em 5em lighten($color-primary-dark, 5%);
                     font-weight: bold;
 
 
@@ -91,6 +90,67 @@
     .row {
         .column {
             margin: 17em 0 0 26em;
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-large) {
+    .site-content{
+        .section-register, .section-login {
+            margin: 0;
+
+            .row {
+                .column {
+                    margin: 0 auto;
+                    padding: 0;
+
+                    .register-form, .login-form {
+                        margin: 0 auto;
+                        max-width: 30em;
+                        width: 100%
+                    }
+                }
+            }
+        }
+    }
+    .site-content {
+        .section-register {
+            padding: 12em 0 1.7em 0;
+        }
+    }
+
+    .site-content {
+        .section-login {
+            padding: 12em 0 6.5em 0;
+        }
+    }
+}
+
+
+@media only screen and (max-width: $breakpoint-small) {
+    .site-content{
+        .section-register, .section-login {
+
+            .row {
+                margin: 0 1em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    .site-content{
+        .section-register, .section-login {
+            background-image: none;
+
+            .row {
+                .column {
+
+                    .register-form, .login-form {
+                        padding: 2em 2em 1em;
+                    }
+                }
+            }
         }
     }
 }

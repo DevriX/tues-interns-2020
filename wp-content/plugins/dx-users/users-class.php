@@ -4,12 +4,19 @@ class Users {
         // add_filter( 'user_contactmethods', array( $this, 'add_custom_box_user' ), 10, 1 );
         add_action( 'show_user_profile', array( $this, 'render_profile_fields' ) );
         add_action( 'edit_user_profile', array( $this, 'render_profile_fields' ) );
-        // validate profile fields
-        add_action( 'user_profile_update_errors', array( $this, 'validate_profile_phone' ), 10, 3 );
-        add_action( 'user_profile_update_errors', array( $this, 'validate_profile_address' ), 10, 3 );
-        // save profile fields
-        // add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ), 10 );
-        // add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
+        // // validate profile fields
+        // add_action( 'user_profile_update_errors', array( $this, 'validate_profile_phone' ), 0, 3 );
+        // add_action( 'user_profile_update_errors', array( $this, 'validate_profile_address' ), 0, 3 );
+        // // save profile fields
+        // // add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ), 10 );
+        // // add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
+        // add_action( 'user_profile_update_errors', array( $this, 'validate_profile_fields' ), 0, 3 );
+            // validate profile field
+        add_action( 'user_profile_update_errors', array( $this, 'validate_profile_fields' ), 0, 3 );   
+
+// save profile fields to your own profile and others.
+        add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ) );
+        add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
     }
     // function add_custom_box_user($contact_methods) {
     //     $new_methods = array(
@@ -52,57 +59,41 @@ class Users {
     
     <?php }
 
-    function validate_profile_phone( $errors, $update, $user ) {
-        $error_check = false;
+    
+    function validate_profile_fields( &$errors, $update, &$user ) {
         $phone_regex = "/08[789]\d{7}/u";
-    // validate input fields
+        
         if ( !empty( $_POST['phone'] ) && strlen( $_POST['phone'] ) > 10) {
+        
             $errors->add( 'phone', "<strong>ERROR</strong>: The maximum phone length is 10 characters." );
-            $error_check = true;
-        }
 
+        }
         if ( preg_match( $phone_regex, $_POST['phone'] ) == 0 ) {
+            
             $errors->add( 'phone', "<strong>ERROR</strong>: Not a valid phone number." );
-            $error_check = true;
         }
         
-        if( $error_check ) {
-            error_log("shareni bomboni");
-            return $errors;
-        }
-
-        error_log("shareni bomboni sled if");
-        add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ) );
-        add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
+        return $errors;
 
     }
 
-    function validate_profile_address( $errors, $update, $user ) {
-            $error_check = false;
-        // validate input fields
-            if ( !empty( $_POST['address'] ) && strlen( $_POST['address'] ) > 255 ) {
-                $errors->add( 'address', "<strong>ERROR</strong>: The maximum address length is 255 characters." ); //test validation; TO DO define proper validation
-                $error_check = true;
-            }
-
-            if( $error_check ){
-                return $errors;
-            }
-
-            add_action( 'edit_user_profile_update', array( $this, 'save_profile_fields' ) );
-            add_action( 'personal_options_update', array( $this, 'save_profile_fields' ) );
-    
-        }
-
     function save_profile_fields( $id ) {
-    //  save input fields values
+        
+        // save input fields values
+        $phone_regex = "/08[789]\d{7}/u";
+        
         if ( !current_user_can( 'edit_user', $id ) )
             return false;
-    
-        if ( isset( $_POST['phone'] ) )
-            update_user_meta( $id, 'phone', $_POST['phone'] );
-    
-        if ( isset( $_POST['address'] ) )
-            update_user_meta( $id, 'address', $_POST['address'] );
+
+        if ( isset( $_POST['phone'] ))  {
+
+            if ( preg_match( $phone_regex, $_POST['phone'] ) == 1 ) {
+                update_user_meta( $id, 'phone', sanitize_text_field( $_POST['phone'] ) );
+            }
+        }
+
+        if ( isset( $_POST['address'] ) ) {
+            update_user_meta( $id, 'address', sanitize_text_field( $_POST['address'] ) );
+        }
     }
 }

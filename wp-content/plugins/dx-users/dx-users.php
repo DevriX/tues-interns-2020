@@ -11,7 +11,7 @@
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-include 'class.cm.php';
+include 'users-class.php';
 
 $users = new Users;
 $users->init();

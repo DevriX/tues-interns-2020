@@ -42,3 +42,28 @@ faqFields.forEach((field) => {
 		field.querySelector(".field-content").classList.toggle("opened");
 	});
 });
+
+let selectedBrand = document.getElementById("brands");
+const modelsNames = Object.keys(models);
+modelsNames.forEach((model) => {
+    let option = document.createElement("option");
+    option.value = model;
+    option.innerHTML = model;
+    selectedBrand.appendChild(option);
+});
+const handleModels = () => {
+    const brand = event.target.value;
+    const modelsSelect = document.getElementById("models");
+    modelsSelect.innerHTML = "";
+    if(brand) {
+        models[brand].forEach((model) => {
+            let option = document.createElement("option");
+            option.value = model;
+            option.innerHTML = model;
+            modelsSelect.appendChild(option);
+        });
+    } else {
+        let option = document.createElement("option");
+        option.value = "";
+        option.innerHTML = "Model";
+        modelsSelect.appendChild(option);

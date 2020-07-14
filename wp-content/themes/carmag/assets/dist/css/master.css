@@ -5535,13 +5535,18 @@ readers do not read off random characters that represent icons */
   justify-content: center;
   align-items: center;
   background-color: #2c2c2c;
-  flex-direction: column; }
-  .simple-search .vehicle-type a {
-    margin: 0 8px;
-    color: rgba(255, 255, 255, 0.15);
-    font-size: 32px; }
-  .simple-search .vehicle-type .selected {
-    color: #FFFFFF; }
+  flex-direction: column;
+  font-family: Roboto; }
+  .simple-search .vehicle-type {
+    display: flex; }
+    .simple-search .vehicle-type .type {
+      margin: 10px 5px;
+      color: rgba(255, 255, 255, 0.15);
+      font-size: 32px;
+      display: flex;
+      justify-content: center; }
+      .simple-search .vehicle-type .type i {
+        pointer-events: none; }
   .simple-search h2 {
     color: #FFFFFF;
     font-size: 32px; }
@@ -5586,6 +5591,7 @@ readers do not read off random characters that represent icons */
     padding: 10px 5px; }
   .simple-search .specifications .price-first {
     font-size: 20px;
+    font-weight: bold;
     color: #FFFFFF;
     background: #232323;
     float: left;
@@ -5598,6 +5604,7 @@ readers do not read off random characters that represent icons */
     text-align: center; }
   .simple-search .specifications .price-second {
     font-size: 20px;
+    font-weight: bold;
     color: #FFFFFF;
     background: #232323;
     float: right;
@@ -5734,36 +5741,43 @@ readers do not read off random characters that represent icons */
 .single-vehicle .seller-card {
   grid-row: 2; }
 
-.simple-search {
+.section-advanced-search {
+  background-color: white; }
+
+.advanced-search {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 100%; }
-  .simple-search .vehicle-type a {
-    margin: 0 8px;
-    color: rgba(255, 255, 255, 0.15);
-    font-size: 32px; }
-  .simple-search .vehicle-type .selected {
-    color: #FFFFFF; }
-  .simple-search h2 {
+  background-color: #2c2c2c;
+  flex-direction: column; }
+  .advanced-search .vehicle-type {
+    display: flex;
+    justify-content: center; }
+    .advanced-search .vehicle-type .type {
+      margin: 35px 20px;
+      color: rgba(255, 255, 255, 0.15);
+      font-size: 35px;
+      display: flex;
+      justify-content: center; }
+      .advanced-search .vehicle-type .type i {
+        pointer-events: none; }
+  .advanced-search h2 {
     color: #FFFFFF;
     font-size: 32px; }
-  .simple-search .specifications .elements {
+  .advanced-search .specifications .elements {
     display: grid;
     justify-content: center;
-    float: left;
-    grid-template-columns: repeat(5, 1fr);
-    -webkit-column-gap: 2px;
-       -moz-column-gap: 2px;
-            column-gap: 2px;
-    font-weight: bold; }
-  .simple-search .specifications h2 {
-    text-align: left;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    color: #FFFFFF; }
-  .simple-search .specifications select, .simple-search .specifications .input {
+    grid-template-columns: repeat(4, minmax(257px, 1fr));
+    grid-template-rows: repeat(4, minmax(56px, 1fr));
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    row-gap: 15px; }
+  .advanced-search .specifications h2 {
+    text-align: center;
+    margin-bottom: 100px;
+    color: black; }
+  .advanced-search .specifications select, .advanced-search .specifications .input {
     color: #FFFFFF;
     background: #232323;
     border-bottom: none;
@@ -5771,17 +5785,17 @@ readers do not read off random characters that represent icons */
     border-left: none;
     border-right: none;
     text-indent: 10px; }
-  .simple-search .specifications .price-first::first-letter {
+  .advanced-search .specifications .price-first::first-letter {
     color: #ff5722; }
-  .simple-search .specifications .price-second::first-letter {
+  .advanced-search .specifications .price-second::first-letter {
     color: #ff5722; }
-  .simple-search .specifications .wrapper {
+  .advanced-search .specifications .wrapper {
     display: flex;
     flex-direction: row;
     -webkit-column-gap: 2px;
        -moz-column-gap: 2px;
             column-gap: 2px; }
-  .simple-search .specifications .separator {
+  .advanced-search .specifications .separator {
     flex: 0 12px 4px;
     display: inline-block;
     text-align: center;
@@ -5789,7 +5803,7 @@ readers do not read off random characters that represent icons */
     background: #232323;
     color: #656565;
     padding: 10px 5px; }
-  .simple-search .specifications .price-first {
+  .advanced-search .specifications .price-first {
     font-size: 20px;
     color: #FFFFFF;
     background: #232323;
@@ -5801,7 +5815,7 @@ readers do not read off random characters that represent icons */
     border-left: none;
     border-right: none;
     text-align: center; }
-  .simple-search .specifications .price-second {
+  .advanced-search .specifications .price-second {
     font-size: 20px;
     color: #FFFFFF;
     background: #232323;
@@ -5813,26 +5827,27 @@ readers do not read off random characters that represent icons */
     border-left: none;
     border-right: none;
     text-align: center; }
-  .simple-search .specifications ::-webkit-input-placeholder {
+  .advanced-search .specifications ::-webkit-input-placeholder {
     /* Edge */
     color: #FFFFFF; }
-  .simple-search .specifications :-ms-input-placeholder {
+  .advanced-search .specifications :-ms-input-placeholder {
     /* Internet Explorer */
     color: #FFFFFF; }
-  .simple-search .specifications ::-moz-placeholder {
+  .advanced-search .specifications ::-moz-placeholder {
     color: #FFFFFF; }
-  .simple-search .specifications ::-ms-input-placeholder {
+  .advanced-search .specifications ::-ms-input-placeholder {
     color: #FFFFFF; }
-  .simple-search .specifications ::placeholder {
+  .advanced-search .specifications ::placeholder {
     color: #FFFFFF; }
-  .simple-search .searchButton {
+  .advanced-search .searchButton {
     display: inline-block;
     font-family: Quantico;
     font-weight: bolder;
     text-align: center;
     font-size: 17px;
+    margin-bottom: 40px;
     float: right;
-    width: 14%; }
+    width: 70%; }
 
 @media (max-width: 1120px) {
   .simple-search .elements {

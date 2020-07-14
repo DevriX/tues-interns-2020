@@ -21,18 +21,22 @@
     align-items: center;
     background-color: $color-primary-dark;
     flex-direction: column;
+		font-family: Roboto;
 
 
-    .vehicle-type {
-        a {
-            margin: 0 8px;
-            color: rgba(255, 255, 255, 0.15);
-            font-size: 32px;
-        }
-        .selected {
-            color: #FFFFFF;
-        }
-    }
+		.vehicle-type {
+	    display: flex;
+	      .type {
+	          margin: 10px 5px;
+	          color: rgba(255, 255, 255, 0.15);
+	          font-size: 32px;
+	          display: flex;
+	          justify-content: center;
+	          i {
+	              pointer-events: none;
+	          }
+	      }
+	}
 
     h2 {
         color: #FFFFFF;
@@ -94,6 +98,7 @@
 
         .price-first {
 						font-size:20px;
+						font-weight: bold;
             color: #FFFFFF;
             background: #232323;
 						float: left;
@@ -108,6 +113,7 @@
 
 				.price-second {
 						font-size:20px;
+						font-weight: bold;
             color: #FFFFFF;
             background: #232323;
 						float: right;

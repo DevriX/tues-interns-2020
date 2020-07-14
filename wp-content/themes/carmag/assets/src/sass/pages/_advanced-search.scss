@@ -1,22 +1,32 @@
+.section-advanced-search {
+  background-color: white;
 
-.simple-search {
+}
+
+
+.advanced-search {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $color-primary-dark;
   flex-direction: column;
-  width: 100%;
 
 
-    .vehicle-type {
-        a {
-            margin: 0 8px;
-            color: rgba(255, 255, 255, 0.15);
-            font-size: 32px;
-        }
-        .selected {
-            color: #FFFFFF;
-        }
-    }
+
+  .vehicle-type {
+    display: flex;
+    justify-content: center;
+      .type {
+          margin: 35px 20px;
+          color: rgba(255, 255, 255, 0.15);
+          font-size: 35px;
+          display: flex;
+          justify-content: center;
+          i {
+              pointer-events: none;
+          }
+      }
+}
 
     h2 {
         color: #FFFFFF;
@@ -25,19 +35,18 @@
 
     .specifications {
         .elements {
-            display: grid;
-            justify-content: center;
-						float: left;
-            grid-template-columns: repeat(5, 1fr);
-            column-gap: 2px;
-						font-weight: bold;
+          display: grid;
+              justify-content: center;
+              grid-template-columns: repeat(4, minmax(257px, 1fr));
+              grid-template-rows: repeat(4, minmax(56px, 1fr));
+              column-gap: 30px;
+              row-gap: 15px;
         }
 
         h2 {
-            text-align: left;
-            margin-bottom: 10px;
-            margin-top: 10px;
-            color: #FFFFFF;
+            text-align: center;
+            margin-bottom: 100px;
+            color: black;
         }
 
         select, .input {
@@ -123,8 +132,9 @@
         font-weight: bolder;
 				text-align: center;
         font-size: 17px;
+        margin-bottom: 40px;
 				float: right;
-        width: 14%;
+        width: 70%;
     }
 }
 

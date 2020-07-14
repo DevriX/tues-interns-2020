@@ -16,7 +16,7 @@ class RegisterUser {
             'display_name' => $_POST['name'],
         );
 
-        if( ! is_email( $user_data['use_email'] ) ) {
+        if( ! is_email( $user_data['user_email'] ) ) {
             wp_die( 'Invaid email address!' );
         }
 

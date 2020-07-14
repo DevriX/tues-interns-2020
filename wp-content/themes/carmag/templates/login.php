@@ -21,7 +21,6 @@ get_header(); ?>
 											 	<input type="hidden" name="action" value="process_login">
                         <h1>Login</h1>
 
-                        <input type="hidden" name="action" value="process_form">
                         <input class="form-input" type="email" name="email" id="email" placeholder="Email" required autofocus>
                         <input class="form-input" type="password" name="password" id="password" placeholder="Password" required>
                         <button type="submit" class="form-submit">Login</button>

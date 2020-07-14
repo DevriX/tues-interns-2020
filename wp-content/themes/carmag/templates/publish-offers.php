@@ -12,7 +12,7 @@
 get_header(); ?>
 
 <div class="section-fullwidth inverted">
-    <form>
+    <form method="POST" action="">
         <h1>Publish offer</h1>
         <div class="offer-info">
             <h2>What is your vehicle type ?</h2>
@@ -115,8 +115,6 @@ get_header(); ?>
             
                 <button type="submit" class="publishOfferButton button secondary" form="publishOffer" value="publishOffer" >Publish offer</button>
             </div>
-
-            
         </div>
     <form>
 </div><!-- .section-fullwidth -->

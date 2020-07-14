@@ -90,13 +90,8 @@ class Vehicles {
       	// Cycle through the $events_meta array.
       	// Note, in this example we just have one item, but this is helpful if you have multiple.
       	foreach ( $events_meta as $key => $value ) {
-            // Don't store custom data twice
-        		if ( 'revision' === $post->post_type ) {
-        			return;
-        		}
-
             if ( $value == null ) {
-                return;
+                continue;
             }
 
             switch ( $key ) {

@@ -14,7 +14,7 @@
             <div class="cookie-content">
                 <div class="cookie-text">
                     <p>This website uses cookies to ensure you get the best experience on our website.
-                    <a href="<?php echo esc_url('/privacy'); ?>" target="_blank"><?php printf( esc_html__( '%s', 'carmag' ), 'More info' ); ?></a>
+                    <a href="<?php echo esc_url('/privacy-policy'); ?>" target="_blank"><?php printf( esc_html__( '%s', 'carmag' ), 'More info' ); ?></a>
                     </p>
                 </div>
                 <div class="cookie-button">

@@ -95,9 +95,9 @@ class Vehicles {
         			return;
         		}
 
-            if ( $value == null ) {
-                return;
-            }
+                if ( $value == null ) {
+                    return;
+                }
 
             switch ( $key ) {
                 case 'vehicle-year':

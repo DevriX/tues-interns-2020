@@ -7,28 +7,28 @@ class Search {
     }
 
     static $tax_vars = array( // tax_name (what is in the request) => tax_key (what is in the database, only hierarchical taxonomies are different from tax_name )
-      'brand'     => 'car-type',
+      'brand'     => 'vehicle-type',
       'category'  => 'vehicle-category',
-      'color'     => 'color',
-      'conditoin' => 'condition',
-      'fuel'      => 'fuel',
-      'gearbox'   => 'gearbox',
-      'location'  => 'location',
-      'model'     => 'car-type',
+      'color'     => 'vehicle-color',
+      'conditoin' => 'vehicle-condition',
+      'fuel'      => 'vehicle-fuel',
+      'gearbox'   => 'vehicle-gearbox',
+      'location'  => 'vehicle-location',
+      'model'     => 'vehicle-type',
       'type'      => 'vehicle-category',
     );
 
     static $meta_vars = array( // meta_name (name of post meta, stored in the database) => meta_keys (what is in the request)
-        'car-horsepower' => array(
+        'vehicle-horsepower' => array(
             'start_horsepower', 'end_horsepower'
         ),
-        'car-price' => array(
+        'vehicle-price' => array(
             'start_price', 'end_price'
         ),
-        'car-range' => array(
+        'vehicle-range' => array(
             'start_range', 'end_range'
         ),
-        'car-year' => array(
+        'vehicle-year' => array(
             'start_year', 'end_year'
         ),
     );
@@ -93,7 +93,7 @@ class Search {
         }
 
         $meta_query = array();
-        
+
         foreach( $this::$meta_vars as $meta_name => $meta_keys ) {
           if( ! empty( get_query_var( $meta_keys[0] ) ) || ! empty( get_query_var( $meta_keys[1] ) ) ) {
               $meta_query[] = $this->get_num_meta_array( $meta_name, get_query_var( $meta_keys[0] ), get_query_var( $meta_keys[1] ) );

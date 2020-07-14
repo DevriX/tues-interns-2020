@@ -20,5 +20,6 @@ class LoginUser {
         wp_set_current_user( $user->data->ID );
 
         wp_redirect( home_url() ); exit;
+        
     }
 }

@@ -5154,6 +5154,20 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Pro';
   font-weight: 900; }
 
+/*!
+ * Font Awesome Pro 5.0.0 by @fontawesome - http://fontawesome.com
+ * License - http://fontawesome.com/license (Commercial License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/fa-brands-400.eot");
+  src: url("../fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-brands-400.woff2") format("woff2"), url("../fonts/fa-brands-400.woff") format("woff"), url("../fonts/fa-brands-400.ttf") format("truetype"), url("../fonts/fa-brands-400.svg#fontawesome") format("svg"); }
+
+.fab {
+  font-family: 'Font Awesome 5 Brands'; }
+
 .row-narrow {
   max-width: 800px; }
 
@@ -5295,6 +5309,33 @@ readers do not read off random characters that represent icons */
   flex-direction: column; }
   .list .card {
     width: 100%; }
+
+.site-footer.section-fullwidth {
+  padding: 80px 0 0; }
+  .site-footer.section-fullwidth .site-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #2c2c2c;
+    padding: 24px 0;
+    width: 100%; }
+    .site-footer.section-fullwidth .site-info .footer-icons a {
+      margin: 0 15px;
+      color: white;
+      font-size: 22px; }
+    .site-footer.section-fullwidth .site-info .footer-text {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 23px;
+      color: rgba(255, 255, 255, 0.5); }
+      .site-footer.section-fullwidth .site-info .footer-text a {
+        color: #ff5722; }
+
+@media (max-width: 660px) {
+  .site-info {
+    display: flex;
+    flex-direction: column; } }
 
 .button {
   border: none;

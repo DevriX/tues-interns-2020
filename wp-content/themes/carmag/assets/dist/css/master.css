@@ -5498,6 +5498,35 @@ readers do not read off random characters that represent icons */
     .seller-card {
       height: 100%; } }
 
+.cookie-banner {
+  background-color: #2c2c2c; }
+
+.cookie-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  width: 100%;
+  font-weight: bold;
+  color: white; }
+  .cookie-content .cookie-text {
+    font-size: 20px; }
+    .cookie-content .cookie-text a {
+      text-decoration: none;
+      color: #00bcd4; }
+  .cookie-content .cookie-button button {
+    border: none;
+    color: white;
+    align-items: center;
+    padding: 12px 56px;
+    background: #ff5722; }
+
+@media only screen and (max-width: 960px) {
+  .cookie-content {
+    flex-direction: column; }
+  .cookie-text {
+    text-align: center; } }
+
 .section-faq .row .column, .section-faq .row .columns {
   margin: 0 auto;
   padding: 30px 25px; }

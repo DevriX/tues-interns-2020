@@ -1,0 +1,42 @@
+.cookie-banner {
+    background-color: $color-primary-dark;
+}
+
+.cookie-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+
+    .cookie-text {
+        font-size: 20px;
+
+        a {
+            text-decoration: none;
+            color: $color-secondary;
+        }
+    }
+
+    .cookie-button {
+        button {
+            border: none;
+            color: white;
+            align-items: center;
+            padding: 12px 56px;
+            background: $color-primary;
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+    .cookie-content {
+        flex-direction: column;
+    }
+
+    .cookie-text {
+        text-align: center;
+    }
+}

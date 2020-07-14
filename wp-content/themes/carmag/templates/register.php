@@ -23,7 +23,7 @@ get_header(); ?>
                         <input class="form-input"  type="email" name="email" id="email" placeholder="Email" required autofocus>
                         <input class="form-input"  type="text" name="name" id="name" placeholder="Name" required>
                         <input class="form-input"  type="password" name="password" id="password" placeholder="Password" required>
-                        <input class="form-input"  type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password" required>
+                        <input class="form-input"  type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password" required>
                         <button type="submit" class="form-submit">Register</button>
 
                         <p class="form-suggestion">Already have an account? <a href="/login/">Login</a></p>

@@ -5607,7 +5607,8 @@ readers do not read off random characters that represent icons */
       font-weight: bold; }
       .section-register .row .column .register-form .form-input:-webkit-autofill::first-line, .section-register .row .columns .register-form .form-input:-webkit-autofill::first-line, .section-register .row .column .login-form .form-input:-webkit-autofill::first-line, .section-register .row .columns .login-form .form-input:-webkit-autofill::first-line, .section-login .row .column .register-form .form-input:-webkit-autofill::first-line, .section-login .row .columns .register-form .form-input:-webkit-autofill::first-line, .section-login .row .column .login-form .form-input:-webkit-autofill::first-line, .section-login .row .columns .login-form .form-input:-webkit-autofill::first-line {
         font-family: -apple-system, BlinkMacSystemFont, "Quantico", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-        font-size: 1em; }
+        font-weight: bold;
+        font-size: 1rem; }
       .section-register .row .column .register-form .form-input::-webkit-input-placeholder, .section-register .row .columns .register-form .form-input::-webkit-input-placeholder, .section-register .row .column .login-form .form-input::-webkit-input-placeholder, .section-register .row .columns .login-form .form-input::-webkit-input-placeholder, .section-login .row .column .register-form .form-input::-webkit-input-placeholder, .section-login .row .columns .register-form .form-input::-webkit-input-placeholder, .section-login .row .column .login-form .form-input::-webkit-input-placeholder, .section-login .row .columns .login-form .form-input::-webkit-input-placeholder {
         color: #a6a6a6;
         -webkit-text-fill-color: #a6a6a6; }

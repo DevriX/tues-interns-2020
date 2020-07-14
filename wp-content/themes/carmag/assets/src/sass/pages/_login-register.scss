@@ -39,7 +39,8 @@
 
                     &:-webkit-autofill::first-line {
                         font-family: $font-sans;
-                        font-size: 1em;
+                        font-weight: bold;
+                        font-size: 1rem;
                     }
                     
                     &::placeholder {

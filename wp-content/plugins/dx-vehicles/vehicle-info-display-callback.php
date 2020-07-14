@@ -9,11 +9,11 @@
     </tr>
     <tr>
         <td><?php _e( 'Horsepower:' ) ?></td>
-        <td><input type="text" name="vehicle-horsepower" value="<?php echo( sanitize_text_field( get_post_meta( get_the_ID(), __( 'car-horsepower' ), true ) ) ) ?>"></td>
+        <td><input type="text" name="vehicle-horsepower" value="<?php echo( sanitize_text_field( get_post_meta( get_the_ID(), __( 'vehicle-horsepower' ), true ) ) ) ?>"></td>
     </tr>
     <tr>
         <td><?php _e( 'Range:' ) ?></td>
-        <td><input type="text" name="vehicle-range" value="<?php echo( sanitize_text_field( get_post_meta( get_the_ID(), __( 'car-range' ), true ) ) ) ?>"></td>
+        <td><input type="text" name="vehicle-range" value="<?php echo( sanitize_text_field( get_post_meta( get_the_ID(), __( 'vehicle-range' ), true ) ) ) ?>"></td>
     </tr>
     <tr>
         <td><?php _e( 'Price:' ) ?></td>

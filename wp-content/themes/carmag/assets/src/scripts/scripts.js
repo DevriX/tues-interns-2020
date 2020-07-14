@@ -38,10 +38,10 @@ if (loginLink) {
 let selectedBrand = document.getElementById("brands");
 let modelsNames = Object.keys(carModels);
 modelsNames.forEach((model) => {
-    let option = document.createElement("option");
-    option.value = model;
-    option.innerHTML = model;
-    selectedBrand.appendChild(option);
+	let option = document.createElement("option");
+	option.value = model;
+	option.innerHTML = model;
+	selectedBrand.appendChild(option);
 });
 
 const handleModels = () => {
@@ -51,18 +51,18 @@ const handleModels = () => {
 	modelsSelect.innerHTML = "";
 	modelsSelect.append(defaultOption);
 	let models;
-	if(selectedType.value === "car") {
+	if (selectedType.value === "car") {
 		models = carModels;
-	} else if(selectedType.value === "truck") {
+	} else if (selectedType.value === "truck") {
 		models = truckModels;
-	} else if(selectedType.value === "motorcycle") {
+	} else if (selectedType.value === "motorcycle") {
 		models = motorcycleModels;
-	} else if(selectedType.value === "tractor") {
+	} else if (selectedType.value === "tractor") {
 		models = agriculturalBrands;
-	} else if(selectedType.value === "bus") {
+	} else if (selectedType.value === "bus") {
 		models = busModels;
 	}
-	if(brand) {
+	if (brand) {
 		models[brand].forEach((model) => {
 			let option = document.createElement("option");
 			option.value = model;
@@ -75,28 +75,28 @@ const handleModels = () => {
 		option.innerHTML = "Model";
 		modelsSelect.appendChild(option);
 	}
-}
+};
 
 let selectedType = document.getElementById("category");
 let types = document.querySelectorAll(".type");
-types.forEach(type => {
-    type.addEventListener("click", () => {
+types.forEach((type) => {
+	type.addEventListener("click", () => {
 		event.stopPropagation();
-        types.forEach(type => {
-			type.classList.remove("selected");   
-		})
+		types.forEach((type) => {
+			type.classList.remove("selected");
+		});
 		event.target.classList.add("selected");
 		selectedType.value = event.target.id;
 		let models;
-		if(selectedType.value === "car") {
+		if (selectedType.value === "car") {
 			models = carModels;
-		} else if(selectedType.value === "truck") {
+		} else if (selectedType.value === "truck") {
 			models = truckModels;
-		} else if(selectedType.value === "motorcycle") {
+		} else if (selectedType.value === "motorcycle") {
 			models = motorcycleModels;
-		} else if(selectedType.value === "tractor") {
+		} else if (selectedType.value === "tractor") {
 			models = agriculturalBrands;
-		} else if(selectedType.value === "bus") {
+		} else if (selectedType.value === "bus") {
 			models = busModels;
 		}
 		modelsNames = Object.keys(models);
@@ -109,5 +109,12 @@ types.forEach(type => {
 			option.innerHTML = model;
 			selectedBrand.appendChild(option);
 		});
-    })
-})
+	});
+});
+const faqFields = document.querySelectorAll(".faq-field");
+faqFields.forEach((field) => {
+	field.addEventListener("click", () => {
+		field.querySelector(".field-heading").classList.toggle("opened");
+		field.querySelector(".field-content").classList.toggle("opened");
+	});
+});

@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
 
 const toggleDrawer = () => {
 	const drawerClassList = event.target.classList;
-	const navClassList = document.querySelectorAll(".menu-primary-container")[0]
+	const navClassList = document.querySelectorAll(".menu-container")[0]
 		.classList;
 	drawerClassList.toggle("opened");
 	navClassList.toggle("opened");
@@ -31,8 +31,12 @@ const toggleDrawer = () => {
 const separator = document.createElement("span");
 separator.className = "separator";
 const loginLink = document.querySelectorAll(".login")[0];
+const profileDropdown = document.querySelectorAll(".profile")[0];
 if (loginLink) {
 	loginLink.before(separator);
+}
+if (profileDropdown) {
+	profileDropdown.before(separator);
 }
 
 const faqFields = document.querySelectorAll(".faq-field");
@@ -130,3 +134,16 @@ if (switcher) {
 		];
 	});
 }
+var password = document.getElementById("password"),
+	confirm_password = document.getElementById("confirm_password");
+
+function validatePassword() {
+	if (password.value != confirm_password.value) {
+		confirm_password.setCustomValidity("Passwords don't match");
+	} else {
+		confirm_password.setCustomValidity("");
+	}
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;

@@ -8,6 +8,8 @@ echo shell_exec( 'git checkout master; ');
 echo shell_exec( 'git pull origin master; ');
 echo shell_exec( 'wp cache flush ');
 
+echo exec( 'git pull origin master' );
+
 // Load WordPress
 require_once( 'wp-load.php' );
 

@@ -5369,6 +5369,17 @@ readers do not read off random characters that represent icons */
         .site-header .row .site-header-inner .main-navigation .menu-container div[class$="-menu-container"] .menu .menu-item .dropdown-arrow {
           display: none; } }
 
+.view {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.list {
+  flex-direction: column; }
+  .list .card {
+    width: 100%; }
+
 .site-footer.section-fullwidth {
   padding: 80px 0 0; }
   .site-footer.section-fullwidth .site-info {
@@ -5401,7 +5412,8 @@ readers do not read off random characters that represent icons */
   padding: 10px 32px;
   font-size: 1rem;
   font-weight: bold;
-  transition: 0.3s; }
+  transition: 0.3s;
+  outline: none; }
   .button:hover {
     color: black; }
   .button.primary {
@@ -5429,6 +5441,53 @@ readers do not read off random characters that represent icons */
   @media (min-width: 640px) {
     .section-fullwidth {
       padding: calc(80px + 85px) 0 80px; } }
+
+.card {
+  background-image: url("https://picsum.photos/350/280");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 280px;
+  position: relative;
+  margin: 1rem; }
+  .card .card-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px 25px 0;
+    transition: 0.2s; }
+    .card .card-info * {
+      margin: 0; }
+    .card .card-info .info-title {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 29px; }
+    .card .card-info .info-price {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      color: #acacaa;
+      font-family: Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+      .card .card-info .info-price::first-letter {
+        color: #ff5722; }
+    .card .card-info .info-readmore {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      border-top: 1px solid rgba(255, 255, 255, 0.75);
+      width: 100%;
+      text-align: left;
+      padding: 10px 0;
+      margin-top: 15px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.75); }
+      .card .card-info .info-readmore i {
+        font-size: 19px; }
+  .card:hover .card-info .info-readmore {
+    margin-top: calc(100% - 130px); }
 
 .carousel {
   height: 450px;
@@ -5597,6 +5656,128 @@ readers do not read off random characters that represent icons */
   .cookie-text {
     text-align: center; } }
 
+.section-latestoffers {
+  padding: 80px 0; }
+  .section-latestoffers .latestoffers-text {
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #2c2c2c;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
+
+.section-search {
+  background-color: #2c2c2c; }
+  .section-search .row .column .simple-search, .section-search .row .columns .simple-search {
+    display: flex;
+    background-color: #2c2c2c;
+    flex-direction: column;
+    font-family: Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+    .section-search .row .column .simple-search h2, .section-search .row .columns .simple-search h2 {
+      color: white;
+      margin-bottom: 5px; }
+    .section-search .row .column .simple-search .search-form, .section-search .row .columns .simple-search .search-form {
+      display: flex;
+      flex-direction: column; }
+      .section-search .row .column .simple-search .search-form .form-content, .section-search .row .columns .simple-search .search-form .form-content {
+        display: flex;
+        flex-direction: row; }
+        .section-search .row .column .simple-search .search-form .form-content .wrapper-price, .section-search .row .columns .simple-search .search-form .form-content .wrapper-price {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          background-color: #1f1f1f;
+          border: 1px solid rgba(255, 255, 255, 0.1); }
+          .section-search .row .column .simple-search .search-form .form-content .wrapper-price .price, .section-search .row .columns .simple-search .search-form .form-content .wrapper-price .price {
+            position: relative; }
+            .section-search .row .column .simple-search .search-form .form-content .wrapper-price .price:before, .section-search .row .columns .simple-search .search-form .form-content .wrapper-price .price:before {
+              content: "$";
+              position: absolute;
+              color: #ff5722;
+              margin-left: 20px;
+              top: 0;
+              bottom: 0;
+              display: flex;
+              align-items: center;
+              font-size: 18px;
+              font-weight: bold; }
+          .section-search .row .column .simple-search .search-form .form-content .wrapper-price .switcher, .section-search .row .columns .simple-search .search-form .form-content .wrapper-price .switcher {
+            font-size: 30px;
+            color: #5f5f5f;
+            cursor: pointer; }
+            .section-search .row .column .simple-search .search-form .form-content .wrapper-price .switcher i, .section-search .row .columns .simple-search .search-form .form-content .wrapper-price .switcher i {
+              pointer-events: none; }
+          .section-search .row .column .simple-search .search-form .form-content .wrapper-price .form-field, .section-search .row .columns .simple-search .search-form .form-content .wrapper-price .form-field {
+            text-align: center;
+            font-size: 18px;
+            padding-left: 35px;
+            border: none;
+            min-width: 100px; }
+            .section-search .row .column .simple-search .search-form .form-content .wrapper-price .form-field::-webkit-inner-spin-button, .section-search .row .columns .simple-search .search-form .form-content .wrapper-price .form-field::-webkit-inner-spin-button, .section-search .row .column .simple-search .search-form .form-content .wrapper-price .form-field::-webkit-outer-spin-button, .section-search .row .columns .simple-search .search-form .form-content .wrapper-price .form-field::-webkit-outer-spin-button, .section-search .row .column .simple-search .search-form .form-content .wrapper-price .form-field[type="number"], .section-search .row .columns .simple-search .search-form .form-content .wrapper-price .form-field[type="number"] {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none; }
+        .section-search .row .column .simple-search .search-form .form-content .form-field, .section-search .row .columns .simple-search .search-form .form-content .form-field {
+          color: white;
+          outline: none;
+          background-color: #1f1f1f;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 20px;
+          font-weight: bold;
+          max-width: 200px;
+          width: 100%; }
+      .section-search .row .column .simple-search .search-form .form-actions, .section-search .row .columns .simple-search .search-form .form-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px; }
+        .section-search .row .column .simple-search .search-form .form-actions .actions-vehicle-type, .section-search .row .columns .simple-search .search-form .form-actions .actions-vehicle-type {
+          font-size: 32px; }
+          .section-search .row .column .simple-search .search-form .form-actions .actions-vehicle-type span, .section-search .row .columns .simple-search .search-form .form-actions .actions-vehicle-type span {
+            margin: 0 5px;
+            cursor: pointer; }
+            .section-search .row .column .simple-search .search-form .form-actions .actions-vehicle-type span i, .section-search .row .columns .simple-search .search-form .form-actions .actions-vehicle-type span i {
+              pointer-events: none; }
+            .section-search .row .column .simple-search .search-form .form-actions .actions-vehicle-type span.selected, .section-search .row .columns .simple-search .search-form .form-actions .actions-vehicle-type span.selected {
+              color: white; }
+        .section-search .row .column .simple-search .search-form .form-actions .actions-buttons .search-button, .section-search .row .columns .simple-search .search-form .form-actions .actions-buttons .search-button {
+          font-family: -apple-system, BlinkMacSystemFont, "Quantico", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+        .section-search .row .column .simple-search .search-form .form-actions .actions-buttons .advanced-button, .section-search .row .columns .simple-search .search-form .form-actions .actions-buttons .advanced-button {
+          font-family: -apple-system, BlinkMacSystemFont, "Quantico", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+          background-color: #afcf80; }
+          .section-search .row .column .simple-search .search-form .form-actions .actions-buttons .advanced-button:hover, .section-search .row .columns .simple-search .search-form .form-actions .actions-buttons .advanced-button:hover {
+            background-color: #a3c86d; }
+
+@media only screen and (max-width: 960px) {
+  .section-search .row .column .simple-search .search-form .form-content, .section-search .row .columns .simple-search .search-form .form-content {
+    flex-wrap: wrap; }
+    .section-search .row .column .simple-search .search-form .form-content .wrapper-price, .section-search .row .columns .simple-search .search-form .form-content .wrapper-price {
+      width: 100%; }
+    .section-search .row .column .simple-search .search-form .form-content .form-field, .section-search .row .columns .simple-search .search-form .form-content .form-field {
+      max-width: 50%; } }
+
+@media only screen and (max-width: 670px) {
+  .section-latestoffers {
+    padding: 50px 0; }
+  .section-search {
+    padding-top: 130px; }
+    .section-search .row .column .simple-search .search-form .form-actions, .section-search .row .columns .simple-search .search-form .form-actions {
+      flex-direction: column; }
+      .section-search .row .column .simple-search .search-form .form-actions .actions-buttons, .section-search .row .columns .simple-search .search-form .form-actions .actions-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .section-search .row .column .simple-search .search-form .form-actions .actions-buttons .button, .section-search .row .columns .simple-search .search-form .form-actions .actions-buttons .button {
+          margin: 5px 0; } }
+
+@media only screen and (max-width: 375px) {
+  .section-search .row .column .simple-search h2, .section-search .row .columns .simple-search h2 {
+    text-align: center; }
+  .section-search .row .column .simple-search .search-form .form-content .form-field, .section-search .row .columns .simple-search .search-form .form-content .form-field {
+    max-width: 100%; } }
+
 .section-faq .row .column, .section-faq .row .columns {
   margin: 0 auto;
   padding: 30px 25px; }
@@ -5675,6 +5856,124 @@ readers do not read off random characters that represent icons */
 
 .single-vehicle .seller-card {
   grid-row: 2; }
+
+.section-advanced-search {
+  background-color: white; }
+
+.advanced-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c2c2c;
+  flex-direction: column; }
+  .advanced-search .vehicle-type {
+    display: flex;
+    justify-content: center; }
+    .advanced-search .vehicle-type .type {
+      margin: 35px 20px;
+      color: rgba(255, 255, 255, 0.15);
+      font-size: 35px;
+      display: flex;
+      justify-content: center; }
+      .advanced-search .vehicle-type .type i {
+        pointer-events: none; }
+  .advanced-search h2 {
+    color: #ffffff;
+    font-size: 32px; }
+  .advanced-search .specifications .elements {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, minmax(257px, 1fr));
+    grid-template-rows: repeat(4, minmax(56px, 1fr));
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    row-gap: 15px; }
+  .advanced-search .specifications h2 {
+    text-align: center;
+    margin-bottom: 100px;
+    color: black; }
+  .advanced-search .specifications select,
+  .advanced-search .specifications .input {
+    color: #ffffff;
+    background: #232323;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-indent: 10px; }
+  .advanced-search .specifications .price-first::first-letter {
+    color: #ff5722; }
+  .advanced-search .specifications .price-second::first-letter {
+    color: #ff5722; }
+  .advanced-search .specifications .wrapper {
+    display: flex;
+    flex-direction: row;
+    -webkit-column-gap: 2px;
+       -moz-column-gap: 2px;
+            column-gap: 2px; }
+  .advanced-search .specifications .separator {
+    flex: 0 12px 4px;
+    display: inline-block;
+    text-align: center;
+    font-size: 27px;
+    background: #232323;
+    color: #656565;
+    padding: 10px 5px; }
+  .advanced-search .specifications .price-first {
+    font-size: 20px;
+    color: #ffffff;
+    background: #232323;
+    float: left;
+    width: 130px;
+    height: 65px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: center; }
+  .advanced-search .specifications .price-second {
+    font-size: 20px;
+    color: #ffffff;
+    background: #232323;
+    float: right;
+    width: 130px;
+    height: 65px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: center; }
+  .advanced-search .specifications ::-webkit-input-placeholder {
+    /* Edge */
+    color: #ffffff; }
+  .advanced-search .specifications :-ms-input-placeholder {
+    /* Internet Explorer */
+    color: #ffffff; }
+  .advanced-search .specifications ::-moz-placeholder {
+    color: #ffffff; }
+  .advanced-search .specifications ::-ms-input-placeholder {
+    color: #ffffff; }
+  .advanced-search .specifications ::placeholder {
+    color: #ffffff; }
+  .advanced-search .searchButton {
+    display: inline-block;
+    font-family: Quantico;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 40px;
+    float: right;
+    width: 70%; }
+
+@media (max-width: 1120px) {
+  .simple-search .elements {
+    display: inline-grid;
+    justify-content: center; }
+  .simple-search .price-first,
+  .simple-search .price-second {
+    display: inline-grid;
+    justify-content: center; } }
 
 .section-register, .section-login {
   text-align: center;

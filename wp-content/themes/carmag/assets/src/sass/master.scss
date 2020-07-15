@@ -4,7 +4,6 @@
 // and in the darkness bind them.
 // The order of files include is important. Dont change it.
 
-
 // All general settings and utils
 @import "base/settings";
 @import "base/mixins";
@@ -32,6 +31,7 @@
 // Separating the largest parts of the site in specific files.
 @import "layout/general";
 @import "layout/header";
+@import "layout/views";
 @import "layout/footer";
 
 // Any other module that can be reused multuple times.
@@ -42,6 +42,7 @@
 @import "components/comments";
 @import "components/widgets";
 @import "components/forms";
+@import "components/card";
 @import "components/carousel";
 @import "components/seller-card";
 @import "components/cookie-notice";
@@ -50,6 +51,8 @@
 @import "pages/404";
 @import "pages/single";
 @import "pages/search";
+@import "pages/homepage";
 @import "pages/faq";
 @import "pages/single-vehicle";
+@import "pages/advanced-search";
 @import "pages/login-register";

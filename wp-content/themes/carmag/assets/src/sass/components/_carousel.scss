@@ -40,6 +40,7 @@
 	align-items: center;
 	transition: 0.3s;
 	cursor: pointer;
+
 	div {
 		width: 25px;
 		height: 25px;
@@ -85,11 +86,13 @@
 	flex-wrap: nowrap;
 	overflow: hidden;
 	gap: 16px;
+
 	div {
 		min-width: 120px;
 		height: 80px;
 		margin: 0;
 		cursor: pointer;
+
 		img {
 			width: 120px;
 			display: block;

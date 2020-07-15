@@ -1,0 +1,226 @@
+.section-latestoffers {
+	padding: 80px 0;
+
+	.latestoffers-text {
+		justify-content: center;
+		padding-bottom: 20px;
+		margin-bottom: 40px;
+		font-weight: bold;
+		font-size: 30px;
+		color: $color-primary-dark;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	}
+}
+
+.section-search {
+	background-color: $color-primary-dark;
+
+	.row {
+		.column {
+			.simple-search {
+				display: flex;
+				background-color: $color-primary-dark;
+				flex-direction: column;
+				font-family: $font-secondary;
+
+				h2 {
+					color: white;
+					margin-bottom: 5px;
+				}
+
+				.search-form {
+					display: flex;
+					flex-direction: column;
+
+					.form-content {
+						display: flex;
+						flex-direction: row;
+
+						.wrapper-price {
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							background-color: darken($color-primary-dark, 5);
+							border: 1px solid rgba(255, 255, 255, 0.1);
+
+							.price {
+								position: relative;
+
+								&:before {
+									content: "$";
+									position: absolute;
+									color: $color-primary;
+									margin-left: 20px;
+									top: 0;
+									bottom: 0;
+									display: flex;
+									align-items: center;
+									font-size: 18px;
+									font-weight: bold;
+								}
+							}
+
+							.switcher {
+								font-size: 30px;
+								color: lighten($color-primary-dark, 20);
+								cursor: pointer;
+
+								i {
+									pointer-events: none;
+								}
+							}
+
+							.form-field {
+								text-align: center;
+								font-size: 18px;
+								padding-left: 35px;
+								border: none;
+								min-width: 100px;
+
+								&::-webkit-inner-spin-button,
+								&::-webkit-outer-spin-button,
+								&[type="number"] {
+									-webkit-appearance: none;
+									-moz-appearance: none;
+									appearance: none;
+								}
+							}
+						}
+
+						.form-field {
+							color: white;
+							outline: none;
+							background-color: darken($color-primary-dark, 5);
+							border: 1px solid rgba(255, 255, 255, 0.1);
+							padding: 20px;
+							font-weight: bold;
+							max-width: 200px;
+							width: 100%;
+						}
+
+						input.form-field {
+						}
+					}
+
+					.form-actions {
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						align-items: center;
+						margin-top: 20px;
+
+						.actions-vehicle-type {
+							font-size: 32px;
+
+							span {
+								margin: 0 5px;
+								cursor: pointer;
+
+								i {
+									pointer-events: none;
+								}
+
+								&.selected {
+									color: white;
+								}
+							}
+						}
+
+						.actions-buttons {
+							.search-button {
+								font-family: $font-sans;
+							}
+
+							.advanced-button {
+								font-family: $font-sans;
+								background-color: #afcf80;
+
+								&:hover {
+									background-color: darken(#afcf80, 5%);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+	.section-search {
+		.row {
+			.column {
+				.simple-search {
+					.search-form {
+						.form-content {
+							flex-wrap: wrap;
+
+							.wrapper-price {
+								width: 100%;
+							}
+
+							.form-field {
+								max-width: 50%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 670px) {
+	.section-latestoffers {
+		padding: 50px 0;
+	}
+
+	.section-search {
+		padding-top: 130px;
+
+		.row {
+			.column {
+				.simple-search {
+					.search-form {
+						.form-actions {
+							flex-direction: column;
+
+							.actions-buttons {
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+
+								.button {
+									margin: 5px 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.section-search {
+		.row {
+			.column {
+				.simple-search {
+					h2 {
+						text-align: center;
+					}
+
+					.search-form {
+						.form-content {
+							.form-field {
+								max-width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

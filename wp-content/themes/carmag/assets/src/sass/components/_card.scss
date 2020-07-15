@@ -1,0 +1,67 @@
+.card {
+	background-image: url("https://picsum.photos/350/280");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 350px;
+	height: 280px;
+	position: relative;
+	margin: 1rem;
+
+	.card-info {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		color: white;
+		padding: 20px 25px 0;
+		transition: 0.2s;
+
+		* {
+			margin: 0;
+		}
+
+		.info-title {
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 29px;
+		}
+
+		.info-price {
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 19px;
+			color: #acacaa;
+			font-family: $font-secondary;
+
+			&::first-letter {
+				color: $color-primary;
+			}
+		}
+
+		.info-readmore {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: transparent;
+			border-top: 1px solid rgba(255, 255, 255, 0.75);
+			width: 100%;
+			text-align: left;
+			padding: 10px 0;
+			margin-top: 15px;
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.75);
+
+			i {
+				font-size: 19px;
+			}
+		}
+	}
+
+	&:hover {
+		.card-info {
+			.info-readmore {
+				margin-top: calc(100% - 130px);
+			}
+		}
+	}
+}

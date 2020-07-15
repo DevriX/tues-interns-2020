@@ -1,0 +1,14 @@
+.view {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.list {
+	flex-direction: column;
+
+	.card {
+		width: 100%;
+	}
+}

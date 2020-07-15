@@ -78,7 +78,7 @@
 					}
 				}
 
-				.menu-primary-container {
+				.menu-container {
 					transition: 0.2s;
 
 					&.opened {
@@ -88,7 +88,7 @@
 						pointer-events: auto;
 					}
 
-					.menu-primary-menu-container {
+					div[class$="-menu-container"] {
 						.menu {
 							display: flex;
 							flex-direction: row;
@@ -104,6 +104,7 @@
 
 							.menu-item {
 								margin: 0 10px;
+								position: relative;
 
 								&.register {
 									padding: 0;
@@ -113,6 +114,86 @@
 
 										&:hover {
 											border-bottom: 1px solid transparent;
+										}
+									}
+								}
+
+								&.profile {
+									min-width: max-content;
+									user-select: none;
+									cursor: pointer;
+								}
+
+								.sub-menu {
+									display: flex;
+									flex-direction: column;
+									position: absolute;
+									background-color: $color-white;
+									right: 0;
+									visibility: hidden;
+									opacity: 0;
+									transition: 0.2s;
+
+									li {
+										margin: 0;
+										border-top: 0.5px solid rgba(0, 0, 0, 0.5);
+										border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+
+										&:first-child {
+											border-top: none;
+										}
+
+										&:last-child {
+											border-bottom: none;
+										}
+
+										a {
+											color: black;
+											font-weight: normal;
+											text-shadow: 0 0 0.5px black;
+											transition: 0.2s;
+
+											&:hover {
+												text-shadow: 0 0 1px black, 0 0 1px black; //bolder
+											}
+
+											&:before {
+												font-family: "Font Awesome 5 Pro";
+												font-size: 25px;
+												margin: 0 10px 0 0;
+												vertical-align: sub;
+											}
+										}
+
+										&.profile-edit {
+											a:before {
+												content: "\f4ff";
+											}
+										}
+
+										&.profile-publish {
+											a:before {
+												content: "\f055";
+											}
+										}
+
+										&.profile-logout {
+											a:before {
+												content: "\f2f5";
+											}
+										}
+									}
+								}
+
+								&.is-extended {
+									.sub-menu {
+										visibility: visible;
+										opacity: 1;
+									}
+
+									.dropdown-arrow {
+										i {
+											transform: rotate(-90deg);
 										}
 									}
 								}
@@ -128,6 +209,16 @@
 
 									&:hover {
 										border-bottom: 1px solid white;
+									}
+								}
+
+								.dropdown-arrow {
+									color: white;
+									display: inline-block;
+
+									i {
+										transition: 0.2s;
+										transform: rotate(90deg);
 									}
 								}
 							}
@@ -156,7 +247,7 @@
 						display: flex;
 					}
 
-					.menu-primary-container {
+					.menu-container {
 						position: absolute;
 						z-index: 1;
 						visibility: hidden;
@@ -167,7 +258,7 @@
 						left: 0;
 						right: 0;
 
-						.menu-primary-menu-container {
+						div[class$="-menu-container"] {
 							.menu {
 								flex-direction: column;
 								padding: 0 20px;
@@ -193,6 +284,30 @@
 									a {
 										width: 100%;
 										border: 0;
+									}
+
+									&.profile {
+										& > a {
+											&:hover {
+												border-bottom: 1px solid transparent;
+											}
+
+											&:after {
+												font-family: "Font Awesome 5 Pro";
+												content: "\f078";
+												margin-left: 20px;
+												vertical-align: text-top;
+											}
+										}
+									}
+
+									.sub-menu {
+										left: 0;
+										right: 0;
+									}
+
+									.dropdown-arrow {
+										display: none;
 									}
 								}
 							}

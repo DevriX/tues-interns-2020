@@ -1,0 +1,157 @@
+.section-register, .section-login {
+	text-align: center;
+	background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)), url('../images/register-image.png');
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-bottom: 25em;
+
+	.row {
+		.column {
+
+			.register-form, .login-form {
+				background-color: $color-primary-dark;
+				text-align: center;
+				padding: 2em 3.5em 1em;
+				margin: 0 9em;
+
+				h1 {
+					color: $color-white;
+					font-size: 1.5em;
+					margin-bottom: 0.7em;
+				}
+
+				.form-input {
+					font-family: $font-sans;
+					width: 100%;
+					padding: 1em;
+					margin-top: 1em;
+					border: none;
+					outline: none;
+					color: $color-white;
+					-webkit-text-fill-color: white;
+					background-color: lighten($color-primary-dark, 5%);
+					-moz-box-shadow:    inset 5em 5em 5em 5em lighten($color-primary-dark, 5%);
+					-webkit-box-shadow: inset 5em 5em 5em 5em lighten($color-primary-dark, 5%);
+					box-shadow:         inset 5em 5em 5em 5em lighten($color-primary-dark, 5%);
+					font-weight: bold;
+
+
+					&:-webkit-autofill::first-line {
+						font-family: $font-sans;
+						font-weight: bold;
+						font-size: 1rem;
+					}
+
+					&::placeholder {
+						color: lighten(#404040, 40);
+						-webkit-text-fill-color: lighten(#404040, 40);
+					}
+				}
+
+				.form-submit {
+					background-color: $color-primary;
+					color: $color-white;
+					font: inherit;
+					border: none;
+					width: 75%;
+					padding: 0.6em 2em;
+					font-size: 1rem;
+					font-weight: bold;
+					transition: 0.3s;
+					margin: 2em 0;
+				}
+
+				.form-suggestion {
+					font-family: $font-secondary;
+					color: $color-white;
+					margin-top: 0;
+					margin-bottom: 0.5em;
+
+					a {
+						color: $color-primary;
+					}
+				}
+
+			}
+
+		}
+	}
+}
+
+.section-register {
+	.row {
+		.column {
+			margin: 4.1em 0 0 26em;
+		}
+	}
+}
+
+.section-login {
+	.row {
+		.column {
+			margin: 17em 0 0 26em;
+		}
+	}
+}
+
+@media only screen and (max-width: $breakpoint-large) {
+	.site-content{
+		.section-register, .section-login {
+			margin: 0;
+
+			.row {
+				.column {
+					margin: 0 auto;
+					padding: 0;
+
+					.register-form, .login-form {
+						margin: 0 auto;
+						max-width: 30em;
+						width: 100%
+					}
+				}
+			}
+		}
+	}
+	.site-content {
+		.section-register {
+			padding: 12em 0 1.7em 0;
+		}
+	}
+
+	.site-content {
+		.section-login {
+			padding: 12em 0 6.5em 0;
+		}
+	}
+}
+
+
+@media only screen and (max-width: $breakpoint-small) {
+	.site-content{
+		.section-register, .section-login {
+
+			.row {
+				margin: 0 1em;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+	.site-content{
+		.section-register, .section-login {
+			background-image: none;
+
+			.row {
+				.column {
+
+					.register-form, .login-form {
+						padding: 2em 2em 1em;
+					}
+				}
+			}
+		}
+	}
+}

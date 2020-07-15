@@ -4,6 +4,8 @@ class Vehicles {
         add_action( 'init', array( $this, 'cpt_create' ) );
         add_action( 'add_meta_boxes', array( $this, 'register_meta_boxes' ) );
         add_action( 'save_post', array( $this, 'vehicle_info_save_meta' ), 1, 2 );
+        add_action( 'admin_post_process_offer', array( $this, 'process_offer_data' ));
+
     }
 
     public function labels() {
@@ -119,6 +121,44 @@ class Vehicles {
         			// If the custom field doesn't have a value, add it.
         			add_post_meta( $post_id, $key, $value );
         		}
+        }
+    }
+
+    function process_offer_data () {
+        $post_data = array(
+            'vehicle-year'       => $_POST['vehicle-year'],
+            'vehicle-millage'    => $_POST['vehicle-millage'],
+            'vehicle-horsepower' => $_POST['vehicle-horsepower'],
+            // 'vehicle-range'      => sanitize_text_field( isset( $_POST['vehicle-range'] ) ? $_POST['vehicle-range'] : null ),
+            'vehicle-price'      => $_POST['vehicle-price'],
+            'vehicle-images'     => $_FILES['vehicle-images'],
+        );
+
+      	// Cycle through the $events_meta array.
+      	// Note, in this example we just have one item, but this is helpful if you have multiple.
+      	foreach ( $events_meta as $key => $value ) {
+            if ( $value == null ) {
+                continue;
+            }
+
+            switch ( $key ) {
+                case 'vehicle-year':
+                    if( strcmp( "1769", $value ) > 0 || strcmp( "2020", $value ) < 0 ) wp_die( 'Invalid year' );
+                    break;
+                case 'vehicle-millage':
+                    if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid millage.' );
+                    break;
+                case 'vehicle-horsepower':
+                    if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid horsepower.' );
+                    break;
+                case 'vehicle-range':
+                    if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid range.' );
+                    break;
+                case 'vehicle-price':
+                    if( strcmp( "0", $value ) > 0 ) wp_die( 'Invalid price.' );
+                    break;
+            }
+                $post_id = wp_insert_post( $post_data );
         }
     }
 }

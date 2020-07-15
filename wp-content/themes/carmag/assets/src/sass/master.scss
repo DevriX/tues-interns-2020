@@ -4,7 +4,6 @@
 // and in the darkness bind them.
 // The order of files include is important. Dont change it.
 
-
 // All general settings and utils
 @import "base/settings";
 @import "base/mixins";
@@ -50,6 +49,7 @@
 @import "pages/404";
 @import "pages/single";
 @import "pages/search";
+@import "pages/publish_offer";
 @import "pages/faq";
 @import "pages/single-vehicle";
 @import "pages/login-register";

@@ -1,0 +1,257 @@
+h1 {
+    text-align: center;
+    margin-bottom: 82px;
+}
+
+.offer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary-dark;
+    padding: 15px 0;
+    flex-direction: column;
+
+    .vehicle-type {
+        .type {
+            margin: 0 25px;
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 25px;
+
+            i {
+                pointer-events: none;
+            }
+        }
+        .selected {
+            color: #FFFFFF;
+        }
+    }
+
+    h2 {
+        margin-bottom: 25px;
+        margin-top: 18px;
+        color: #FFFFFF;
+    }
+
+    .specifications {
+        .elements {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(4, minmax(257px, 1fr));
+            grid-template-rows: repeat(2, minmax(56px, 2fr));
+            column-gap: 30px;
+            row-gap: 15px;
+        }
+    
+        h2 {
+            text-align: left;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            color: #FFFFFF;
+        }
+
+        #pricee {
+            grid-area: pricee;
+        }
+
+        #images {
+            grid-area: images;
+        }
+
+        #description {
+            grid-area: description;
+        }
+
+        .sorting {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            column-gap: 80px;
+        }
+
+        .device {
+            display: none;
+        }
+    
+        select, .input {
+            color: #FFFFFF;
+            background: #232323;
+            border-bottom: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            text-indent: 15px;
+        }
+
+        .price {
+            font-family: Quantico;
+            color: #FFFFFF;
+            background: #232323;
+            border-right: none;
+            border-bottom: none;
+            text-align: center;
+            width: 255px;
+            height: 60px;
+        }
+
+        .desc {
+            width: 545px;
+            height: 119px;
+        }
+    
+        input[type="file"] {
+            display: none;
+        }
+    
+        ::-webkit-input-placeholder { /* Edge */
+            color: #FFFFFF;
+        }
+          
+        :-ms-input-placeholder { /* Internet Explorer */
+            color: #FFFFFF;
+        }
+          
+        ::placeholder {
+            color: #FFFFFF;
+        }
+        
+        .custom-file-upload {
+            background-color: #FFFFFF;
+            display: inline-block;
+            padding: 30px 60px;
+            margin-right: 25px;
+            cursor: pointer;
+        }
+    }    
+
+    .publishOfferButton {
+        font-family: Quantico;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 50px;
+        width: 100%;
+        color: #000000;
+    }
+
+}
+
+@media (max-width: 1130px) {
+    .offer-info{
+        .specifications {
+            .elements {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: repeat(4, minmax(60px, 1fr));
+                grid-template-rows: repeat(2, minmax(56px, 1fr));
+                column-gap: 20px;
+                row-gap: 15px;
+            }
+
+            .sorting {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                column-gap: 80px;
+            }
+
+            .device {
+                display: none;
+            }
+
+            .description{
+                h2, .desc {
+                    display: flex;
+                    justify-content: center;
+                    margin: 25px auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 880px) {
+    .offer-info{
+        .specifications {
+            h2 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .elements {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: repeat(4, minmax(60px, 1fr));
+                grid-template-rows: repeat(2, minmax(56px, 1fr));
+                column-gap: 20px;
+                row-gap: 15px;
+            }
+
+            .sorting {
+                display: none;
+            }
+
+            .device {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto;
+
+                .price {
+                    margin: 0 auto;
+                }
+            }
+
+            .description{
+                h2, .desc {
+                    display: flex;
+                    justify-content: center;
+                    margin: 25px auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .offer-info{
+        .specifications {
+            h2 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .elements {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: repeat(1, minmax(258px, 1fr));
+                grid-template-rows: repeat(8, minmax(56px, 1fr));
+                column-gap: 20px;
+                row-gap: 15px;
+            }
+
+            .sorting {
+                display: none;
+            }
+
+            .device {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto;
+
+                .price {
+                    margin: 0 auto;
+                }
+            }
+
+            .description{
+                h2, .desc {
+                    display: flex;
+                    justify-content: center;
+                    margin: 25px auto;
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

@@ -51,13 +51,20 @@
 
 					<?php if ( has_nav_menu( 'primary' ) ) : ?>
 					<nav id="site-navigation" class="main-navigation">
-						<div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" onClick="toggleDrawer()">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-						<div class="menu-primary-container">
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						<div class="menu-toggle" aria-expanded="false" onClick="toggleDrawer()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+						<div class="menu-container">
+                            <?php
+                            if ( is_user_logged_in() ) {
+                                wp_nav_menu( array( 'theme_location' => 'profile', 'menu_id' => 'profile-menu' ) );
+                            } else {
+                                wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );
+                            }
+                            ?>
+
 						</div><!-- .menu-primary-container -->
 					</nav><!-- #site-navigation -->
 					<?php endif; ?>

@@ -17,7 +17,7 @@ get_header(); ?>
     <div class="row">
 		<div class="column small-12 medium-11 account">
             <h1 class="account-heading">Your Account</h1>
-            <form action="" method="get">
+            <form class="account-form">
                 <div class="account-picture">
                     <img  src="https://babeltechreviews.com/wp-content/uploads/2018/07/rendition1.img_.jpg" alt="">
                     <i class='fas fa-edit' id="profile-picture-button"></i>
@@ -35,6 +35,13 @@ get_header(); ?>
                 </div>
             </form>
         </div><!-- .column -->
+        <div class="column small-12 medium-12 offers">
+            <h2>Your Offers</h2>
+            <ul class="offers-list">
+            </ul>
+            <p class="no-offers">No Offers</p>
+            <a href="#newOffer" class="button secondary">Add new offer</a>
+        </div>
 	</div><!-- .row -->
 </section><!-- .section-fullwidth section-main -->
 

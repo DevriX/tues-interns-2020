@@ -12,7 +12,8 @@
 get_header(); ?>
 
 <div class="section-fullwidth inverted">
-    <form method="POST" action="">
+    <form method="POST" action="<?php echo admin_url( 'admin-post.php' ) ?>">
+        <input type="hidden" name="action" value="process_offer">
         <h1>Publish offer</h1>
         <div class="offer-info">
             <h2>What is your vehicle type ?</h2>
@@ -22,7 +23,7 @@ get_header(); ?>
                 <span id="motorcycle" class="type"><i class="fas fa-motorcycle"></i></span>
                 <span id="tractor" class="type"><i class="fas fa-tractor"></i></span>
                 <span id="bus" class="type"><i class="fas fa-bus"></i></span>
-                <input type="hidden" name="category" id="category" value="car">
+                <input type="hidden" name="vehicle-category" id="category" value="car">
             </div>
             <div class="specifications">
                 <h2>Specifications about your vehicle</h2>
@@ -31,11 +32,11 @@ get_header(); ?>
                         <option selected="" value="">Brand</option>
                     </select>
 
-                    <select class="models" id="models" name="model">
+                    <select class="models" id="models" name="vehicle-model">
                         <option selected="" value="">Model</option>    
                     </select>
 
-                    <select class="fuelType" name="fuel">
+                    <select class="fuelType" name="vehicle-fuel">
                         <option selected="" value="">Fuel type</option>
                         <option value="Gasoline">Gasoline</option>
                         <option value="Diesel">Diesel</option>
@@ -43,25 +44,25 @@ get_header(); ?>
                         <option value="Hybrid">Hybrid</option>
                     </select>
 
-                    <select class="condition" name="condition">
+                    <select class="condition" name="vehicle-condition">
                         <option selected="" value="">Condition</option>
                         <option value="Factory new">Factory new</option>
                         <option value="Used">Used</option>
                         <option value="For parts">For parts</option>
                     </select>
 
-                    <select class="gearbox" name="gearbox">
+                    <select class="gearbox" name="vehicle-gearbox">
                         <option selected="" value="">Gearbox</option>
                         <option value="Manual">Manual</option>
                         <option value="Automatic">Automatic</option>
                         <option value="Semi-automatic">Semi-automatic</option>
                     </select>
 
-                    <input type="text" class="input" id="year" name="year" placeholder="Year">
+                    <input type="text" class="input" id="year" name="vehicle-year" placeholder="Year">
 
-                    <input type="text" class="input" id="horsepower" name="horsepower" placeholder="Horsepower">
+                    <input type="text" class="input" id="horsepower" name="vehicle-horsepower" placeholder="Horsepower">
 
-                    <select class="types" name="type">
+                    <select class="types" name="vehicle-type">
                         <option value="">All categories</option>
                         <option value="Hatchback">Hatchback</option>
                         <option value="Coupe">Coupe</option>
@@ -110,7 +111,7 @@ get_header(); ?>
 
                 <div class="description">
                     <h2>Add a short description about your offer</h2>
-                    <input type="text" class="input desc" id="description" name="description">
+                    <input type="text" class="input desc" id="description" name="vehicle-description">
                 </div>
             
                 <button type="submit" class="publishOfferButton button secondary" form="publishOffer" value="publishOffer" >Publish offer</button>

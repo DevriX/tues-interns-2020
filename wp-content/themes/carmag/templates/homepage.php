@@ -89,7 +89,7 @@ get_header();
                                 </div>
     
                                 <div class="actions-buttons">
-                                    <a href="http://local.carmag.com/index.php/advanced-search/" class="advanced-button button secondary">Advanced Search</a>
+                                    <a href="<?php echo home_url( '/advanced-search/' ); ?>" class="advanced-button button secondary">Advanced Search</a>
                                     <button type="submit" class="search-button button secondary" form="search-form">Search now</button>
                                 </div>
                             </div>

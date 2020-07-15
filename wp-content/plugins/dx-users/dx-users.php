@@ -9,11 +9,13 @@
  * Text Domain:       dx-users
  */
 
- include 'login-user-class.php';
- include 'register-user-class.php';
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
- $login_user = new LoginUser;
- $register_user = new RegisterUser;
+include 'login-user-class.php';
+include 'register-user-class.php';
 
- $login_user->init();
- $register_user->init();
+$login_user = new LoginUser;
+$register_user = new RegisterUser;
+
+$login_user->init();
+$register_user->init();

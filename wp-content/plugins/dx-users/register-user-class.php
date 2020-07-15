@@ -5,15 +5,15 @@ class RegisterUser {
     }
 
     function process_register_data() {
-        if( username_exists( $_POST['password'] ) ) {
+        if( username_exists( sanitize_text_field( $_POST['password'] ) ) ) {
             wp_die( 'User already exists!' );
         }
 
         $user_data = array(
-            'user_pass'    => $_POST['password'],
-            'user_login'   => $_POST['email'],
-            'user_email'   => $_POST['email'],
-            'display_name' => $_POST['name'],
+            'user_pass'    => sanitize_text_field( $_POST['password'] ),
+            'user_login'   => sanitize_text_field( $_POST['email'] ),
+            'user_email'   => sanitize_text_field( $_POST['email'] ),
+            'display_name' => sanitize_text_field( $_POST['name'] ),
         );
 
         if( ! is_email( $user_data['user_email'] ) ) {

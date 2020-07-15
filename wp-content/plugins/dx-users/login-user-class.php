@@ -6,8 +6,8 @@ class LoginUser {
 
     function try_login_user() {
         $creds = array(
-            'user_login'    => $_POST['email'],
-            'user_password' => $_POST['password'],
+            'user_login'    => sanitize_text_field( $_POST['email'] ),
+            'user_password' => sanitize_text_field( $_POST['password'] ),
             'remember'      => true
         );
 
@@ -19,7 +19,6 @@ class LoginUser {
 
         wp_set_current_user( $user->data->ID );
 
-        wp_redirect( home_url() ); exit;
-        
+        wp_redirect( home_url() ); exit;    
     }
 }

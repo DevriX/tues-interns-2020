@@ -7,32 +7,19 @@
  * @package CarMag
  */
 
+$no_answer = __( 'N/A' );
 get_header(); ?>
 
 	<section class="section-fullwidth section-main single-vehicle">
 		<div class="row">
 			<div class="columns small-12 medium-12 large-8">
                 <div class="carousel">
-                    <img
-                        class ="carousel-image"
-                        src="https://mobistatic2.focus.bg/mobile/photosmob/684/1/big/11589622941723684_g.jpg"
-                        alt=""
-                    />
-                    <img
-                        class ="carousel-image"
-                        src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_tj.jpg"
-                        alt=""
-                    />
-                    <img
-                        class ="carousel-image"
-                        src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_wV.jpg"
-                        alt=""
-                    />
-                    <img
-                        class ="carousel-image"
-                        src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_3I.jpg"
-                        alt=""
-                    />
+									<?php
+											$images = ( array )json_decode( get_post_meta( get_the_ID(), __( 'vehicle-images' ), true ) );
+											foreach ( $images as $image ) {
+													echo( '<img class="carousel-image" src="' . $image . '" alt="">' );
+											}
+									?>
                     <p class="image-num">1/7</p>
                     <div class="arrow forward">
                         <div></div>
@@ -42,68 +29,50 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="all-images">
-                    <div>
-                        <img
-                            src="https://mobistatic2.focus.bg/mobile/photosmob/684/1/big/11589622941723684_g.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_tj.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_wV.jpg"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src="https://mobistatic2.focus.bg/mobile/photosmob/684/1//big/11589622941723684_3I.jpg"
-                            alt=""
-                        />
-                    </div>
+									<?php
+											$images = ( array )json_decode( get_post_meta( get_the_ID(), __( 'vehicle-images' ), true ) );
+											foreach ( $images as $image ) {
+													echo( '<div><img src="' . $image . '" alt=""></div>' );
+											}
+									?>
                 </div>
                 <div class="vehicle-information">
-                    <h2>Polo Comfortline 1.0 EVO BMT</h2>
+                    <h2><?php echo( sanitize_text_field( get_the_title() ) ) ?></h2>
                     <ul class="vehicle-properties">
                         <li>
                             <i class="fas fa-calendar-alt"></i>
-                            <p>2020</p>
+                            <p><?php echo( sanitize_text_field( ( get_post_meta( get_the_ID(), __( 'vehicle-year' ), true ) == null ) ? $no_answer : get_post_meta( get_the_ID(), __( 'vehicle-year' ), true ) ) ) ?></p>
                         </li>
                         <li>
                             <i class="fas fa-gas-pump">&#xf52f;</i>
-                            <p>Petrol</p>
+                            <p><?php echo( sanitize_text_field( get_the_terms( get_the_ID(), __( 'vehicle-fuel' ) ) ? get_the_terms( get_the_ID(), __( 'vehicle-fuel' ) )[0]->name : $no_answer ) ) ?></p>
                         </li>
                         <li>
                             <i class="fas fa-road"></i>
-                            <p>200 km</p>
+                            <p><?php echo( sanitize_text_field( ( get_post_meta( get_the_ID(), __( 'vehicle-range' ), true ) == null ) ? $no_answer : get_post_meta( get_the_ID(), __( 'vehicle-range' ), true ) ) ) ?> <?php _e( 'km' ) ?></p>
                         </li>
                         <li>
                             <i class="fas fa-tachometer-alt"></i>
-                            <p>650 hp</p>
+                            <p><?php echo( sanitize_text_field( ( get_post_meta( get_the_ID(), __( 'vehicle-horsepower' ), true ) == null ) ? $no_answer : get_post_meta( get_the_ID(), __( 'vehicle-horsepower' ), true ) ) ) ?> <?php _e( 'hp' ) ?></p>
                         </li>
                         <li>
                             <i class="fas fa-cogs"></i>
-                            <p>Manual</p>
+                            <p><?php echo( sanitize_text_field( get_the_terms( get_the_ID(), __( 'vehicle-gearbox' ) ) ? get_the_terms( get_the_ID(), __( 'vehicle-gearbox' ) )[0]->name : $no_answer ) ) ?></p>
                         </li>
                         <li>
                             <i class="fas fa-car"></i>
-                            <p>Sedan</p>
+                            <p><?php echo( sanitize_text_field( get_the_terms( get_the_ID(), __( 'vehicle-type' ) ) ? get_the_terms( get_the_ID(), __( 'vehicle-type' ) )[1]->name : $no_answer ) ) ?></p>
                         </li>
-                    </ul> 
-                    <p class="vehicle-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </ul>
+                    <p class="vehicle-description"><?php echo( sanitize_text_field( get_post()->post_content ) ) ?></p>
                 </div>
 			</div><!-- .columns medium-8 -->
 			<div class="columns small-12 medium-12 large-4 ">
                 <div class="seller-card">
                     <div class="seller-map" id="map"></div>
                     <div class="seller-info">
-                        <img class="seller-avatar" src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg" alt="">
-                        <p>Gosho</p>
+                        <?php echo '<img class="seller-avatar" src="' . sanitize_text_field( get_avatar_url( get_post()->post_author ) ) . '" alt="">' ?>
+                        <p><?php echo sanitize_text_field( get_the_author_meta( __( 'display_name' ), get_post()->post_author ) ) ?></p>
                         <button class="button secondary">Contact</button>
                     </div>
                 </div>

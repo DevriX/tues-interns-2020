@@ -19,7 +19,8 @@ get_header();
                     <div class="simple-search">
                         <h2>Find your dream car</h2>
 
-                        <form id="search-form" class="search-form" action="/search" method="GET">
+                        <form id="search-form" class="search-form" action="/" method="GET">
+                            <input type="hidden" name="search" value="vehicles">
                             <div class="form-content">
                                 <select id="brands" name="brand" class="form-field brands" onChange="handleModels()">
                                     <option selected="" value="">Brand</option>
@@ -38,34 +39,34 @@ get_header();
     
                                 <select name="location" class="form-field location">
                                     <option selected="" value="">Location</option>
-                                    <option value="Благоевград">Благоевград</option>
-                                    <option value="Бургас">Бургас</option>
-                                    <option value="Варна">Варна</option>
-                                    <option value="Велико Търново">Велико Търново</option>
-                                    <option value="Видин">Видин</option>
-                                    <option value="Враца">Враца</option>
-                                    <option value="Габрово">Габрово</option>
-                                    <option value="Добрич">Добрич</option>
-                                    <option value="Дупница">Дупница</option>
-                                    <option value="Кърджали">Кърджали</option>
-                                    <option value="Кюстендил">Кюстендил</option>
-                                    <option value="Ловеч">Ловеч</option>
-                                    <option value="Монтана">Монтана</option>
-                                    <option value="Пазарджик">Пазарджик</option>
-                                    <option value="Перник">Перник</option>
-                                    <option value="Плевен">Плевен</option>
-                                    <option value="Пловдив">Пловдив</option>
-                                    <option value="Разград">Разград</option>
-                                    <option value="Русе">Русе</option>
-                                    <option value="Силистра">Силистра</option>
-                                    <option value="Сливен">Сливен</option>
-                                    <option value="Смолян">Смолян</option>
-                                    <option value="София">София</option>
-                                    <option value="Стара Загора">Стара Загора</option>
-                                    <option value="Търговище">Търговище</option>
-                                    <option value="Хасково">Хасково</option>
-                                    <option value="Шумен">Шумен</option>
-                                    <option value="Ямбол">Ямбол</option>
+                                    <option value="blagoevgrad">Благоевград</option>
+                                    <option value="burgas">Бургас</option>
+                                    <option value="varna">Варна</option>
+                                    <option value="velikoturnovo">Велико Търново</option>
+                                    <option value="vidin">Видин</option>
+                                    <option value="vratsa">Враца</option>
+                                    <option value="gabrovo">Габрово</option>
+                                    <option value="dobrich">Добрич</option>
+                                    <option value="dupnitsa">Дупница</option>
+                                    <option value="kurdjali">Кърджали</option>
+                                    <option value="kustendil">Кюстендил</option>
+                                    <option value="lovech">Ловеч</option>
+                                    <option value="montana">Монтана</option>
+                                    <option value="pazardjik">Пазарджик</option>
+                                    <option value="pernik">Перник</option>
+                                    <option value="pleven">Плевен</option>
+                                    <option value="plovdiv">Пловдив</option>
+                                    <option value="razgrad">Разград</option>
+                                    <option value="ruse">Русе</option>
+                                    <option value="silistra">Силистра</option>
+                                    <option value="sliven">Сливен</option>
+                                    <option value="smolqn">Смолян</option>
+                                    <option value="sofia">София</option>
+                                    <option value="starazagora">Стара Загора</option>
+                                    <option value="turgovishte">Търговище</option>
+                                    <option value="haskovo">Хасково</option>
+                                    <option value="shumen">Шумен</option>
+                                    <option value="qmbol">Ямбол</option>
                                 </select>
     
     

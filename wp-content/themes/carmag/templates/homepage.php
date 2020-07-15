@@ -107,10 +107,26 @@ get_header();
     </div><!-- .row -->
     <div class="view latestoffers-grid">
     <?php
-        for($i = 0; $i < 6; $i++) :
-            get_template_part( 'template-parts/content', 'card' );
-        endfor;
+        $new_loop = new WP_Query( array(
+        'post_type' => 'vehicles',
+            'posts_per_page' => 6
+        ) );
     ?>
+
+    <?php if ( $new_loop->have_posts() ) : ?>
+        <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
+            <?php 
+                $images = ( array )json_decode( get_post_meta( get_the_ID(), __( 'vehicle-images' ), true ) );
+                set_query_var('name', sanitize_text_field( get_the_title() ));
+                set_query_var('price', sanitize_text_field( get_post_meta( get_the_ID(), __( 'vehicle-price' ), true ) ) );
+                set_query_var('url', sanitize_text_field( get_post_permalink( get_the_ID() ) ) );
+                set_query_var('image', sanitize_text_field( array_pop( $images ) ));
+            ?> 
+            <?php get_template_part( 'template-parts/content', 'card' ); ?>
+        <?php endwhile;?>
+    <?php else: ?>
+    <?php endif; ?>
+    <?php wp_reset_query(); ?>
     
     </div>
 </section><!-- .section-fullwidth section-main -->

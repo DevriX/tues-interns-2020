@@ -43,6 +43,7 @@
 @import "components/forms";
 @import "components/carousel";
 @import "components/seller-card";
+@import "components/cookie-notice";
 
 // If there is anything specific for a page it should be in this folder
 @import "pages/404";
@@ -51,3 +52,4 @@
 @import "pages/faq";
 @import "pages/single-vehicle";
 @import "pages/account";
+@import "pages/login-register";

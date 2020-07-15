@@ -92,8 +92,19 @@ function carmag_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'carmag' ),
-	) );
+        'primary' => esc_html__( 'Primary', 'carmag' ),
+        'profile' => esc_html__( 'Profile', 'carmag' ),
+    ) );
+    add_filter( 'wp_nav_menu_objects', 'my_dynamic_menu_items' );
+    function my_dynamic_menu_items( $menu_items ) {
+        foreach ( $menu_items as $menu_item ) {
+            if ( strpos($menu_item->title, '#profile_name#') !== false) {
+                    $menu_item->title =  str_replace("#profile_name#",  wp_get_current_user()->display_name, $menu_item->title);
+            }
+        }
+
+        return $menu_items;
+    } 
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
